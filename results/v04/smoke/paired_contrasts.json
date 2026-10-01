@@ -1,0 +1,182 @@
+[
+  {
+    "family": "E1",
+    "reference": "k1_beta0.3_width0.02_budget1.0",
+    "arm": "k5_beta1.0_width0.2_budget3.0",
+    "metric": "final_Y",
+    "mean": 0.5840401085682616,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E10",
+    "reference": "n12",
+    "arm": "n3",
+    "metric": "final_Y",
+    "mean": -9.296189347082299,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E11",
+    "reference": "budget0.5",
+    "arm": "budget3.0",
+    "metric": "final_Y",
+    "mean": 2.5191075318277347,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E12",
+    "reference": "interference_right",
+    "arm": "linear",
+    "metric": "final_Y",
+    "mean": -0.21662127869345504,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E2",
+    "reference": "frustrated_prior0.5_alpha0.0",
+    "arm": "interference_prior2.0_alpha0.6",
+    "metric": "final_Y",
+    "mean": -2.109231271155473,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E3",
+    "reference": "k1_nonresonant",
+    "arm": "k5_resonant",
+    "metric": "final_Y",
+    "mean": -0.8402503324655186,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E4",
+    "reference": "tolerance0.005_amplitude0.03",
+    "arm": "tolerance0.05_amplitude0.15",
+    "metric": "final_Y",
+    "mean": 0.22168197464103834,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E5",
+    "reference": "alpha0.0_width0.02_reviewedFalse",
+    "arm": "alpha0.6_width0.3_reviewedTrue",
+    "metric": "final_Y",
+    "mean": -0.12115700957948716,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E6",
+    "reference": "interaction0.1_k1_memory0.5",
+    "arm": "interaction0.8_k5_memory1.0",
+    "metric": "final_Y",
+    "mean": -0.7514943649334496,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E7",
+    "reference": "adaptive_exact",
+    "arm": "fixed",
+    "metric": "final_Y",
+    "mean": -0.01506121904021196,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E8",
+    "reference": "concave",
+    "arm": "frustrated",
+    "metric": "final_Y",
+    "mean": 0.6023090145244185,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E9",
+    "reference": "invisible_with_relocation",
+    "arm": "random_k1",
+    "metric": "final_Y",
+    "mean": -0.8609657087678078,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "R1",
+    "reference": "all_k5",
+    "arm": "rotation_k1",
+    "metric": "final_Y",
+    "mean": 1.5913676037413005,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "R2",
+    "reference": "price_fixed",
+    "arm": "ration_adaptive",
+    "metric": "final_Y",
+    "mean": -0.676042310154003,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "R3",
+    "reference": "eta0.1_theta0.1",
+    "arm": "eta1.0_theta1.0",
+    "metric": "final_Y",
+    "mean": -0.043750401287571794,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "R4",
+    "reference": "offset-5.0_draft",
+    "arm": "offset5.0_absolute_drop",
+    "metric": "final_Y",
+    "mean": 10.0,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "R5",
+    "reference": "width0.0_amplitude0.03",
+    "arm": "width0.3_amplitude0.15",
+    "metric": "final_Y",
+    "mean": 0.8308312768962594,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "R6",
+    "reference": "all_budget0.5_beta0.1",
+    "arm": "all_budget3.0_beta1.0",
+    "metric": "final_Y",
+    "mean": 2.059272737405548,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  }
+]

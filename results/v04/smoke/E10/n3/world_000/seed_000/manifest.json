@@ -1,0 +1,99 @@
+{
+  "identity": "cbdf35bc530696101346e5c7a1317fa8391ec6ba06f4a13d49366638f497d0ef",
+  "version": "0.4.0",
+  "code_hash": "d5f31a480d4078bf4ad2",
+  "job": {
+    "family": "E10",
+    "arm": "n3",
+    "world_seed": 0,
+    "seed": 0,
+    "world": {
+      "scenario": "frustrated",
+      "n": 3,
+      "s_off": 0.4,
+      "budget_factor": 1.0,
+      "alpha_max": 0.3
+    },
+    "config": {
+      "periods": 12,
+      "T": 192,
+      "k": 1,
+      "schedule": "rotation",
+      "frequencies": "nonresonant",
+      "w_min": 0.1,
+      "a_max": 0.08,
+      "eps_dis": 0.02,
+      "rho_dis": 0.05,
+      "curvature_floor": 0.05,
+      "beta": 0.7,
+      "phi_mem": 1.0,
+      "g0": 1.0,
+      "commit": "fixed",
+      "within_period": "fixed",
+      "budget_rule": "price",
+      "theta_adj": 0.3,
+      "eta_p": 0.5,
+      "p_min": 1e-08,
+      "p_max": 1000.0,
+      "lambda_overload": 1.0,
+      "price_tol": 1e-10,
+      "multistarts": 8,
+      "log_executions": false,
+      "outside_kind": "none",
+      "outside_period": 150,
+      "outside_scale": 0.4,
+      "outside_role": 0,
+      "outside_local_gain": 0.3,
+      "outside_cost_fraction": 0.3,
+      "outside_relocate": false,
+      "initial_targets": null,
+      "non_disruption": "draft"
+    }
+  },
+  "world": {
+    "b": [
+      0.6403344716699173,
+      0.807304310855565,
+      0.7263008235905866
+    ],
+    "C": [
+      [
+        -0.3683248013260323,
+        -0.5562444366161768,
+        0.010784703509784357
+      ],
+      [
+        -0.5562444366161768,
+        -0.22459066718571238,
+        -0.35890241770196596
+      ],
+      [
+        0.010784703509784357,
+        -0.35890241770196596,
+        -0.3897377450755505
+      ]
+    ],
+    "gamma": [
+      1.0119015784928287,
+      0.9945282992952879,
+      1.0383728018471805
+    ],
+    "B": 2.7899244757354147,
+    "alpha": [
+      0.0651532645756271,
+      0.13052301139267417,
+      0.2628290946602592
+    ],
+    "w": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Y0": 0.0,
+    "qbar": 0.999999
+  },
+  "python": "3.11.2 (v3.11.2:878ead1ac1, Feb  7 2023, 10:02:41) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "1.23.5",
+  "scipy": "1.10.1",
+  "status": "running"
+}

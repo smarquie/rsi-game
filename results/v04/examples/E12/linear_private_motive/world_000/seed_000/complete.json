@@ -1,0 +1,9 @@
+{
+  "identity": "10f702c800b8ec18dda6db1ee97853313525d8e89cdce18f0b999f560c2adbbe",
+  "seconds": 3.352450610953383,
+  "formats": [
+    "jsonl",
+    "csv",
+    "parquet"
+  ]
+}

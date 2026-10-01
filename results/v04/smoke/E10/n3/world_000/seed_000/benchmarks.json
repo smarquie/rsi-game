@@ -1,0 +1,187 @@
+[
+  {
+    "period": 0,
+    "world": {
+      "b": [
+        0.6403344716699173,
+        0.807304310855565,
+        0.7263008235905866
+      ],
+      "C": [
+        [
+          -0.3683248013260323,
+          -0.5562444366161768,
+          0.010784703509784357
+        ],
+        [
+          -0.5562444366161768,
+          -0.22459066718571238,
+          -0.35890241770196596
+        ],
+        [
+          0.010784703509784357,
+          -0.35890241770196596,
+          -0.3897377450755505
+        ]
+      ],
+      "gamma": [
+        1.0119015784928287,
+        0.9945282992952879,
+        1.0383728018471805
+      ],
+      "B": 2.7899244757354147,
+      "alpha": [
+        0.0651532645756271,
+        0.13052301139267417,
+        0.2628290946602592
+      ],
+      "w": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "Y0": 0.0,
+      "qbar": 0.999999
+    },
+    "benchmarks": {
+      "team": {
+        "best": {
+          "q": [
+            0.7231812619586531,
+            0.0,
+            0.761926103295451
+          ],
+          "Y": 0.6094648207461275,
+          "spending": 2.7899244757354147,
+          "optimizer_success": true,
+          "residual": 5.7194943225979955e-12,
+          "multiplier": 0.03393208011960071,
+          "feasibility": 0.0,
+          "complementarity": 0.0,
+          "tangent_eigenvalues": [
+            -1.2952507535880695
+          ],
+          "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"
+        },
+        "solutions": [
+          {
+            "q": [
+              0.7231812619586531,
+              0.0,
+              0.761926103295451
+            ],
+            "Y": 0.6094648207461275,
+            "spending": 2.7899244757354147,
+            "optimizer_success": true,
+            "residual": 5.7194943225979955e-12,
+            "multiplier": 0.03393208011960071,
+            "feasibility": 0.0,
+            "complementarity": 0.0,
+            "tangent_eigenvalues": [
+              -1.2952507535880695
+            ],
+            "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"
+          },
+          {
+            "q": [
+              0.0,
+              0.937055888520781,
+              0.03737075361719804
+            ],
+            "Y": 0.5607437657710933,
+            "spending": 2.789924475735415,
+            "optimizer_success": true,
+            "residual": 7.969675938981902e-08,
+            "multiplier": 0.022757423047883304,
+            "feasibility": 4.440892098500626e-16,
+            "complementarity": 1.01063260195581e-17,
+            "tangent_eigenvalues": [
+              -0.7322728103079579
+            ],
+            "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"
+          }
+        ],
+        "validated_stationary_points": [
+          {
+            "q": [
+              0.7231812619586531,
+              0.0,
+              0.761926103295451
+            ],
+            "Y": 0.6094648207461275,
+            "spending": 2.7899244757354147,
+            "optimizer_success": true,
+            "residual": 5.7194943225979955e-12,
+            "multiplier": 0.03393208011960071,
+            "feasibility": 0.0,
+            "complementarity": 0.0,
+            "tangent_eigenvalues": [
+              -1.2952507535880695
+            ],
+            "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"
+          },
+          {
+            "q": [
+              0.0,
+              0.937055888520781,
+              0.03737075361719804
+            ],
+            "Y": 0.5607437657710933,
+            "spending": 2.789924475735415,
+            "optimizer_success": true,
+            "residual": 7.969675938981902e-08,
+            "multiplier": 0.022757423047883304,
+            "feasibility": 4.440892098500626e-16,
+            "complementarity": 1.01063260195581e-17,
+            "tangent_eigenvalues": [
+              -0.7322728103079579
+            ],
+            "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"
+          }
+        ],
+        "starts": 8,
+        "failed_kkt_starts": 0,
+        "eigenvalues": [
+          -0.9604014911384565,
+          -0.39325888799359,
+          0.3710071655447513
+        ],
+        "global_certified": false,
+        "status": "best_found_not_global_certificate"
+      },
+      "ignoring_interactions": {
+        "q": [
+          0.5002997525426056,
+          0.7233033852296127,
+          0.5416764208590493
+        ],
+        "Y": 0.2956979461251754,
+        "spending": 2.7899244757354147,
+        "optimizer_success": true,
+        "residual": 2.4296364919962343e-10,
+        "multiplier": 0.13421558230867867,
+        "feasibility": 0.0,
+        "complementarity": 0.0,
+        "tangent_eigenvalues": [
+          -1.7236039274208943,
+          -1.3424326096440693
+        ],
+        "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified",
+        "Y_under_diagonal": 0.973660651767475
+      },
+      "informed_free": {
+        "q": [
+          0.6715788844355128,
+          2.4140650545156912e-11,
+          0.7984565540012557
+        ],
+        "Y": 0.6069290410655587,
+        "price": 0.07399659637030709,
+        "iterations": 67,
+        "converged": true,
+        "residual": 2.0790180688123883e-10,
+        "spending": 2.7899244752890997
+      }
+    }
+  }
+]

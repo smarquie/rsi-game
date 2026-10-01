@@ -1,0 +1,46 @@
+{
+  "initial_Y": 0.3372666848007042,
+  "final_Y": 0.3190069481603977,
+  "final_reward": 0.3190069481603977,
+  "final_target_Y": 0.347414373007147,
+  "improvement": -0.0182597366403065,
+  "best_found_Y": 0.6561644902373129,
+  "gap_to_best_found": 0.33715754207691523,
+  "global_certified": false,
+  "final_mean_settings": [
+    0.3247960833013793,
+    0.08000000000000003
+  ],
+  "final_targets": [
+    0.27479608330137983,
+    0.3836780637947381
+  ],
+  "final_target_spending": 0.8052882275219757,
+  "nearest_stationary_index": 1,
+  "distance_to_stationary": 0.3931917760568321,
+  "within_one_percent_best": false,
+  "settling_period": null,
+  "cumulative_exploration_effect": -0.1919999999999782,
+  "total_overload": 61.72609486646803,
+  "skipped_turns": 0,
+  "jump_events": 0,
+  "bound_violations": 0,
+  "target_path_length": 97.17646581082884,
+  "tail_target_range": 0.8494552294720148,
+  "idealized_slice_residual": {
+    "distance": 0.4986526296222985,
+    "targets": [
+      0.7734487129236783,
+      0.7634176251437904
+    ],
+    "budget_violation": 0.0,
+    "complementarity": 0.0
+  },
+  "actual_T": 192,
+  "frequencies": [
+    1,
+    4
+  ],
+  "periods": 300,
+  "warning": "Best-found gaps are not global gaps unless certified; period rewards may involve overload and targets need not be feasible"
+}

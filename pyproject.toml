@@ -4,16 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rsi-game"
-version = "0.1.0"
-description = "Exact policy-game analysis and sticky-snapshot self-improvement simulation"
+version = "0.4.0"
+description = "Continuous decentralized functions game with preserved v0.1 snapshot simulator"
 requires-python = ">=3.11"
-dependencies = ["numpy>=1.23,<3"]
+dependencies = ["numpy>=1.23,<3", "scipy>=1.10,<2"]
+
+[project.optional-dependencies]
+reports = ["matplotlib>=3.6", "pyarrow>=10"]
 
 [project.scripts]
-rsi-game = "rsi_game.run:main"
+rsi-game = "rsi_game.v04.cli:main"
+rsi-game-v01 = "rsi_game.run:main"
 
 [tool.setuptools.packages.find]
 include = ["rsi_game*"]
 
 [tool.setuptools.package-data]
 rsi_game = ["lab.html"]
+"rsi_game.v04" = ["lab.html"]

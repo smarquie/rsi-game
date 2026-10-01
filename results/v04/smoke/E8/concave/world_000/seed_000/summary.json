@@ -1,0 +1,58 @@
+{
+  "initial_Y": 1.727524002950685,
+  "final_Y": 1.9158985646668842,
+  "final_reward": 1.9158985646668842,
+  "final_target_Y": 1.8272507358034669,
+  "improvement": 0.18837456171619915,
+  "best_found_Y": 2.0206231545848508,
+  "gap_to_best_found": 0.10472458991796652,
+  "global_certified": true,
+  "final_mean_settings": [
+    0.7595621851244966,
+    0.29005381668892044,
+    0.4733231372769109,
+    0.5756937918793495,
+    0.6761980746689877
+  ],
+  "final_targets": [
+    0.7122065943232075,
+    0.43992253182574764,
+    0.4233231372769116,
+    0.5256937918793518,
+    0.6261980746689861
+  ],
+  "final_target_spending": 4.270301686868663,
+  "nearest_stationary_index": 0,
+  "distance_to_stationary": 0.1598604916546531,
+  "within_one_percent_best": false,
+  "settling_period": null,
+  "cumulative_exploration_effect": -0.02618378740517735,
+  "total_overload": 0.0,
+  "skipped_turns": 0,
+  "jump_events": 0,
+  "bound_violations": 0,
+  "target_path_length": 2.182519275747528,
+  "tail_target_range": 0.452469617035352,
+  "idealized_slice_residual": {
+    "distance": 0.3350664068779843,
+    "targets": [
+      0.688248392626208,
+      0.5281945649315737,
+      0.7352435573367696,
+      0.8607601987573361,
+      0.9019701293984833
+    ],
+    "budget_violation": 0.0,
+    "complementarity": 0.015902721322060408
+  },
+  "actual_T": 192,
+  "frequencies": [
+    1,
+    4,
+    10,
+    13,
+    28
+  ],
+  "periods": 12,
+  "warning": "Best-found gaps are not global gaps unless certified; period rewards may involve overload and targets need not be feasible"
+}

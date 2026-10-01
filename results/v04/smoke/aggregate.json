@@ -1,0 +1,4178 @@
+[
+  {
+    "family": "E1",
+    "arm": "k1_beta0.3_width0.02_budget1.0",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 1.727524002950685,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.8467385789865507,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.8467385789865507,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.1192145760358656,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.17388457559830006,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.01488618368430572,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.30101960797644006,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.1042403610213025,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.1925620444625826,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 1.836308882730009e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 2.1094237467877974e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 2.1094237467877974e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 3.617765809149631e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E1",
+    "arm": "k5_beta1.0_width0.2_budget3.0",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.4307786875548123,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.4307786875548123,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.4307786875548123,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.30549933222939707,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 60.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.8025161939372475,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_slope_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 8.881784197001252e-16,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E10",
+    "arm": "n12",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 5.322048836244105,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 9.74053482667763,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 9.74053482667763,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 4.418485990433525,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.7931223258249691,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.5352248146529547,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 2.998416041363342,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 1.0524353389301775,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.170796958329447e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.5860203695392556e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.5860203695392556e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 5.96453225351623e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E10",
+    "arm": "n3",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 0.3080445610657275,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 0.4443454795953315,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 0.4443454795953315,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.13630091852960402,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.16511934115079602,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.29734756473372537,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.6334090418503586,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 2.961807369309825,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.2857749512255968,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 4.8960835385969403e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 6.38378239159465e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 6.38378239159465e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 7.216449660063518e-16,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E11",
+    "arm": "budget0.5",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 1.3197093801331348,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.3404727340643519,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.1492044281833091,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.020763353931217088,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.21246361247273415,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.605480863706338,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.5149368305883542,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.9675235630038783,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.1646510251615424,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 1.9156898289907076e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 1.6542323066914832e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 1.9156898289907076e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 2.7289368681460147e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E11",
+    "arm": "budget3.0",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 3.7389864572687164,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 3.859580265892087,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 3.859580265892087,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.12059380862337044,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.0018619672365316475,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.44123289653339404,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.5624830238100322,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.289842181901283,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.4811042937121783e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 6.403766406037903e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 6.403766406037903e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 7.099789506304077e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E12",
+    "arm": "interference_right",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 0.3372666848007042,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 0.586819474630596,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 0.42424906274707463,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.24955278982989182,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.06934501560671691,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 1.9716819018610812,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.9099990899999999,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 3.5864708528845357,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.4292807968980756,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 9.123257704857224e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 8.260059303211165e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 9.123257704857224e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 9.730714498057402e-16,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E12",
+    "arm": "linear",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 0.9481808381578958,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 0.370198195937141,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 0.370198195937141,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.5779826422207548,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.60954170903997,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 3.0050109424078193,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.6673840258222854,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 4.671318101658718,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.057692307692400226,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 2.537033083616076e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 4.671818487622659e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 4.671818487622659e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 2.7755575615628914e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E2",
+    "arm": "frustrated_prior0.5_alpha0.0",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.3548535031271625,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.1069821990809516,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.1069821990809516,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.24787130404621083,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.41493888596457573,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.051388802859605676,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.5333079293351033,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 2.569301807703773,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.36009443734071833,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 1.7841284005726266e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 2.398081733190338e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 2.398081733190338e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 4.283249102621234e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E2",
+    "arm": "interference_prior2.0_alpha0.6",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": -0.0022490720745214077,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": -0.0022490720745214077,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": -0.0022490720745214077,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.8795363338806668,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 12.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 2.3385762375268255,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_slope_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 1.7763568394002505e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E3",
+    "arm": "k1_nonresonant",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22544930634351124,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.003713505854224586,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.416629745291292,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0670097782762982,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18894296967375748,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.019251515468113e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 6.459459703234138e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E3",
+    "arm": "k5_resonant",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.6779572467257842,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.6779572467257842,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.6148010261220074,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.8439638383197432,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 9.19384255918197,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 18.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.6367036439639582,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 10.810047911870486,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.3229775698698343,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 0.5910545986877155,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 0.8777437802722485,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 2.5175174445113413e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E4",
+    "arm": "tolerance0.005_amplitude0.03",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.22916281219773582,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 12.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.44686982453259494,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_slope_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 1.7763568394002505e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E4",
+    "arm": "tolerance0.05_amplitude0.15",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.51444024748883,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.51444024748883,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22168197464103834,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.007480837556697484,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.4162341775580849,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0776245615345985,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18856234888899948,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 6.566969190657801e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 8.060219158778636e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 8.060219158778636e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 5.294376048681215e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E5",
+    "arm": "alpha0.0_width0.02_reviewedFalse",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.3548535031271625,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.3548535031271625,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.3548535031271625,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.1670675819183649,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.44717906701945953,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_slope_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 1.7763568394002505e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E5",
+    "arm": "alpha0.6_width0.3_reviewedTrue",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2336964935476753,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.2336964935476753,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.2336964935476753,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.28822459149785207,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 12.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.4441623643571731,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_slope_fit_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 1.3322676295501878e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E6",
+    "arm": "interaction0.1_k1_memory0.5",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 1.8900507136932492,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.7991219618523742,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.7991219618523742,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.09092875184087501,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.195472941320471,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.2335003732067431,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.6103496855627353,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 2.615160332120103,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.12142404233534512,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 1.7114087924596788e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 2.2160051571518125e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 2.2160051571518125e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 3.408731630294426e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E6",
+    "arm": "interaction0.8_k5_memory1.0",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.829701685053848,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.0476275969189246,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.0476275969189246,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -1.7820740881349233,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 2.4620026682827145,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 13.93384475630749,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.6367036439639582,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 14.207875835457418,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.9975379131538243,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 6.262212970398195e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 9.57900425646585e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 9.57900425646585e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 2.0322285521068295e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E7",
+    "arm": "adaptive_exact",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.5332687982315147,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.3817740098369424,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.2405105253837232,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": -0.011347713185987374,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.17558477673836315,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.41955619772574626,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.7690186822047909,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 1.8251694757577306,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 4.08139266960827,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 4.877893668812868,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 1.7763568394002505e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E7",
+    "arm": "fixed",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22544930634351124,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.003713505854224586,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.416629745291292,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0670097782762982,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18894296967375748,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.019251515468113e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 6.459459703234138e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E8",
+    "arm": "concave",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 1.727524002950685,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.9158985646668842,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.9158985646668842,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.18837456171619915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.10472458991796652,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.452469617035352,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 2.182519275747528,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.21465338829511837,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 1.815214645262131e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 2.071676163950542e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 2.071676163950542e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 4.238363132680334e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E8",
+    "arm": "frustrated",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22544930634351124,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.003713505854224586,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.416629745291292,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0670097782762982,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18894296967375748,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.019251515468113e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 6.459459703234138e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E9",
+    "arm": "invisible_with_relocation",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.516913360011048,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.516913360011048,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22415508716325627,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.004896293254045059,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.4030863375641167,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0531537926211296,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.1895146449212844,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 2.910449659054848e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 7.183489914019958e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "E9",
+    "arm": "random_k1",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.65594765124324,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.65594765124324,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.6368106216045515,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.770883068136587,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.3286116283809495,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.5457219218050093,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 2.7170790284135595,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.3357333295820386,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 2.910449659054848e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 4.239013653983825e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R1",
+    "arm": "all_k5",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 0.9268399754500022,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 0.9268399754500022,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -1.3659182973977892,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 1.595081109595525,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 12.220759412472777,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.6367036439639582,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 13.866035003099444,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.47004069196777337,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 2.802202914153895e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.3928415632544784e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.3928415632544784e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 1.7763568394002505e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R1",
+    "arm": "rotation_k1",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22544930634351124,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.003713505854224586,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.416629745291292,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0670097782762982,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18894296967375748,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.019251515468113e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 6.459459703234138e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R2",
+    "arm": "price_fixed",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.518207579191303,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22544930634351124,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.003713505854224586,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.416629745291292,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0670097782762982,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18894296967375748,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.019251515468113e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.319566843629218e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 6.459459703234138e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R2",
+    "arm": "ration_adaptive",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.4504115476989416,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.8421652690372998,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.8421652690372998,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.6082462786616418,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.6797558160082275,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 5.329070518200751e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 7296.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.389199027000002,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.8703953240000097,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.25659871372578164,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 5.6066262743570405e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 9.214851104388799e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 9.214851104388799e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 9.247810850432359e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R3",
+    "arm": "eta0.1_theta0.1",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.292758273014778,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 3.6595430394647317,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": -3.8703675848931103,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 1.3667847664499537,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": -1.1376219544192043,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 39.774467548679816,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.5080030045443432,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.9041156520914888,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.2994408586925725,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 0.22292923900139827,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 0.5661959323428991,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 7.627579123870021e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R3",
+    "arm": "eta1.0_theta1.0",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582730223093,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 3.61579263817716,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": -3.177429276806498,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 1.3230343651548506,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": -1.0938715531316325,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 30.191759176224288,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.5080030045420849,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 2.1428857034591866,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.48792087917181065,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 2.186909057538428,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 2.1939846851062548,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "max_exploration_formula_error": {
+        "mean": 6.222886789197801e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R4",
+    "arm": "offset-5.0_draft",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": -2.7072417271522085,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": -2.4817924208086786,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": -2.4817924208086786,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.2254493063435299,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.00371350585420549,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.4166297452913114,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.067009778276309,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.1889429696737299,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 3.6720626539477053e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 4.900524430695441e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 4.900524430695441e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 7.347638122934264e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R4",
+    "arm": "offset5.0_absolute_drop",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 7.292758272847792,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 7.518207579191322,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 7.518207579191322,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.22544930634352944,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.003713505854205934,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.4166297452912671,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 1.0670097782762795,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18894296967376464,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 2.8466118351389014e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 3.0619951019161817e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 3.0619951019161817e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 4.07486544506952e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R5",
+    "arm": "width0.0_amplitude0.03",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.6819745999756688,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.0047488514693221,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.6107836728721228,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.8399464850698586,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 3.8637501360440574,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.7078757301252341,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 3.617014655056444,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.25481624387433294,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 6.103451077876798e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 8.577583088253959e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 8.577583088253959e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 2.9692231746231146e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R5",
+    "arm": "width0.3_amplitude0.15",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 2.2927582728477915,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 2.512805876871928,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 2.512805876871928,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.2200476040241366,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.009115208173599232,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.4190593171000969,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.9343634213332294,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 1.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.18176856100858207,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 6.811218256075335e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 9.370282327836321e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 9.370282327836321e-14,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 5.302182304323111e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R6",
+    "arm": "all_budget0.5_beta0.1",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 1.3197093801331348,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 1.5190011311713238,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 1.5190011311713238,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": 0.19929175103818908,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.03393521536576216,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 0.5948904740249916,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 20.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.18825477211678876,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 0.904055870070402,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.07924864049179588,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 1.8590684547348246e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 1.2534417948018017e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 1.8590684547348246e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 1.673628683557249e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  },
+  {
+    "family": "R6",
+    "arm": "all_budget3.0_beta1.0",
+    "worlds": 1,
+    "runs": 1,
+    "metrics": {
+      "initial_Y": {
+        "mean": 3.7389864572687164,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_Y": {
+        "mean": 3.578273868576872,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "final_reward": {
+        "mean": 3.578273868576872,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "improvement": {
+        "mean": -0.16071258869184435,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "gap_to_best_found": {
+        "mean": 0.28316836455174643,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "settling_period": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "worlds": 0
+      },
+      "total_overload": {
+        "mean": 6.892716054450645,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "skipped_turns": {
+        "mean": 12.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "jump_events": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "bound_violations": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "tail_target_range": {
+        "mean": 0.999999,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "target_path_length": {
+        "mean": 14.339902186960979,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "within_one_percent_best": {
+        "mean": 0.0,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "mean_absolute_staleness": {
+        "mean": 0.6518751952748325,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_curvature_fit_error": {
+        "mean": 4.4786396813378815e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_slope_fit_error": {
+        "mean": 8.459899447643693e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_valid_identification_error": {
+        "mean": 8.459899447643693e-13,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      },
+      "max_exploration_formula_error": {
+        "mean": 8.800740084607961e-15,
+        "low": null,
+        "high": null,
+        "worlds": 1
+      }
+    }
+  }
+]

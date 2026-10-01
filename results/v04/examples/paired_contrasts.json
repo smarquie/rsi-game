@@ -1,0 +1,32 @@
+[
+  {
+    "family": "E12",
+    "reference": "interference_left",
+    "arm": "interference_right",
+    "metric": "final_Y",
+    "mean": 0.27124375109913906,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E12",
+    "reference": "interference_left",
+    "arm": "linear",
+    "metric": "final_Y",
+    "mean": 0.15184575962630797,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  },
+  {
+    "family": "E12",
+    "reference": "interference_left",
+    "arm": "linear_private_motive",
+    "metric": "final_Y",
+    "mean": 0.151847104910385,
+    "low": null,
+    "high": null,
+    "worlds": 1
+  }
+]

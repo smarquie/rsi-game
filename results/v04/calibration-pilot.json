@@ -1,0 +1,61 @@
+{
+  "worlds": 5,
+  "multistarts": 32,
+  "share_multiple_candidates": 0.2,
+  "share_budget_binding": 1.0,
+  "share_initial_gap_at_least_5pct": 1.0,
+  "retuned": false,
+  "qualification": "Multi-start candidates are not an exhaustive count of local optima; no automatic parameter tuning",
+  "records": [
+    {
+      "seed": 0,
+      "positive_eigenvalues": 1,
+      "stationary_candidates": 1,
+      "best_found_Y": 2.5219210850455274,
+      "initial_Y": 2.2927582728477915,
+      "budget_binds": true,
+      "relative_initial_gap": 0.09086835173258359,
+      "certified": false
+    },
+    {
+      "seed": 1,
+      "positive_eigenvalues": 1,
+      "stationary_candidates": 1,
+      "best_found_Y": 4.009181684913154,
+      "initial_Y": 3.667768362815161,
+      "budget_binds": true,
+      "relative_initial_gap": 0.08515785737093332,
+      "certified": false
+    },
+    {
+      "seed": 2,
+      "positive_eigenvalues": 1,
+      "stationary_candidates": 1,
+      "best_found_Y": 2.593415084052112,
+      "initial_Y": 2.1939743346306937,
+      "budget_binds": true,
+      "relative_initial_gap": 0.15402114064876476,
+      "certified": false
+    },
+    {
+      "seed": 3,
+      "positive_eigenvalues": 2,
+      "stationary_candidates": 2,
+      "best_found_Y": 2.1134683518011026,
+      "initial_Y": 1.7837951743839613,
+      "budget_binds": true,
+      "relative_initial_gap": 0.1559868058285297,
+      "certified": false
+    },
+    {
+      "seed": 4,
+      "positive_eigenvalues": 2,
+      "stationary_candidates": 1,
+      "best_found_Y": 3.577050611960019,
+      "initial_Y": 2.3939980763916644,
+      "budget_binds": true,
+      "relative_initial_gap": 0.3307340778497147,
+      "certified": false
+    }
+  ]
+}

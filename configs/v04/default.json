@@ -1,0 +1,41 @@
+{
+  "world": {
+    "scenario": "frustrated",
+    "n": 5
+  },
+  "config": {
+    "periods": 300,
+    "T": 192,
+    "k": 1,
+    "schedule": "rotation",
+    "frequencies": "nonresonant",
+    "w_min": 0.1,
+    "a_max": 0.08,
+    "eps_dis": 0.02,
+    "rho_dis": 0.05,
+    "curvature_floor": 0.05,
+    "beta": 0.7,
+    "phi_mem": 1.0,
+    "g0": 1.0,
+    "commit": "fixed",
+    "within_period": "fixed",
+    "budget_rule": "price",
+    "theta_adj": 0.3,
+    "eta_p": 0.5,
+    "p_min": 1e-08,
+    "p_max": 1000.0,
+    "lambda_overload": 1.0,
+    "price_tol": 1e-10,
+    "multistarts": 300,
+    "log_executions": false,
+    "outside_kind": "none",
+    "outside_period": 150,
+    "outside_scale": 0.4,
+    "outside_role": 0,
+    "outside_local_gain": 0.3,
+    "outside_cost_fraction": 0.3,
+    "outside_relocate": false,
+    "initial_targets": null,
+    "non_disruption": "draft"
+  }
+}

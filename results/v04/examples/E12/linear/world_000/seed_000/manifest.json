@@ -1,0 +1,88 @@
+{
+  "identity": "b50f86aec762934cfc29125786a87d1adb6ee25606f4018eb0c554c0d563bd27",
+  "version": "0.4.0",
+  "code_hash": "d5f31a480d4078bf4ad2",
+  "job": {
+    "family": "E12",
+    "arm": "linear",
+    "world_seed": 0,
+    "seed": 0,
+    "world": {
+      "scenario": "example1",
+      "n": 5,
+      "s_off": 0.4,
+      "budget_factor": 1.0,
+      "alpha_max": 0.3
+    },
+    "config": {
+      "periods": 300,
+      "T": 192,
+      "k": 1,
+      "schedule": "rotation",
+      "frequencies": "nonresonant",
+      "w_min": 0.1,
+      "a_max": 0.08,
+      "eps_dis": 0.02,
+      "rho_dis": 0.05,
+      "curvature_floor": 0.05,
+      "beta": 0.7,
+      "phi_mem": 1.0,
+      "g0": 1.0,
+      "commit": "fixed",
+      "within_period": "fixed",
+      "budget_rule": "price",
+      "theta_adj": 0.3,
+      "eta_p": 0.5,
+      "p_min": 1e-08,
+      "p_max": 1000.0,
+      "lambda_overload": 1.0,
+      "price_tol": 1e-10,
+      "multistarts": 32,
+      "log_executions": false,
+      "outside_kind": "none",
+      "outside_period": 150,
+      "outside_scale": 0.4,
+      "outside_role": 0,
+      "outside_local_gain": 0.3,
+      "outside_cost_fraction": 0.3,
+      "outside_relocate": false,
+      "initial_targets": null,
+      "non_disruption": "draft"
+    }
+  },
+  "world": {
+    "b": [
+      1.0,
+      0.5
+    ],
+    "C": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "gamma": [
+      1.0,
+      1.0
+    ],
+    "B": 2.0,
+    "alpha": [
+      0.0,
+      0.0
+    ],
+    "w": [
+      1.0,
+      1.0
+    ],
+    "Y0": 0.0,
+    "qbar": 0.999999
+  },
+  "python": "3.11.2 (v3.11.2:878ead1ac1, Feb  7 2023, 10:02:41) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "1.23.5",
+  "scipy": "1.10.1",
+  "status": "running"
+}
