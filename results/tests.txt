@@ -1,0 +1,23 @@
+test_correlated_critic (test_model.ModelTests.test_correlated_critic) ... ok
+test_crn_exact_pairing (test_model.ModelTests.test_crn_exact_pairing) ... ok
+test_deferred_evaluation_and_gated (test_model.ModelTests.test_deferred_evaluation_and_gated) ... ok
+test_determinism_snapshot_and_external (test_model.ModelTests.test_determinism_snapshot_and_external) ... ok
+test_equilibrium_certification (test_model.ModelTests.test_equilibrium_certification) ... ok
+test_evaluation_derivatives (test_model.ModelTests.test_evaluation_derivatives) ... ok
+test_grids (test_model.ModelTests.test_grids) ... ok
+test_infeasible_budget (test_model.ModelTests.test_infeasible_budget) ... ok
+test_interpreter_floor (test_model.ModelTests.test_interpreter_floor) ... ok
+test_invalid_meta_and_infinite_manifest (test_model.ModelTests.test_invalid_meta_and_infinite_manifest) ... ok
+test_logit_fallback_not_claimed_as_equilibrium (test_model.ModelTests.test_logit_fallback_not_claimed_as_equilibrium) ... ok
+test_mass_budget_and_vectorization (test_model.ModelTests.test_mass_budget_and_vectorization) ... ok
+test_measurement_inversion (test_model.ModelTests.test_measurement_inversion) ... ok
+test_no_loop_and_rejection_accounting (test_model.ModelTests.test_no_loop_and_rejection_accounting) ... ok
+test_oring (test_model.ModelTests.test_oring) ... ok
+test_sampler_exact (test_model.ModelTests.test_sampler_exact) ... ok
+test_sticky_exact_potential (test_model.ModelTests.test_sticky_exact_potential) ... ok
+test_two_stage_complementarity (test_model.ModelTests.test_two_stage_complementarity) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 4.587s
+
+OK

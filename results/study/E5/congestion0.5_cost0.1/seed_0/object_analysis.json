@@ -1,0 +1,360 @@
+{
+  "solution": {
+    "profile": [
+      18,
+      3,
+      6,
+      19,
+      23
+    ],
+    "converged": true,
+    "regret": 0.0,
+    "sweeps": 3,
+    "method": "best_response"
+  },
+  "Q": 0.6016685088500653,
+  "W": 0.2766685088500653,
+  "exhaustive": {
+    "profiles": 950400,
+    "feasible_profiles": 950400,
+    "pure_equilibria": [
+      {
+        "profile": [
+          17,
+          3,
+          9,
+          19,
+          5
+        ],
+        "welfare": 0.3133278208202442
+      },
+      {
+        "profile": [
+          17,
+          4,
+          6,
+          19,
+          17
+        ],
+        "welfare": 0.2773811763632874
+      },
+      {
+        "profile": [
+          17,
+          4,
+          7,
+          19,
+          5
+        ],
+        "welfare": 0.3023811763632874
+      },
+      {
+        "profile": [
+          17,
+          5,
+          6,
+          20,
+          11
+        ],
+        "welfare": 0.22713429046562217
+      },
+      {
+        "profile": [
+          18,
+          3,
+          6,
+          19,
+          23
+        ],
+        "welfare": 0.2766685088500653
+      },
+      {
+        "profile": [
+          18,
+          3,
+          6,
+          21,
+          17
+        ],
+        "welfare": 0.26237617781035527
+      },
+      {
+        "profile": [
+          18,
+          3,
+          7,
+          19,
+          11
+        ],
+        "welfare": 0.31666850885006526
+      },
+      {
+        "profile": [
+          18,
+          3,
+          7,
+          20,
+          5
+        ],
+        "welfare": 0.31102419189407765
+      },
+      {
+        "profile": [
+          18,
+          4,
+          6,
+          21,
+          5
+        ],
+        "welfare": 0.24444192994192465
+      },
+      {
+        "profile": [
+          23,
+          3,
+          6,
+          19,
+          17
+        ],
+        "welfare": 0.26539555706191176
+      },
+      {
+        "profile": [
+          23,
+          3,
+          6,
+          21,
+          5
+        ],
+        "welfare": 0.2504934204678752
+      },
+      {
+        "profile": [
+          23,
+          3,
+          7,
+          19,
+          5
+        ],
+        "welfare": 0.2903955570619117
+      },
+      {
+        "profile": [
+          23,
+          4,
+          6,
+          20,
+          11
+        ],
+        "welfare": 0.2200991810022077
+      },
+      {
+        "profile": [
+          23,
+          5,
+          6,
+          19,
+          5
+        ],
+        "welfare": 0.19579470879064687
+      }
+    ],
+    "team_optimum": {
+      "profile": [
+        15,
+        2,
+        6,
+        15,
+        0
+      ],
+      "welfare": 0.4001633967989128,
+      "exact": true
+    },
+    "pure_price_of_anarchy": 0.2043686880082659,
+    "sweep_attractors": [
+      {
+        "period": 1,
+        "basin_profiles": 152100,
+        "profiles": [
+          [
+            17,
+            3,
+            9,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 244400,
+        "profiles": [
+          [
+            17,
+            4,
+            6,
+            19,
+            17
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 228550,
+        "profiles": [
+          [
+            17,
+            4,
+            7,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 5375,
+        "profiles": [
+          [
+            17,
+            5,
+            6,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 135175,
+        "profiles": [
+          [
+            18,
+            3,
+            6,
+            19,
+            23
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 9600,
+        "profiles": [
+          [
+            18,
+            3,
+            6,
+            21,
+            17
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 103600,
+        "profiles": [
+          [
+            18,
+            3,
+            7,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 21275,
+        "profiles": [
+          [
+            18,
+            3,
+            7,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 22375,
+        "profiles": [
+          [
+            18,
+            4,
+            6,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 7050,
+        "profiles": [
+          [
+            23,
+            3,
+            6,
+            19,
+            17
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 2325,
+        "profiles": [
+          [
+            23,
+            3,
+            6,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 11025,
+        "profiles": [
+          [
+            23,
+            3,
+            7,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 975,
+        "profiles": [
+          [
+            23,
+            4,
+            6,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 6575,
+        "profiles": [
+          [
+            23,
+            5,
+            6,
+            19,
+            5
+          ]
+        ]
+      }
+    ],
+    "dynamics_scope": "All feasible starts; fixed I,M,R,G,C sweep; current-action ties; tolerance 1e-9"
+  }
+}

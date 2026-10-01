@@ -133,8 +133,20 @@ class ModelTests(unittest.TestCase):
         meta=replace(MetaParams(),p_eval=1.,p_rule=0.)
         rows=run(3,designer=choice,meta=meta,rich=False)
         self.assertEqual(rows[0]['protocol'],asdict(EvalProtocol()))
-        self.assertEqual(rows[1]['handover_protocol'],rows[2]['protocol'] if not rows[2]['accepted'] else rows[2]['protocol'])
+        self.assertEqual(rows[1]['handover_protocol'],rows[2]['protocol'])
         rows=run(2,designer=replace(choice,promotion='gated'),meta=replace(meta,H_ign=2),rich=False)
         self.assertEqual(sum(r['promotion_trial_cycles'] for r in rows),8)
+
+    def test_invalid_meta_and_infinite_manifest(self):
+        with self.assertRaises(ValueError): MetaParams(H_ign=0)
+        with self.assertRaises(ValueError): MetaParams(ell_rho=0)
+        with self.assertRaises(ValueError): MetaParams(p_eval=.9,p_rule=.9)
+        self.assertEqual(MetaParams(ell_rho='Infinity').ell_rho,float('inf'))
+
+    def test_logit_fallback_not_claimed_as_equilibrium(self):
+        sol=solve(self.cfg,self.tech,LOW,max_sweeps=1,logit_steps=20)
+        self.assertFalse(sol.converged)
+        self.assertEqual(sol.method,'logit_modal_non_equilibrium')
+        self.assertGreaterEqual(sol.regret,0.)
 
 if __name__=='__main__': unittest.main()

@@ -1,0 +1,567 @@
+{
+  "solution": {
+    "profile": [
+      9,
+      2,
+      4,
+      10,
+      0
+    ],
+    "converged": true,
+    "regret": 0.0,
+    "sweeps": 2,
+    "method": "best_response"
+  },
+  "Q": 0.33857705982259956,
+  "W": 0.20357705982259955,
+  "exhaustive": {
+    "profiles": 950400,
+    "feasible_profiles": 950400,
+    "pure_equilibria": [
+      {
+        "profile": [
+          9,
+          2,
+          4,
+          10,
+          0
+        ],
+        "welfare": 0.20357705982259955
+      },
+      {
+        "profile": [
+          9,
+          2,
+          5,
+          10,
+          0
+        ],
+        "welfare": 0.20357705982259955
+      },
+      {
+        "profile": [
+          9,
+          3,
+          9,
+          19,
+          11
+        ],
+        "welfare": -0.012442125589074648
+      },
+      {
+        "profile": [
+          9,
+          3,
+          9,
+          20,
+          5
+        ],
+        "welfare": -0.021144942458525107
+      },
+      {
+        "profile": [
+          9,
+          4,
+          7,
+          19,
+          11
+        ],
+        "welfare": -0.02005307474483925
+      },
+      {
+        "profile": [
+          9,
+          4,
+          7,
+          20,
+          5
+        ],
+        "welfare": -0.02849871952488331
+      },
+      {
+        "profile": [
+          14,
+          2,
+          9,
+          20,
+          11
+        ],
+        "welfare": 0.020306253800213225
+      },
+      {
+        "profile": [
+          14,
+          2,
+          9,
+          21,
+          5
+        ],
+        "welfare": 0.000701928773198579
+      },
+      {
+        "profile": [
+          14,
+          3,
+          7,
+          20,
+          11
+        ],
+        "welfare": 0.02019855451184932
+      },
+      {
+        "profile": [
+          14,
+          3,
+          7,
+          21,
+          5
+        ],
+        "welfare": 0.000599647471501763
+      },
+      {
+        "profile": [
+          14,
+          3,
+          9,
+          16,
+          11
+        ],
+        "welfare": -0.0005752405833397423
+      },
+      {
+        "profile": [
+          14,
+          3,
+          9,
+          19,
+          5
+        ],
+        "welfare": -0.008699428244980711
+      },
+      {
+        "profile": [
+          14,
+          4,
+          5,
+          20,
+          11
+        ],
+        "welfare": -0.002245760438716382
+      },
+      {
+        "profile": [
+          14,
+          4,
+          7,
+          16,
+          11
+        ],
+        "welfare": -0.008937340978019515
+      },
+      {
+        "profile": [
+          14,
+          4,
+          7,
+          19,
+          5
+        ],
+        "welfare": -0.017032363301808018
+      },
+      {
+        "profile": [
+          19,
+          2,
+          9,
+          19,
+          11
+        ],
+        "welfare": -0.013303323752453966
+      },
+      {
+        "profile": [
+          19,
+          2,
+          9,
+          20,
+          5
+        ],
+        "welfare": -0.0225331767646903
+      },
+      {
+        "profile": [
+          19,
+          3,
+          7,
+          19,
+          11
+        ],
+        "welfare": -0.014623003241499177
+      },
+      {
+        "profile": [
+          19,
+          3,
+          7,
+          20,
+          5
+        ],
+        "welfare": -0.02380802520215486
+      },
+      {
+        "profile": [
+          19,
+          4,
+          5,
+          17,
+          11
+        ],
+        "welfare": -0.045529349323932045
+      },
+      {
+        "profile": [
+          19,
+          4,
+          5,
+          20,
+          5
+        ],
+        "welfare": -0.044384076019773844
+      },
+      {
+        "profile": [
+          19,
+          4,
+          7,
+          15,
+          11
+        ],
+        "welfare": -0.042972618057905615
+      },
+      {
+        "profile": [
+          19,
+          4,
+          7,
+          16,
+          5
+        ],
+        "welfare": -0.051194570534890016
+      }
+    ],
+    "team_optimum": {
+      "profile": [
+        10,
+        1,
+        4,
+        10,
+        0
+      ],
+      "welfare": 0.24462396012689674,
+      "exact": true
+    },
+    "pure_price_of_anarchy": 0.29581853066178676,
+    "sweep_attractors": [
+      {
+        "period": 1,
+        "basin_profiles": 928700,
+        "profiles": [
+          [
+            9,
+            2,
+            4,
+            10,
+            0
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 17200,
+        "profiles": [
+          [
+            9,
+            2,
+            5,
+            10,
+            0
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 575,
+        "profiles": [
+          [
+            9,
+            3,
+            9,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 225,
+        "profiles": [
+          [
+            9,
+            3,
+            9,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 925,
+        "profiles": [
+          [
+            9,
+            4,
+            7,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 925,
+        "profiles": [
+          [
+            9,
+            4,
+            7,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 150,
+        "profiles": [
+          [
+            14,
+            2,
+            9,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 350,
+        "profiles": [
+          [
+            14,
+            2,
+            9,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 50,
+        "profiles": [
+          [
+            14,
+            3,
+            7,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 150,
+        "profiles": [
+          [
+            14,
+            3,
+            7,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 25,
+        "profiles": [
+          [
+            14,
+            3,
+            9,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 100,
+        "profiles": [
+          [
+            14,
+            3,
+            9,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 75,
+        "profiles": [
+          [
+            14,
+            4,
+            5,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 75,
+        "profiles": [
+          [
+            14,
+            4,
+            7,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 100,
+        "profiles": [
+          [
+            14,
+            4,
+            7,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 75,
+        "profiles": [
+          [
+            19,
+            2,
+            9,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 50,
+        "profiles": [
+          [
+            19,
+            2,
+            9,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 125,
+        "profiles": [
+          [
+            19,
+            3,
+            7,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 50,
+        "profiles": [
+          [
+            19,
+            3,
+            7,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 150,
+        "profiles": [
+          [
+            19,
+            4,
+            5,
+            17,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 75,
+        "profiles": [
+          [
+            19,
+            4,
+            5,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 100,
+        "profiles": [
+          [
+            19,
+            4,
+            7,
+            15,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 150,
+        "profiles": [
+          [
+            19,
+            4,
+            7,
+            16,
+            5
+          ]
+        ]
+      }
+    ],
+    "dynamics_scope": "All feasible starts; fixed I,M,R,G,C sweep; current-action ties; tolerance 1e-9"
+  }
+}

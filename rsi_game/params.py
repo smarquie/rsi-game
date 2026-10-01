@@ -110,6 +110,22 @@ class MetaParams:
     H_ign: int = 5
     delta_ign: float = 0.
 
+    def __post_init__(self):
+        if self.ell_rho == 'Infinity': object.__setattr__(self, 'ell_rho', float('inf'))
+        for name, value in asdict(self).items():
+            if name == 'ell_rho':
+                if not value > 0: raise ValueError('ell_rho must be positive, possibly infinity')
+            elif not math.isfinite(value): raise ValueError(f'{name} must be finite')
+        if min(self.c_ref,self.c_max,self.delta_rho,self.H_ign) <= 0:
+            raise ValueError('Reference capability, frontier, separation step and trial length must be positive')
+        if not isinstance(self.H_ign,int): raise ValueError('H_ign must be an integer')
+        for name in ('psi_meta','p_cap','p_rule','p_eval','rho_E0','f_E'):
+            if not 0 <= getattr(self,name) <= 1: raise ValueError(f'{name} must lie in [0,1]')
+        if self.psi_meta == 0 or self.p_rule+self.p_eval > 1:
+            raise ValueError('Positive meta discount and valid target probabilities required')
+        if min(self.sc,self.s_lam,self.s_w,self.omega_o,self.o_sep,self.base_o,self.delta_anchor,self.delta_separation,self.c_anchor,self.zeta_E,self.zeta_d,self.lambda_T) < 0:
+            raise ValueError('Noise, costs, steps and detection powers must be nonnegative')
+
 @dataclass(frozen=True)
 class DesignerChoice:
     K: int | None = 5  # None means infinity

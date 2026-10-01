@@ -1,0 +1,84 @@
+{
+  "solution": {
+    "profile": [
+      9,
+      2,
+      4,
+      10,
+      0
+    ],
+    "converged": true,
+    "regret": 0.0,
+    "sweeps": 4,
+    "method": "best_response"
+  },
+  "Q": 0.38403696678669424,
+  "W": 0.24903696678669424,
+  "exhaustive": {
+    "profiles": 950400,
+    "feasible_profiles": 950400,
+    "pure_equilibria": [
+      {
+        "profile": [
+          9,
+          2,
+          4,
+          10,
+          0
+        ],
+        "welfare": 0.24903696678669424
+      },
+      {
+        "profile": [
+          9,
+          2,
+          5,
+          10,
+          0
+        ],
+        "welfare": 0.24903696678669424
+      }
+    ],
+    "team_optimum": {
+      "profile": [
+        10,
+        2,
+        4,
+        15,
+        0
+      ],
+      "welfare": 0.30828999705939697,
+      "exact": true
+    },
+    "pure_price_of_anarchy": 0.059253030272702734,
+    "sweep_attractors": [
+      {
+        "period": 1,
+        "basin_profiles": 945000,
+        "profiles": [
+          [
+            9,
+            2,
+            4,
+            10,
+            0
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 5400,
+        "profiles": [
+          [
+            9,
+            2,
+            5,
+            10,
+            0
+          ]
+        ]
+      }
+    ],
+    "dynamics_scope": "All feasible starts; fixed I,M,R,G,C sweep; current-action ties; tolerance 1e-9"
+  }
+}

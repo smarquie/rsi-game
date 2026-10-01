@@ -1,0 +1,131 @@
+{
+  "seed": 2,
+  "parameters": {
+    "agent": {
+      "c": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lam": [
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7
+      ],
+      "w": [
+        0.05,
+        0.05,
+        0.05,
+        0.1,
+        0.05
+      ],
+      "o": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "rho": 0.5,
+      "L": 3
+    },
+    "tech": {
+      "B": 1.0,
+      "difficulties": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "probabilities": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "zeta_phi": 1.5,
+      "b_bar": 0.05,
+      "psi": [
+        0.6,
+        0.4,
+        0.4,
+        0.5
+      ],
+      "gamma_sigma": 0.15,
+      "mu_sigma": 0.5,
+      "eta": [
+        0.2,
+        0.4,
+        0.2
+      ],
+      "omega": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "eps_W": 0.0,
+      "a_C": 3.0,
+      "xi": 1.0,
+      "beta_p": 10.0,
+      "kappa": 0.5,
+      "kappa_T": 0.5,
+      "chi_C": 1
+    },
+    "protocol": {
+      "anchor": 0.3,
+      "separation": 0.3
+    },
+    "meta": {
+      "psi_meta": 0.8,
+      "zeta_d": 1.5,
+      "mu0": 0.1,
+      "sc": 0.15,
+      "c_ref": 0.8,
+      "c_max": 4.0,
+      "omega_o": 0.02,
+      "mu_lam": 0.03,
+      "s_lam": 0.05,
+      "mu_w": 0.1,
+      "s_w": 0.2,
+      "p_cap": 0.6,
+      "p_rule": 0.1,
+      "p_eval": 0.15,
+      "delta_rho": 0.1,
+      "o_sep": 0.03,
+      "base_o": 0.02,
+      "delta_anchor": 0.1,
+      "delta_separation": 0.1,
+      "c_anchor": 0.02,
+      "rho_E0": 0.9,
+      "ell_rho": 2.0,
+      "zeta_E": 2.0,
+      "f_E": 0.05,
+      "lambda_T": 0.2,
+      "H_ign": 5,
+      "delta_ign": 0.0
+    },
+    "designer": {
+      "K": 5,
+      "promotion": "auto",
+      "edit_class": 2,
+      "eval_timing": "immediate",
+      "selection": "warm",
+      "n_cycles": 100,
+      "k_sparse": 1,
+      "delta": 0.005,
+      "m_eval": 200,
+      "crn": false,
+      "n_diag": 50,
+      "exact": false,
+      "oracle_diagnosis": false,
+      "external_capability": 1.2,
+      "diagnostics_every": 10
+    }
+  },
+  "seconds": 9.253434461075813,
+  "model_version": "0.1.0",
+  "numpy_version": "1.23.5",
+  "python_version": "3.11.2 (v3.11.2:878ead1ac1, Feb  7 2023, 10:02:41) [Clang 13.0.0 (clang-1300.0.29.30)]"
+}

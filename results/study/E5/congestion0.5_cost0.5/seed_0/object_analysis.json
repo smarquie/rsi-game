@@ -1,0 +1,1234 @@
+{
+  "solution": {
+    "profile": [
+      14,
+      2,
+      4,
+      15,
+      0
+    ],
+    "converged": true,
+    "regret": 0.0,
+    "sweeps": 2,
+    "method": "best_response"
+  },
+  "Q": 0.5211613593625829,
+  "W": 0.34616135936258285,
+  "exhaustive": {
+    "profiles": 950400,
+    "feasible_profiles": 950400,
+    "pure_equilibria": [
+      {
+        "profile": [
+          12,
+          3,
+          9,
+          16,
+          11
+        ],
+        "welfare": 0.3054788876228147
+      },
+      {
+        "profile": [
+          12,
+          3,
+          9,
+          19,
+          5
+        ],
+        "welfare": 0.31546334827212996
+      },
+      {
+        "profile": [
+          12,
+          3,
+          11,
+          15,
+          5
+        ],
+        "welfare": 0.2911111295666374
+      },
+      {
+        "profile": [
+          12,
+          4,
+          9,
+          15,
+          5
+        ],
+        "welfare": 0.29103191395360584
+      },
+      {
+        "profile": [
+          13,
+          2,
+          9,
+          20,
+          11
+        ],
+        "welfare": 0.29271660519036913
+      },
+      {
+        "profile": [
+          13,
+          2,
+          11,
+          16,
+          11
+        ],
+        "welfare": 0.26951834326509516
+      },
+      {
+        "profile": [
+          13,
+          2,
+          11,
+          19,
+          5
+        ],
+        "welfare": 0.2784836020131518
+      },
+      {
+        "profile": [
+          13,
+          3,
+          7,
+          20,
+          11
+        ],
+        "welfare": 0.3025813568426142
+      },
+      {
+        "profile": [
+          13,
+          3,
+          7,
+          21,
+          5
+        ],
+        "welfare": 0.2898244346073401
+      },
+      {
+        "profile": [
+          13,
+          4,
+          7,
+          16,
+          11
+        ],
+        "welfare": 0.27877312370724283
+      },
+      {
+        "profile": [
+          13,
+          4,
+          7,
+          19,
+          5
+        ],
+        "welfare": 0.28803256130645816
+      },
+      {
+        "profile": [
+          13,
+          5,
+          7,
+          15,
+          5
+        ],
+        "welfare": 0.25861476141698114
+      },
+      {
+        "profile": [
+          14,
+          2,
+          4,
+          15,
+          0
+        ],
+        "welfare": 0.34616135936258285
+      },
+      {
+        "profile": [
+          14,
+          2,
+          5,
+          15,
+          0
+        ],
+        "welfare": 0.34616135936258285
+      },
+      {
+        "profile": [
+          14,
+          2,
+          9,
+          21,
+          5
+        ],
+        "welfare": 0.2622884360715815
+      },
+      {
+        "profile": [
+          14,
+          4,
+          5,
+          20,
+          11
+        ],
+        "welfare": 0.2486427340393783
+      },
+      {
+        "profile": [
+          14,
+          4,
+          5,
+          21,
+          5
+        ],
+        "welfare": 0.2366165336440007
+      },
+      {
+        "profile": [
+          14,
+          5,
+          5,
+          16,
+          11
+        ],
+        "welfare": 0.22244075947414965
+      },
+      {
+        "profile": [
+          14,
+          5,
+          5,
+          19,
+          5
+        ],
+        "welfare": 0.22973288699941907
+      },
+      {
+        "profile": [
+          17,
+          3,
+          9,
+          15,
+          11
+        ],
+        "welfare": 0.31847265849203465
+      },
+      {
+        "profile": [
+          17,
+          3,
+          9,
+          16,
+          5
+        ],
+        "welfare": 0.3128114166143242
+      },
+      {
+        "profile": [
+          17,
+          4,
+          7,
+          15,
+          11
+        ],
+        "welfare": 0.3079007336195364
+      },
+      {
+        "profile": [
+          17,
+          4,
+          7,
+          16,
+          5
+        ],
+        "welfare": 0.30233866810545085
+      },
+      {
+        "profile": [
+          18,
+          2,
+          8,
+          21,
+          5
+        ],
+        "welfare": 0.2779411845177941
+      },
+      {
+        "profile": [
+          18,
+          2,
+          9,
+          19,
+          11
+        ],
+        "welfare": 0.30700393858011044
+      },
+      {
+        "profile": [
+          18,
+          2,
+          9,
+          20,
+          5
+        ],
+        "welfare": 0.30145028599668805
+      },
+      {
+        "profile": [
+          18,
+          2,
+          10,
+          19,
+          5
+        ],
+        "welfare": 0.2755329970495495
+      },
+      {
+        "profile": [
+          18,
+          2,
+          11,
+          15,
+          11
+        ],
+        "welfare": 0.2813656973056732
+      },
+      {
+        "profile": [
+          18,
+          2,
+          11,
+          16,
+          5
+        ],
+        "welfare": 0.27605255981954824
+      },
+      {
+        "profile": [
+          18,
+          3,
+          7,
+          19,
+          11
+        ],
+        "welfare": 0.31666850885006526
+      },
+      {
+        "profile": [
+          18,
+          3,
+          7,
+          20,
+          5
+        ],
+        "welfare": 0.31102419189407765
+      },
+      {
+        "profile": [
+          19,
+          2,
+          7,
+          21,
+          11
+        ],
+        "welfare": 0.2829167170521273
+      },
+      {
+        "profile": [
+          19,
+          3,
+          5,
+          21,
+          11
+        ],
+        "welfare": 0.26248156278719603
+      },
+      {
+        "profile": [
+          19,
+          4,
+          5,
+          19,
+          11
+        ],
+        "welfare": 0.259127090098763
+      },
+      {
+        "profile": [
+          19,
+          4,
+          5,
+          20,
+          5
+        ],
+        "welfare": 0.2540225753773155
+      },
+      {
+        "profile": [
+          19,
+          5,
+          5,
+          15,
+          11
+        ],
+        "welfare": 0.2299901556593017
+      },
+      {
+        "profile": [
+          19,
+          5,
+          5,
+          16,
+          5
+        ],
+        "welfare": 0.2251589776518137
+      },
+      {
+        "profile": [
+          22,
+          3,
+          9,
+          15,
+          5
+        ],
+        "welfare": 0.29107753434968714
+      },
+      {
+        "profile": [
+          23,
+          2,
+          9,
+          16,
+          11
+        ],
+        "welfare": 0.27180494571337255
+      },
+      {
+        "profile": [
+          23,
+          2,
+          9,
+          19,
+          5
+        ],
+        "welfare": 0.281657399487989
+      },
+      {
+        "profile": [
+          23,
+          2,
+          11,
+          15,
+          5
+        ],
+        "welfare": 0.2553977232178802
+      },
+      {
+        "profile": [
+          23,
+          3,
+          7,
+          16,
+          11
+        ],
+        "welfare": 0.280313158660607
+      },
+      {
+        "profile": [
+          23,
+          3,
+          7,
+          19,
+          5
+        ],
+        "welfare": 0.2903955570619117
+      },
+      {
+        "profile": [
+          23,
+          4,
+          7,
+          15,
+          5
+        ],
+        "welfare": 0.26243468014723254
+      },
+      {
+        "profile": [
+          24,
+          2,
+          7,
+          20,
+          11
+        ],
+        "welfare": 0.27186156707189185
+      },
+      {
+        "profile": [
+          24,
+          2,
+          7,
+          21,
+          5
+        ],
+        "welfare": 0.25863668814545077
+      },
+      {
+        "profile": [
+          24,
+          3,
+          5,
+          20,
+          11
+        ],
+        "welfare": 0.2506571792913121
+      },
+      {
+        "profile": [
+          24,
+          3,
+          5,
+          21,
+          5
+        ],
+        "welfare": 0.23773996546749104
+      },
+      {
+        "profile": [
+          24,
+          4,
+          5,
+          16,
+          11
+        ],
+        "welfare": 0.22502608203002172
+      },
+      {
+        "profile": [
+          24,
+          4,
+          5,
+          19,
+          5
+        ],
+        "welfare": 0.23325876052437217
+      },
+      {
+        "profile": [
+          24,
+          5,
+          4,
+          21,
+          5
+        ],
+        "welfare": 0.14697056330620073
+      },
+      {
+        "profile": [
+          24,
+          5,
+          5,
+          15,
+          5
+        ],
+        "welfare": 0.2032697916360129
+      }
+    ],
+    "team_optimum": {
+      "profile": [
+        15,
+        2,
+        6,
+        15,
+        0
+      ],
+      "welfare": 0.4001633967989128,
+      "exact": true
+    },
+    "pure_price_of_anarchy": 0.25319283349271204,
+    "sweep_attractors": [
+      {
+        "period": 1,
+        "basin_profiles": 3825,
+        "profiles": [
+          [
+            12,
+            3,
+            9,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 4275,
+        "profiles": [
+          [
+            12,
+            3,
+            9,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 6725,
+        "profiles": [
+          [
+            12,
+            3,
+            11,
+            15,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 6800,
+        "profiles": [
+          [
+            12,
+            4,
+            9,
+            15,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 8875,
+        "profiles": [
+          [
+            13,
+            2,
+            9,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 2900,
+        "profiles": [
+          [
+            13,
+            2,
+            11,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 2625,
+        "profiles": [
+          [
+            13,
+            2,
+            11,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 3200,
+        "profiles": [
+          [
+            13,
+            3,
+            7,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 2100,
+        "profiles": [
+          [
+            13,
+            3,
+            7,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 2875,
+        "profiles": [
+          [
+            13,
+            4,
+            7,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 2275,
+        "profiles": [
+          [
+            13,
+            4,
+            7,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 4950,
+        "profiles": [
+          [
+            13,
+            5,
+            7,
+            15,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 730750,
+        "profiles": [
+          [
+            14,
+            2,
+            4,
+            15,
+            0
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 131400,
+        "profiles": [
+          [
+            14,
+            2,
+            5,
+            15,
+            0
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 4200,
+        "profiles": [
+          [
+            14,
+            2,
+            9,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 4650,
+        "profiles": [
+          [
+            14,
+            4,
+            5,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 1300,
+        "profiles": [
+          [
+            14,
+            4,
+            5,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 3600,
+        "profiles": [
+          [
+            14,
+            5,
+            5,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 4225,
+        "profiles": [
+          [
+            14,
+            5,
+            5,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 575,
+        "profiles": [
+          [
+            17,
+            3,
+            9,
+            15,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 200,
+        "profiles": [
+          [
+            17,
+            3,
+            9,
+            16,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 1300,
+        "profiles": [
+          [
+            17,
+            4,
+            7,
+            15,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 625,
+        "profiles": [
+          [
+            17,
+            4,
+            7,
+            16,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 225,
+        "profiles": [
+          [
+            18,
+            2,
+            8,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 1100,
+        "profiles": [
+          [
+            18,
+            2,
+            9,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 650,
+        "profiles": [
+          [
+            18,
+            2,
+            9,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 150,
+        "profiles": [
+          [
+            18,
+            2,
+            10,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 525,
+        "profiles": [
+          [
+            18,
+            2,
+            11,
+            15,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 225,
+        "profiles": [
+          [
+            18,
+            2,
+            11,
+            16,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 575,
+        "profiles": [
+          [
+            18,
+            3,
+            7,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 150,
+        "profiles": [
+          [
+            18,
+            3,
+            7,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 650,
+        "profiles": [
+          [
+            19,
+            2,
+            7,
+            21,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 225,
+        "profiles": [
+          [
+            19,
+            3,
+            5,
+            21,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 1200,
+        "profiles": [
+          [
+            19,
+            4,
+            5,
+            19,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 900,
+        "profiles": [
+          [
+            19,
+            4,
+            5,
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 950,
+        "profiles": [
+          [
+            19,
+            5,
+            5,
+            15,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 575,
+        "profiles": [
+          [
+            19,
+            5,
+            5,
+            16,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 800,
+        "profiles": [
+          [
+            22,
+            3,
+            9,
+            15,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 625,
+        "profiles": [
+          [
+            23,
+            2,
+            9,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 700,
+        "profiles": [
+          [
+            23,
+            2,
+            9,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 350,
+        "profiles": [
+          [
+            23,
+            2,
+            11,
+            15,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 275,
+        "profiles": [
+          [
+            23,
+            3,
+            7,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 450,
+        "profiles": [
+          [
+            23,
+            3,
+            7,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 375,
+        "profiles": [
+          [
+            23,
+            4,
+            7,
+            15,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 650,
+        "profiles": [
+          [
+            24,
+            2,
+            7,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 525,
+        "profiles": [
+          [
+            24,
+            2,
+            7,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 400,
+        "profiles": [
+          [
+            24,
+            3,
+            5,
+            20,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 350,
+        "profiles": [
+          [
+            24,
+            3,
+            5,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 475,
+        "profiles": [
+          [
+            24,
+            4,
+            5,
+            16,
+            11
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 350,
+        "profiles": [
+          [
+            24,
+            4,
+            5,
+            19,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 150,
+        "profiles": [
+          [
+            24,
+            5,
+            4,
+            21,
+            5
+          ]
+        ]
+      },
+      {
+        "period": 1,
+        "basin_profiles": 1575,
+        "profiles": [
+          [
+            24,
+            5,
+            5,
+            15,
+            5
+          ]
+        ]
+      }
+    ],
+    "dynamics_scope": "All feasible starts; fixed I,M,R,G,C sweep; current-action ties; tolerance 1e-9"
+  }
+}

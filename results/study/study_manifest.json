@@ -1,0 +1,7 @@
+{
+  "seeds": 3,
+  "cycles": 100,
+  "runs": 267,
+  "seconds": 627.7010582350194,
+  "scope": "Exploratory all-arm E1-E8 study; not exhaustive continuous meta dynamics; empirical intervals across seeds"
+}
