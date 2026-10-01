@@ -1,0 +1,108 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-10-01T23:15:52.034181+00:00",
+  "report_code_sha256": "594e82d31443ef6ba74661fb9b353cafdf8774598e90e4d432462279d2913a27",
+  "python": "3.11.2",
+  "numpy": "1.23.5",
+  "input_root": "/Users/sergemarquie/Documents/Codex/2026-10-01/wha/outputs/rsi-game/results/v04/examples",
+  "source_files": [
+    {
+      "path": "E12/interference_left/world_000/seed_000/manifest.json",
+      "sha256": "3f2871c54ef282f06d84517e206de709cf77e8482c723aa4c1156e8ee3089a6a"
+    },
+    {
+      "path": "E12/interference_left/world_000/seed_000/complete.json",
+      "sha256": "b0a7add282501e4da6b6131781b719d269069de3fc84ebdb349b152558443f2d"
+    },
+    {
+      "path": "E12/interference_left/world_000/seed_000/summary.json",
+      "sha256": "cdf800a3f32b105eece1a39faaaaec8c64f58535f90bae0e6c2f6e7ac342117a"
+    },
+    {
+      "path": "E12/interference_left/world_000/seed_000/periods.jsonl",
+      "sha256": "b2e62a13885dd5affc5e131bc842b3bb8c6dd7ea9c5fbbad64a09b93e6f227ed"
+    },
+    {
+      "path": "E12/interference_left/world_000/seed_000/benchmarks.json",
+      "sha256": "69c989f4a1dcf2cb9eb7882be6a672d22ef7b2c836ce61ab4a446b69e841063b"
+    },
+    {
+      "path": "E12/interference_right/world_000/seed_000/manifest.json",
+      "sha256": "ba7176063c605a1c151dd484d252bb4045c476b6a68c1e4e460dca88f1df8e89"
+    },
+    {
+      "path": "E12/interference_right/world_000/seed_000/complete.json",
+      "sha256": "689714dd14f7600f0f2dc612ec14a5c87e119ac01dc64c7ec14ed1e6feee0ad3"
+    },
+    {
+      "path": "E12/interference_right/world_000/seed_000/summary.json",
+      "sha256": "3e1e8267f9e0bb3664143f5b76080f9d33ebf492d31ae4d7ae2ad2e95e4ce0f3"
+    },
+    {
+      "path": "E12/interference_right/world_000/seed_000/periods.jsonl",
+      "sha256": "72cf0cef17587924598eb139694ad3e51ddab5ea86966ac30fbcd625b2f0e04d"
+    },
+    {
+      "path": "E12/interference_right/world_000/seed_000/benchmarks.json",
+      "sha256": "69c989f4a1dcf2cb9eb7882be6a672d22ef7b2c836ce61ab4a446b69e841063b"
+    },
+    {
+      "path": "E12/linear/world_000/seed_000/manifest.json",
+      "sha256": "ae5e32bc3695e774e4770e17db5a13d754c686302f2a6c166249a36705f07e2a"
+    },
+    {
+      "path": "E12/linear/world_000/seed_000/complete.json",
+      "sha256": "e4e48788f082fbaa5c1c6231996949c74627864c4c65be2f4cff46456d6f2312"
+    },
+    {
+      "path": "E12/linear/world_000/seed_000/summary.json",
+      "sha256": "cff590dcf10193c9e1f7cd9289fbd239f97bd6d6465ccdbbadaf9283eef46242"
+    },
+    {
+      "path": "E12/linear/world_000/seed_000/periods.jsonl",
+      "sha256": "c8441707da58d67bbcc4852f69d9b68475203625c5fde8b6559b8215eafaa3da"
+    },
+    {
+      "path": "E12/linear/world_000/seed_000/benchmarks.json",
+      "sha256": "8517ec91bb324fae75a6607242e626caa55a3143954d2b45544f643569385346"
+    },
+    {
+      "path": "E12/linear_private_motive/world_000/seed_000/manifest.json",
+      "sha256": "4ea7f8514610d76b494f197c18990483cecf87f1d92994e492754d215380a86b"
+    },
+    {
+      "path": "E12/linear_private_motive/world_000/seed_000/complete.json",
+      "sha256": "1d3cb6f871b6859d4063c31536c153274d6064c85b74948fded47c5dc5870cd4"
+    },
+    {
+      "path": "E12/linear_private_motive/world_000/seed_000/summary.json",
+      "sha256": "b865b749f28a5d7a3c5a0dac984ff10e4a5bdc520648d83c23c940041366e8b2"
+    },
+    {
+      "path": "E12/linear_private_motive/world_000/seed_000/periods.jsonl",
+      "sha256": "4ba439e8843e754be5755b1a8dc64b8a6dcacd9d53f604ffbba6b771603cfc5a"
+    },
+    {
+      "path": "E12/linear_private_motive/world_000/seed_000/benchmarks.json",
+      "sha256": "d2450202cef382e368e44477d920f05aeeb36dd41057666d239cd7281511a7a3"
+    },
+    {
+      "path": "plan.json",
+      "sha256": "2daeebee7c73c6e18da3fc20fce467166f77a768138acc1c0ca304e4c42c8fb9"
+    },
+    {
+      "path": "suite_summary.json",
+      "sha256": "3f2438758d6002379a216d86271ac5e38ed7a7eb1908482178bc98d8c4758c5f"
+    }
+  ],
+  "model_hashes": [
+    "d5f31a480d4078bf4ad2"
+  ],
+  "contrast_specification": [],
+  "bootstrap": {
+    "resamples": 4000,
+    "seed": 4104,
+    "confidence": 0.95
+  },
+  "coverage_status": "COMPLETE"
+}

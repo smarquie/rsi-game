@@ -1,0 +1,6 @@
+family,reference,treatment,metric,changed_parameters,status,matched_worlds,reference_worlds,treatment_worlds,n,mean,median,sd,min,max,ci95_low,ci95_high
+E7,fixed,adaptive_exact,tail_mean_reward,config.within_period,estimated,1,1,1,1,-0.11161909579536955,-0.11161909579536955,,-0.11161909579536955,-0.11161909579536955,,
+E7,fixed,adaptive_theta0.3,mean_overload,,not estimable: missing arms or eligible observations,0,1,0,0,,,,,,,
+E3,k5_nonresonant,k5_resonant,max_curvature_fit_error,,not estimable: missing arms or eligible observations,0,0,1,0,,,,,,,
+R2,price_fixed,ration_fixed,mean_overload,,not estimable: missing arms or eligible observations,0,1,0,0,,,,,,,
+R2,price_fixed,price_adaptive,tail_target_range,,not estimable: missing arms or eligible observations,0,1,0,0,,,,,,,

@@ -39,3 +39,22 @@ def plot_basin(data,output):
         fig.colorbar(scatter,ax=ax);ax.set(xlabel='Initial q1',ylabel='Initial q2',title=label,xlim=(0,1),ylim=(0,1));ax.set_aspect('equal')
     fig.suptitle(f"Example 4.7 | {data['mode']} | {data['resolution']} × {data['resolution']} initial grid | {data['periods']} periods")
     fig.savefig(path.with_suffix('.svg'));fig.savefig(path.with_suffix('.png'),dpi=150);plt.close(fig)
+
+
+def plot_family_statistics(family,statistics,directory):
+    """Every arm, with world-level means and 95% bootstrap intervals."""
+    directory=Path(directory);directory.mkdir(parents=True,exist_ok=True)
+    names=sorted({r['arm'] for r in statistics});metrics=('tail_mean_reward','mean_overload','tail_target_range')
+    height=max(4.5,.27*len(names)+1.5)
+    fig,axes=plt.subplots(1,3,figsize=(18,height),sharey=True,constrained_layout=True)
+    for ax,metric in zip(axes,metrics):
+        lookup={r['arm']:r for r in statistics if r['metric']==metric}
+        for y,name in enumerate(names):
+            r=lookup[name]
+            if r['mean'] is None:continue
+            ax.plot(r['mean'],y,'o',color='#137f77',markersize=4)
+            if r['ci95_low'] is not None:ax.plot([r['ci95_low'],r['ci95_high']],[y,y],color='#137f77',linewidth=1.5)
+        ax.set_title(metric.replace('_',' '));ax.grid(axis='x',alpha=.2);ax.set_yticks(range(len(names)),names,fontsize=7)
+    axes[0].invert_yaxis();fig.suptitle(f'{family} | All completed arms | Means and exploratory 95% world-bootstrap intervals\nSingle-world estimates have no interval; designs and feasibility differ across arms',fontsize=12)
+    for ext in ('svg','png'):fig.savefig(directory/f'{family}.{ext}',dpi=150)
+    plt.close(fig)

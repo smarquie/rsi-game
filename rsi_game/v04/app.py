@@ -26,6 +26,13 @@ class Handler(BaseHTTPRequestHandler):
         if self.path=='/report':
             report=ROOT/'results/v04/smoke/report.html'
             return self.send(200,report.read_bytes(),'text/html') if report.exists() else self.send(404,'{"error":"Generate the smoke report first"}')
+        if self.path.startswith('/research/'):
+            from urllib.parse import unquote,urlsplit
+            base=(ROOT/'results/v04/smoke/research').resolve()
+            target=(base/unquote(urlsplit(self.path).path[len('/research/'):])).resolve()
+            if target.is_relative_to(base) and target.is_file():
+                kind={'.html':'text/html','.json':'application/json','.csv':'text/csv','.md':'text/plain','.svg':'image/svg+xml','.png':'image/png'}.get(target.suffix,'application/octet-stream')
+                return self.send(200,target.read_bytes(),kind)
         return self.send(404,'{}')
     def do_POST(self):
         if self.path!='/simulate':return self.send(404,'{}')

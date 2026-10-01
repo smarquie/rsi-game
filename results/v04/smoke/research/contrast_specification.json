@@ -1,0 +1,32 @@
+[
+  {
+    "family": "E7",
+    "reference": "fixed",
+    "treatment": "adaptive_exact",
+    "metric": "tail_mean_reward"
+  },
+  {
+    "family": "E7",
+    "reference": "fixed",
+    "treatment": "adaptive_theta0.3",
+    "metric": "mean_overload"
+  },
+  {
+    "family": "E3",
+    "reference": "k5_nonresonant",
+    "treatment": "k5_resonant",
+    "metric": "max_curvature_fit_error"
+  },
+  {
+    "family": "R2",
+    "reference": "price_fixed",
+    "treatment": "ration_fixed",
+    "metric": "mean_overload"
+  },
+  {
+    "family": "R2",
+    "reference": "price_fixed",
+    "treatment": "price_adaptive",
+    "metric": "tail_target_range"
+  }
+]

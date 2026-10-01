@@ -20,13 +20,13 @@ def main(argv=None):
         p.add_argument('--worlds',type=int);p.add_argument('--replicates',type=int);p.add_argument('--periods',type=int);p.add_argument('--multistarts',type=int)
         p.add_argument('--keep-duplicates',action='store_true');p.add_argument('--output',default=f'results/v04/{name}')
         if name=='suite':
-            p.add_argument('--workers',type=int,default=2);p.add_argument('--overwrite',action='store_true');p.add_argument('--max-jobs',type=int)
+            p.add_argument('--workers',type=int,default=2);p.add_argument('--overwrite',action='store_true');p.add_argument('--max-jobs',type=int);p.add_argument('--no-report',action='store_true');p.add_argument('--contrasts')
     p=sub.add_parser('simulate');p.add_argument('--config');p.add_argument('--scenario',default='frustrated',choices=('concave','frustrated','interference','complements','example1','example2'))
     p.add_argument('--world-seed',type=int,default=0);p.add_argument('--seed',type=int,default=0);p.add_argument('--periods',type=int);p.add_argument('--multistarts',type=int)
     p.add_argument('--output',default='results/v04/single');p.add_argument('--overwrite',action='store_true');p.add_argument('--log-executions',action='store_true')
     p=sub.add_parser('benchmark');p.add_argument('--scenario',default='example2');p.add_argument('--world-seed',type=int,default=0);p.add_argument('--multistarts',type=int,default=300)
     p.add_argument('--certify',action='store_true');p.add_argument('--max-boxes',type=int,default=5000);p.add_argument('--tolerance',type=float,default=1e-5);p.add_argument('--output',default='results/v04/benchmark.json')
-    p=sub.add_parser('report');p.add_argument('--input',default='results/v04/pilot');p.add_argument('--output')
+    p=sub.add_parser('report');p.add_argument('--input',default='results/v04/pilot');p.add_argument('--output');p.add_argument('--contrasts')
     p=sub.add_parser('calibrate');p.add_argument('--worlds',type=int,default=50);p.add_argument('--multistarts',type=int,default=300);p.add_argument('--output',default='results/v04/calibration.json')
     p=sub.add_parser('basins');p.add_argument('--resolution',type=int,default=21);p.add_argument('--periods',type=int,default=150)
     p.add_argument('--mode',choices=('fixed_low','fixed_high','learning'),default='fixed_low');p.add_argument('--output',default='results/v04/basins.json')
@@ -36,7 +36,7 @@ def main(argv=None):
         atomic_json(args.output,dict(world=dict(scenario='frustrated',n=5),config=asdict(Config())));return
     if args.command=='report':
         from .analysis import report
-        report(args.input,args.output);return
+        report(args.input,args.output,contrasts=args.contrasts);return
     if args.command=='benchmark':
         world=make_world(args.scenario,seed=args.world_seed); result=benchmark_bundle(world,args.multistarts)
         if args.certify: result['certificate']=certify_global(world,result['team']['best']['q'],args.tolerance,args.max_boxes)
@@ -88,6 +88,9 @@ def main(argv=None):
         pool.shutdown(wait=True)
     atomic_json(out/'suite_summary.json',dict(requested=len(jobs),completed=len(results),failures=failed,seconds=time.perf_counter()-start,partial=len(jobs)<design['job_count']))
     print(f'Completed {len(results)}; failed {len(failed)}. Report: python -m rsi_game.v04 report --input {out}')
+    if not args.no_report:
+        from .analysis import report
+        report(out,contrasts=args.contrasts)
     if failed: raise SystemExit(1)
 
 if __name__=='__main__':main()

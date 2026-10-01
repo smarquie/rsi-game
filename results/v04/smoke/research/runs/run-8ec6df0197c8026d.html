@@ -1,0 +1,730 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RSI Functions v0.4 · Research</title>
+<style>:root{font-family:system-ui,sans-serif;background:#f3f6fa;color:#1a2b42}body{max-width:1180px;margin:auto;padding:40px 25px;line-height:1.65}h1{font-size:38px;line-height:1.2}h2{margin-top:35px;font-size:24px}.tag{font-size:12px;color:#087c75;letter-spacing:2px;text-transform:uppercase}.note{padding:18px;border-left:4px solid #ca9952;background:#fff9ec}section{border:1px solid #dce4ed;background:#fff;padding:24px;border-radius:12px;margin:20px 0}select{max-width:100%;padding:8px;border:1px solid #b5c4d4;border-radius:5px;font:inherit;margin:8px 14px 10px 0}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:9px;text-align:left;border-bottom:1px solid #dde5ee}th{background:#edf2f7}.scroll{overflow:auto}svg{width:100%;height:auto}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px}.legend span:before{content:'●';color:var(--c);margin-right:5px}pre{white-space:pre-wrap;background:#17273c;color:#fff;padding:18px;border-radius:8px;font-size:12px}.muted{color:#5d6e83;font-size:13px}summary{cursor:pointer;font-weight:600}a{color:#087c75}</style>
+<div class="tag">Serge Marquie · Functions game · v0.4</div><h1>Decentralized learning under a shared budget</h1><p id="coverage"></p>
+<p class="note"><strong>Read the scope before interpreting a gap.</strong> Indefinite-world optima are best found by multi-start SLSQP, not certified global optima. The optional branch-and-bound command reports an explicit remaining gap. Finite-width targets need not be budget-feasible; overload may make raw outcomes incomparable with the feasible team benchmark. This report does not classify a short transient as a proven fixed point or cycle.</p>
+<h2>Trajectories</h2><section><label for="run">Run</label><br><select id="run"></select><label for="view">View</label><select id="view"><option value="Y">Outcomes and benchmarks</option><option value="q">Settings and targets</option><option value="price">Price and overload</option><option value="belief">Absolute belief staleness</option><option value="exploration">Exploration effect: actual vs predicted</option></select><div class="legend" id="legend"></div><svg viewBox="0 0 1100 380" id="chart" role="img" aria-label="Model trajectories"></svg><p id="detail" class="muted"></p><details><summary>Run configuration and benchmark qualifications</summary><pre id="configuration"></pre></details></section>
+<p><a href="../research_report.html">Return to complete study report</a></p><h2>Complete scalar period record</h2><div class="scroll"><table><thead><tr><th>Period</th><th>Y</th><th>Reward</th><th>Price</th><th>Mean spending</th><th>Overload</th><th>Target spending</th><th>Fast status</th></tr></thead><tbody><tr><td>0</td><td>5.32205</td><td>5.32205</td><td>0.436359</td><td>10.9216</td><td>0</td><td>10.9216</td><td>cleared</td></tr><tr><td>1</td><td>5.31889</td><td>5.31889</td><td>0.436644</td><td>10.9216</td><td>0</td><td>10.6772</td><td>cleared</td></tr><tr><td>2</td><td>5.34214</td><td>5.34214</td><td>0.426791</td><td>10.9216</td><td>0</td><td>9.93072</td><td>cleared</td></tr><tr><td>3</td><td>7.09748</td><td>7.09748</td><td>0.395475</td><td>10.9216</td><td>0</td><td>9.56311</td><td>cleared</td></tr><tr><td>4</td><td>7.27446</td><td>7.27446</td><td>0.370902</td><td>10.9216</td><td>0</td><td>9.76255</td><td>cleared</td></tr><tr><td>5</td><td>7.31369</td><td>7.31369</td><td>0.383951</td><td>10.9216</td><td>0</td><td>8.98242</td><td>cleared</td></tr><tr><td>6</td><td>8.2966</td><td>8.2966</td><td>0.326434</td><td>10.9216</td><td>0</td><td>9.80764</td><td>cleared</td></tr><tr><td>7</td><td>8.49689</td><td>8.49689</td><td>0.377731</td><td>10.9216</td><td>0</td><td>8.96219</td><td>cleared</td></tr><tr><td>8</td><td>8.73987</td><td>8.73987</td><td>0.287791</td><td>10.9216</td><td>0</td><td>10.0389</td><td>cleared</td></tr><tr><td>9</td><td>9.50774</td><td>9.50774</td><td>0.393274</td><td>10.9216</td><td>0</td><td>9.60027</td><td>cleared</td></tr><tr><td>10</td><td>9.61777</td><td>9.61777</td><td>0.298785</td><td>10.9216</td><td>0</td><td>10.3162</td><td>cleared</td></tr><tr><td>11</td><td>9.66981</td><td>9.66981</td><td>0.436684</td><td>10.9216</td><td>0</td><td>10.6759</td><td>cleared</td></tr><tr><td>12</td><td>9.74053</td><td>9.74053</td><td>0.497734</td><td>10.9216</td><td>0</td><td>10.8799</td><td>cleared</td></tr></tbody></table></div><h2>Every recorded metric</h2><div class="scroll"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>initial_Y</td><td>5.32205</td></tr><tr><td>final_Y</td><td>9.74053</td></tr><tr><td>final_reward</td><td>9.74053</td></tr><tr><td>improvement</td><td>4.41849</td></tr><tr><td>gap_to_best_found</td><td>0.793122</td></tr><tr><td>settling_period</td><td>not estimable</td></tr><tr><td>total_overload</td><td>0</td></tr><tr><td>skipped_turns</td><td>0</td></tr><tr><td>jump_events</td><td>0</td></tr><tr><td>bound_violations</td><td>0</td></tr><tr><td>tail_target_range</td><td>0.535225</td></tr><tr><td>target_path_length</td><td>2.99842</td></tr><tr><td>within_one_percent_best</td><td>0</td></tr><tr><td>mean_absolute_staleness</td><td>1.05244</td></tr><tr><td>max_curvature_fit_error</td><td>3.1708e-13</td></tr><tr><td>max_slope_fit_error</td><td>3.58602e-13</td></tr><tr><td>max_valid_identification_error</td><td>3.58602e-13</td></tr><tr><td>max_exploration_formula_error</td><td>5.96453e-14</td></tr><tr><td>mean_overload</td><td>0</td></tr><tr><td>overload_period_fraction</td><td>0</td></tr><tr><td>tail_mean_Y</td><td>7.82599</td></tr><tr><td>tail_mean_reward</td><td>7.82599</td></tr><tr><td>tail_price_range</td><td>0.209943</td></tr><tr><td>settling_observed</td><td>0</td></tr><tr><td>skip_fraction</td><td>0</td></tr><tr><td>eligible_fit_count</td><td>12</td></tr><tr><td>fit_count</td><td>12</td></tr><tr><td>max_complementarity_residual</td><td>4.74414e-10</td></tr><tr><td>final_target_budget_excess</td><td>0</td></tr><tr><td>final_budget_feasible</td><td>1</td></tr><tr><td>global_certified</td><td>0</td></tr></tbody></table></div><h2>Benchmark audit: every world version</h2><pre>[
+  {
+    &quot;period&quot;: 0,
+    &quot;world&quot;: {
+      &quot;b&quot;: [
+        0.6403344716699173,
+        0.807304310855565,
+        0.7263008235905866,
+        1.0119015784928287,
+        0.9945282992952879,
+        1.0383728018471805,
+        0.7171775485854237,
+        0.9350767046422472,
+        1.3760969822008642,
+        1.0366496026520644,
+        0.7491813343714248,
+        1.079475490151101
+      ],
+      &quot;C&quot;: [
+        [
+          -0.10435848871542155,
+          0.06752658782822728,
+          0.4958793213710436,
+          -0.7503143434187565,
+          0.4192995135375581,
+          0.2965348502287842,
+          -0.26404864646587356,
+          0.636951421586502,
+          -0.12407715254406322,
+          -0.6428093969821387,
+          -0.3993402121225238,
+          0.3649413565106343
+        ],
+        [
+          0.06752658782822728,
+          -0.11397735465113787,
+          -0.6890218001573531,
+          -0.5233159686139426,
+          -0.6317684074465779,
+          0.24795539318202403,
+          0.3141612134109921,
+          -0.40574311403395225,
+          -0.5928443073776396,
+          0.44549867279769234,
+          0.09221253706062221,
+          -0.4232791039560244
+        ],
+        [
+          0.4958793213710436,
+          -0.6890218001573531,
+          -0.4774983443172779,
+          -0.04763861059666674,
+          -0.1549882974655111,
+          -0.34782466731131984,
+          -0.1846167883115179,
+          0.6581440910909557,
+          0.5310913111246081,
+          0.025777018999266696,
+          -0.5006609831568174,
+          0.16107333746499314
+        ],
+        [
+          -0.7503143434187565,
+          -0.5233159686139426,
+          -0.04763861059666674,
+          -0.5051763011090327,
+          -0.38696377429231044,
+          1.011566749240555,
+          0.37544508614852623,
+          0.45827133800823355,
+          -0.625893403137813,
+          0.9198622814964428,
+          -0.14354581162988062,
+          0.01439117775036642
+        ],
+        [
+          0.4192995135375581,
+          -0.6317684074465779,
+          -0.1549882974655111,
+          -0.38696377429231044,
+          -0.47552239304609556,
+          -0.10271952432628478,
+          -0.32277878587085335,
+          0.4271683546813416,
+          -0.09611602894778082,
+          -0.3546727663306825,
+          0.6885961704257899,
+          -0.8343126512346468
+        ],
+        [
+          0.2965348502287842,
+          0.24795539318202403,
+          -0.34782466731131984,
+          1.011566749240555,
+          -0.10271952432628478,
+          -0.2808263603458514,
+          -0.7348105252720052,
+          0.2438377337383031,
+          -0.13195848972851526,
+          -0.5153589843581189,
+          0.5354594551556237,
+          0.604913392312146
+        ],
+        [
+          -0.26404864646587356,
+          0.3141612134109921,
+          -0.1846167883115179,
+          0.37544508614852623,
+          -0.32277878587085335,
+          -0.7348105252720052,
+          -0.263134216363631,
+          -0.02280051749250707,
+          -0.03600381573431813,
+          0.2618183936013716,
+          -0.16058335987062616,
+          0.20155363932507925
+        ],
+        [
+          0.636951421586502,
+          -0.40574311403395225,
+          0.6581440910909557,
+          0.45827133800823355,
+          0.4271683546813416,
+          0.2438377337383031,
+          -0.02280051749250707,
+          -0.16002797784210468,
+          0.19693427246510858,
+          0.1428130175087898,
+          0.5599265157847074,
+          0.022209244487386356
+        ],
+        [
+          -0.12407715254406322,
+          -0.5928443073776396,
+          0.5310913111246081,
+          -0.625893403137813,
+          -0.09611602894778082,
+          -0.13195848972851526,
+          -0.03600381573431813,
+          0.19693427246510858,
+          -0.5608682480314453,
+          0.7712932567022233,
+          -0.46075181469427035,
+          -0.08473728235739016
+        ],
+        [
+          -0.6428093969821387,
+          0.44549867279769234,
+          0.025777018999266696,
+          0.9198622814964428,
+          -0.3546727663306825,
+          -0.5153589843581189,
+          0.2618183936013716,
+          0.1428130175087898,
+          0.7712932567022233,
+          -0.319448302031656,
+          0.6399194470344636,
+          0.08602782515084748
+        ],
+        [
+          -0.3993402121225238,
+          0.09221253706062221,
+          -0.5006609831568174,
+          -0.14354581162988062,
+          0.6885961704257899,
+          0.5354594551556237,
+          -0.16058335987062616,
+          0.5599265157847074,
+          -0.46075181469427035,
+          0.6399194470344636,
+          -0.3736449883564015,
+          0.380968597589126
+        ],
+        [
+          0.3649413565106343,
+          -0.4232791039560244,
+          0.16107333746499314,
+          0.01439117775036642,
+          -0.8343126512346468,
+          0.604913392312146,
+          0.20155363932507925,
+          0.022209244487386356,
+          -0.08473728235739016,
+          0.08602782515084748,
+          0.380968597589126,
+          -0.21873605724500203
+        ]
+      ],
+      &quot;gamma&quot;: [
+        1.360279227467795,
+        0.6294317392538793,
+        0.5778219456242708,
+        1.0969713581787404,
+        0.7266412051126057,
+        1.371399528861551,
+        1.0625185292087496,
+        1.239516843971992,
+        1.4021457187889097,
+        1.0586354851679252,
+        0.7505915411296995,
+        0.643423406900978
+      ],
+      &quot;B&quot;: 10.921614243852288,
+      &quot;alpha&quot;: [
+        0.051868370737476854,
+        0.16680670921896967,
+        0.018120808855272796,
+        0.16133338382290804,
+        0.18945389703809193,
+        0.021514842490473272,
+        0.2690534381868432,
+        0.09217470024916219,
+        0.20631559772329874,
+        0.15079201051465654,
+        0.14754391624700866,
+        0.24807920984507573
+      ],
+      &quot;w&quot;: [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      &quot;Y0&quot;: 0.0,
+      &quot;qbar&quot;: 0.999999
+    },
+    &quot;benchmarks&quot;: {
+      &quot;team&quot;: {
+        &quot;best&quot;: {
+          &quot;q&quot;: [
+            0.0,
+            8.270308032783491e-14,
+            0.3308130309920412,
+            0.8262878483091051,
+            0.0,
+            0.782643389316986,
+            5.254148602152544e-13,
+            0.8045125606746973,
+            0.15939014782268812,
+            0.8011744304591858,
+            0.8514745895087192,
+            0.8607029415225168
+          ],
+          &quot;Y&quot;: 10.533657152502599,
+          &quot;spending&quot;: 10.92161424385229,
+          &quot;optimizer_success&quot;: true,
+          &quot;residual&quot;: 6.136868790918015e-12,
+          &quot;multiplier&quot;: 0.5575786790706334,
+          &quot;feasibility&quot;: 1.7763568394002505e-15,
+          &quot;complementarity&quot;: 9.90458700070877e-16,
+          &quot;tangent_eigenvalues&quot;: [
+            -23.112926113203077,
+            -20.438849179850653,
+            -19.011418592795067,
+            -18.397037003351436,
+            -15.027729925234407,
+            -2.909125339562044,
+            -0.7231636034246409
+          ],
+          &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;
+        },
+        &quot;solutions&quot;: [
+          {
+            &quot;q&quot;: [
+              0.0,
+              8.270308032783491e-14,
+              0.3308130309920412,
+              0.8262878483091051,
+              0.0,
+              0.782643389316986,
+              5.254148602152544e-13,
+              0.8045125606746973,
+              0.15939014782268812,
+              0.8011744304591858,
+              0.8514745895087192,
+              0.8607029415225168
+            ],
+            &quot;Y&quot;: 10.533657152502599,
+            &quot;spending&quot;: 10.92161424385229,
+            &quot;optimizer_success&quot;: true,
+            &quot;residual&quot;: 6.136868790918015e-12,
+            &quot;multiplier&quot;: 0.5575786790706334,
+            &quot;feasibility&quot;: 1.7763568394002505e-15,
+            &quot;complementarity&quot;: 9.90458700070877e-16,
+            &quot;tangent_eigenvalues&quot;: [
+              -23.112926113203077,
+              -20.438849179850653,
+              -19.011418592795067,
+              -18.397037003351436,
+              -15.027729925234407,
+              -2.909125339562044,
+              -0.7231636034246409
+            ],
+            &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;
+          }
+        ],
+        &quot;validated_stationary_points&quot;: [
+          {
+            &quot;q&quot;: [
+              0.0,
+              8.270308032783491e-14,
+              0.3308130309920412,
+              0.8262878483091051,
+              0.0,
+              0.782643389316986,
+              5.254148602152544e-13,
+              0.8045125606746973,
+              0.15939014782268812,
+              0.8011744304591858,
+              0.8514745895087192,
+              0.8607029415225168
+            ],
+            &quot;Y&quot;: 10.533657152502599,
+            &quot;spending&quot;: 10.92161424385229,
+            &quot;optimizer_success&quot;: true,
+            &quot;residual&quot;: 6.136868790918015e-12,
+            &quot;multiplier&quot;: 0.5575786790706334,
+            &quot;feasibility&quot;: 1.7763568394002505e-15,
+            &quot;complementarity&quot;: 9.90458700070877e-16,
+            &quot;tangent_eigenvalues&quot;: [
+              -23.112926113203077,
+              -20.438849179850653,
+              -19.011418592795067,
+              -18.397037003351436,
+              -15.027729925234407,
+              -2.909125339562044,
+              -0.7231636034246409
+            ],
+            &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;
+          }
+        ],
+        &quot;starts&quot;: 8,
+        &quot;failed_kkt_starts&quot;: 1,
+        &quot;eigenvalues&quot;: [
+          -3.0857097299265526,
+          -2.220488243914057,
+          -1.6490227472713186,
+          -1.3178032659812924,
+          -1.0478211996859048,
+          -0.21769468143054793,
+          -0.0659030858252593,
+          0.19152122438537506,
+          0.8281760473461328,
+          1.3092651120421441,
+          1.499634666623683,
+          1.9226268715825379
+        ],
+        &quot;global_certified&quot;: false,
+        &quot;status&quot;: &quot;best_found_not_global_certificate&quot;
+      },
+      &quot;ignoring_interactions&quot;: {
+        &quot;q&quot;: [
+          0.466548356561317,
+          0.7865858177188819,
+          0.5018863520157771,
+          0.5199512388017693,
+          0.618869110242195,
+          0.587719306713335,
+          0.5010905937046921,
+          0.6387688762818781,
+          0.5851639573008859,
+          0.6406750582877566,
+          0.5388041118471666,
+          0.8109536783454918
+        ],
+        &quot;Y&quot;: 6.2437122196822,
+        &quot;spending&quot;: 10.92161424385229,
+        &quot;optimizer_success&quot;: true,
+        &quot;residual&quot;: 1.0115491777540342e-09,
+        &quot;multiplier&quot;: 0.21292818620797194,
+        &quot;feasibility&quot;: 1.7763568394002505e-15,
+        &quot;complementarity&quot;: 3.7823643987162103e-16,
+        &quot;tangent_eigenvalues&quot;: [
+          -4.031698781340758,
+          -3.083412555085784,
+          -2.7150353878225046,
+          -2.3693643673474782,
+          -2.3059392131607312,
+          -2.0849614246400896,
+          -2.019191565200781,
+          -1.5953652586077576,
+          -1.4763180544466927,
+          -1.4465325995937306,
+          -1.2861501493169178
+        ],
+        &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;,
+        &quot;Y_under_diagonal&quot;: 5.419233776441503
+      },
+      &quot;informed_free&quot;: {
+        &quot;q&quot;: [
+          3.809802220463859e-32,
+          2.563150381371985e-32,
+          0.34899448611551265,
+          0.8191070902112899,
+          2.563150381371985e-32,
+          0.7488946380004946,
+          0.14311577611511966,
+          0.7955936466596427,
+          0.23301135818909738,
+          0.8078269340079194,
+          0.8394760859948814,
+          0.8631526695003904
+        ],
+        &quot;Y&quot;: 10.503050784916041,
+        &quot;price&quot;: 0.6006569640248927,
+        &quot;iterations&quot;: 202,
+        &quot;converged&quot;: true,
+        &quot;residual&quot;: 2.1559709573182317e-10,
+        &quot;spending&quot;: 10.921614243581063
+      }
+    }
+  }
+]</pre><h2>Reproduction manifest</h2><pre>{
+  &quot;identity&quot;: &quot;cd35dac2c32aaf92a356564fe37a25a29e9d84b0564742379072e7c27216e56d&quot;,
+  &quot;version&quot;: &quot;0.4.0&quot;,
+  &quot;code_hash&quot;: &quot;d5f31a480d4078bf4ad2&quot;,
+  &quot;job&quot;: {
+    &quot;family&quot;: &quot;E10&quot;,
+    &quot;arm&quot;: &quot;n12&quot;,
+    &quot;world_seed&quot;: 0,
+    &quot;seed&quot;: 0,
+    &quot;world&quot;: {
+      &quot;scenario&quot;: &quot;frustrated&quot;,
+      &quot;n&quot;: 12,
+      &quot;s_off&quot;: 0.4,
+      &quot;budget_factor&quot;: 1.0,
+      &quot;alpha_max&quot;: 0.3
+    },
+    &quot;config&quot;: {
+      &quot;periods&quot;: 12,
+      &quot;T&quot;: 192,
+      &quot;k&quot;: 1,
+      &quot;schedule&quot;: &quot;rotation&quot;,
+      &quot;frequencies&quot;: &quot;nonresonant&quot;,
+      &quot;w_min&quot;: 0.1,
+      &quot;a_max&quot;: 0.08,
+      &quot;eps_dis&quot;: 0.02,
+      &quot;rho_dis&quot;: 0.05,
+      &quot;curvature_floor&quot;: 0.05,
+      &quot;beta&quot;: 0.7,
+      &quot;phi_mem&quot;: 1.0,
+      &quot;g0&quot;: 1.0,
+      &quot;commit&quot;: &quot;fixed&quot;,
+      &quot;within_period&quot;: &quot;fixed&quot;,
+      &quot;budget_rule&quot;: &quot;price&quot;,
+      &quot;theta_adj&quot;: 0.3,
+      &quot;eta_p&quot;: 0.5,
+      &quot;p_min&quot;: 1e-08,
+      &quot;p_max&quot;: 1000.0,
+      &quot;lambda_overload&quot;: 1.0,
+      &quot;price_tol&quot;: 1e-10,
+      &quot;multistarts&quot;: 8,
+      &quot;log_executions&quot;: false,
+      &quot;outside_kind&quot;: &quot;none&quot;,
+      &quot;outside_period&quot;: 150,
+      &quot;outside_scale&quot;: 0.4,
+      &quot;outside_role&quot;: 0,
+      &quot;outside_local_gain&quot;: 0.3,
+      &quot;outside_cost_fraction&quot;: 0.3,
+      &quot;outside_relocate&quot;: false,
+      &quot;initial_targets&quot;: null,
+      &quot;non_disruption&quot;: &quot;draft&quot;
+    }
+  },
+  &quot;world&quot;: {
+    &quot;b&quot;: [
+      0.6403344716699173,
+      0.807304310855565,
+      0.7263008235905866,
+      1.0119015784928287,
+      0.9945282992952879,
+      1.0383728018471805,
+      0.7171775485854237,
+      0.9350767046422472,
+      1.3760969822008642,
+      1.0366496026520644,
+      0.7491813343714248,
+      1.079475490151101
+    ],
+    &quot;C&quot;: [
+      [
+        -0.10435848871542155,
+        0.06752658782822728,
+        0.4958793213710436,
+        -0.7503143434187565,
+        0.4192995135375581,
+        0.2965348502287842,
+        -0.26404864646587356,
+        0.636951421586502,
+        -0.12407715254406322,
+        -0.6428093969821387,
+        -0.3993402121225238,
+        0.3649413565106343
+      ],
+      [
+        0.06752658782822728,
+        -0.11397735465113787,
+        -0.6890218001573531,
+        -0.5233159686139426,
+        -0.6317684074465779,
+        0.24795539318202403,
+        0.3141612134109921,
+        -0.40574311403395225,
+        -0.5928443073776396,
+        0.44549867279769234,
+        0.09221253706062221,
+        -0.4232791039560244
+      ],
+      [
+        0.4958793213710436,
+        -0.6890218001573531,
+        -0.4774983443172779,
+        -0.04763861059666674,
+        -0.1549882974655111,
+        -0.34782466731131984,
+        -0.1846167883115179,
+        0.6581440910909557,
+        0.5310913111246081,
+        0.025777018999266696,
+        -0.5006609831568174,
+        0.16107333746499314
+      ],
+      [
+        -0.7503143434187565,
+        -0.5233159686139426,
+        -0.04763861059666674,
+        -0.5051763011090327,
+        -0.38696377429231044,
+        1.011566749240555,
+        0.37544508614852623,
+        0.45827133800823355,
+        -0.625893403137813,
+        0.9198622814964428,
+        -0.14354581162988062,
+        0.01439117775036642
+      ],
+      [
+        0.4192995135375581,
+        -0.6317684074465779,
+        -0.1549882974655111,
+        -0.38696377429231044,
+        -0.47552239304609556,
+        -0.10271952432628478,
+        -0.32277878587085335,
+        0.4271683546813416,
+        -0.09611602894778082,
+        -0.3546727663306825,
+        0.6885961704257899,
+        -0.8343126512346468
+      ],
+      [
+        0.2965348502287842,
+        0.24795539318202403,
+        -0.34782466731131984,
+        1.011566749240555,
+        -0.10271952432628478,
+        -0.2808263603458514,
+        -0.7348105252720052,
+        0.2438377337383031,
+        -0.13195848972851526,
+        -0.5153589843581189,
+        0.5354594551556237,
+        0.604913392312146
+      ],
+      [
+        -0.26404864646587356,
+        0.3141612134109921,
+        -0.1846167883115179,
+        0.37544508614852623,
+        -0.32277878587085335,
+        -0.7348105252720052,
+        -0.263134216363631,
+        -0.02280051749250707,
+        -0.03600381573431813,
+        0.2618183936013716,
+        -0.16058335987062616,
+        0.20155363932507925
+      ],
+      [
+        0.636951421586502,
+        -0.40574311403395225,
+        0.6581440910909557,
+        0.45827133800823355,
+        0.4271683546813416,
+        0.2438377337383031,
+        -0.02280051749250707,
+        -0.16002797784210468,
+        0.19693427246510858,
+        0.1428130175087898,
+        0.5599265157847074,
+        0.022209244487386356
+      ],
+      [
+        -0.12407715254406322,
+        -0.5928443073776396,
+        0.5310913111246081,
+        -0.625893403137813,
+        -0.09611602894778082,
+        -0.13195848972851526,
+        -0.03600381573431813,
+        0.19693427246510858,
+        -0.5608682480314453,
+        0.7712932567022233,
+        -0.46075181469427035,
+        -0.08473728235739016
+      ],
+      [
+        -0.6428093969821387,
+        0.44549867279769234,
+        0.025777018999266696,
+        0.9198622814964428,
+        -0.3546727663306825,
+        -0.5153589843581189,
+        0.2618183936013716,
+        0.1428130175087898,
+        0.7712932567022233,
+        -0.319448302031656,
+        0.6399194470344636,
+        0.08602782515084748
+      ],
+      [
+        -0.3993402121225238,
+        0.09221253706062221,
+        -0.5006609831568174,
+        -0.14354581162988062,
+        0.6885961704257899,
+        0.5354594551556237,
+        -0.16058335987062616,
+        0.5599265157847074,
+        -0.46075181469427035,
+        0.6399194470344636,
+        -0.3736449883564015,
+        0.380968597589126
+      ],
+      [
+        0.3649413565106343,
+        -0.4232791039560244,
+        0.16107333746499314,
+        0.01439117775036642,
+        -0.8343126512346468,
+        0.604913392312146,
+        0.20155363932507925,
+        0.022209244487386356,
+        -0.08473728235739016,
+        0.08602782515084748,
+        0.380968597589126,
+        -0.21873605724500203
+      ]
+    ],
+    &quot;gamma&quot;: [
+      1.360279227467795,
+      0.6294317392538793,
+      0.5778219456242708,
+      1.0969713581787404,
+      0.7266412051126057,
+      1.371399528861551,
+      1.0625185292087496,
+      1.239516843971992,
+      1.4021457187889097,
+      1.0586354851679252,
+      0.7505915411296995,
+      0.643423406900978
+    ],
+    &quot;B&quot;: 10.921614243852288,
+    &quot;alpha&quot;: [
+      0.051868370737476854,
+      0.16680670921896967,
+      0.018120808855272796,
+      0.16133338382290804,
+      0.18945389703809193,
+      0.021514842490473272,
+      0.2690534381868432,
+      0.09217470024916219,
+      0.20631559772329874,
+      0.15079201051465654,
+      0.14754391624700866,
+      0.24807920984507573
+    ],
+    &quot;w&quot;: [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    &quot;Y0&quot;: 0.0,
+    &quot;qbar&quot;: 0.999999
+  },
+  &quot;python&quot;: &quot;3.11.2 (v3.11.2:878ead1ac1, Feb  7 2023, 10:02:41) [Clang 13.0.0 (clang-1300.0.29.30)]&quot;,
+  &quot;numpy&quot;: &quot;1.23.5&quot;,
+  &quot;scipy&quot;: &quot;1.10.1&quot;,
+  &quot;status&quot;: &quot;running&quot;
+}</pre><h2>Final function states</h2><div class="scroll"><table><thead><tr><th>Function</th><th>Target</th><th>Mean setting</th><th>Belief A</th><th>Belief G</th><th>Belief C</th><th>Commitment bounds</th></tr></thead><tbody><tr><td>0</td><td>0.324618</td><td>0.274618</td><td>4.9559</td><td>0.879349</td><td>-0.104358</td><td>[0.2746181146561409, 0.37461811465614087]</td></tr><tr><td>1</td><td>0.229382</td><td>0.179382</td><td>7.04393</td><td>-2.13808</td><td>-0.113977</td><td>[0.17938206342269497, 0.27938206342269495]</td></tr><tr><td>2</td><td>0.532116</td><td>0.482116</td><td>6.74902</td><td>0.824444</td><td>-0.477498</td><td>[0.4821157969378585, 0.5821157969378585]</td></tr><tr><td>3</td><td>0.656346</td><td>0.637192</td><td>6.2824</td><td>1.98739</td><td>-0.505176</td><td>[0.606345606680441, 0.7063456066804411]</td></tr><tr><td>4</td><td>0.220028</td><td>0.170028</td><td>7.96841</td><td>-0.541851</td><td>-0.475522</td><td>[0.1700280454353203, 0.2700280454353203]</td></tr><tr><td>5</td><td>0.679053</td><td>0.694553</td><td>7.26743</td><td>2.60332</td><td>-0.280826</td><td>[0.6290527069198173, 0.7290527069198174]</td></tr><tr><td>6</td><td>0.190397</td><td>0.140397</td><td>8.50138</td><td>0.161263</td><td>-0.263134</td><td>[0.14039713541140603, 0.240397135411406]</td></tr><tr><td>7</td><td>0.79224</td><td>0.84224</td><td>6.50382</td><td>4.5116</td><td>-0.160028</td><td>[0.7422404631107287, 0.8422404631107288]</td></tr><tr><td>8</td><td>0.306533</td><td>0.256533</td><td>9.16901</td><td>0.967386</td><td>-0.560868</td><td>[0.25653256703218413, 0.3565325670321841]</td></tr><tr><td>9</td><td>0.795881</td><td>0.814368</td><td>7.81298</td><td>3.20802</td><td>-0.319448</td><td>[0.7458814625014618, 0.8458814625014619]</td></tr><tr><td>10</td><td>0.823238</td><td>0.860195</td><td>7.59833</td><td>3.16753</td><td>-0.373645</td><td>[0.7732382908183786, 0.8732382908183787]</td></tr><tr><td>11</td><td>0.836179</td><td>0.775043</td><td>7.77664</td><td>2.70435</td><td>-0.218736</td><td>[0.7861786454356083, 0.8861786454356084]</td></tr></tbody></table></div><h2>Across-world comparisons</h2><p class="muted">Nested schedule/intervention replicas are averaged within each world first. Intervals are percentile-bootstrap 90% confidence intervals over independent world means. A single-world smoke run has no uncertainty interval. No multiple-comparison adjustment is claimed; preselect confirmatory contrasts before a large study.</p><label for="family">Family</label><select id="family"></select><label for="metric">Metric</label><select id="metric"></select><div class="scroll"><table><thead><tr><th>Arm</th><th>Mean</th><th>90% CI</th><th>Worlds</th><th>Runs</th></tr></thead><tbody id="comparison"></tbody></table></div>
+<h2>Design flags</h2><div id="flags"></div><h2>Interpretation guide</h2><ul>
+<li><strong>Identification:</strong> exact curvature/slope recovery requires nonzero dither, the frequency conditions, a fixed free-function background, and a raw quadratic aggregate. Adaptive clearing and finite-horizon mixtures can break the fixed-background assumption.</li>
+<li><strong>Learning versus feasibility:</strong> raw Y, penalized reward, spending and overload are distinct series. A lower reward can reflect price instability or a infeasible exploration floor even if the fitted quadratic is exact.</li>
+<li><strong>Traps:</strong> nearest stationary candidate is a distance diagnostic, not proof of basin membership. Use longer runs, residual checks, multiple starts and the two-dimensional basin command.</li>
+<li><strong>Convergence:</strong> tail target range and settling time are finite-horizon diagnostics. Fixed-multiplier idealized tests differ from the finite-width, changing-price process.</li>
+<li><strong>Outside changes:</strong> the invisible construction preserves slices through the chosen target. It need not preserve observations under finite-width commitments, shifted boundary centers, or changing backgrounds.</li>
+<li><strong>Statistical unit:</strong> the baseline is deterministic conditional on the world. Changing only a seed does not create independent evidence. Random schedules and outside interventions supply nested randomness when enabled.</li>
+</ul><h2>Saved artifacts</h2><p>Use <code>aggregate.csv</code>, <code>run_summary.csv</code> and <code>paired_contrasts.json</code> alongside the complete per-run JSONL/CSV/Parquet records. The contrasts file compares each arm with the lexicographically first completed arm in its family on shared world seeds; this is descriptive, not a claim that this is the scientifically preferred control. Standalone SVG/PNG plots for up to twelve representative runs are under <code>figures/</code>.</p>
+<details><summary>Completion and failure audit</summary><pre id="audit"></pre></details>
+<script>const D={"runs": [{"name": "E10/n12/0/0", "summary": {"initial_Y": 5.322048836244105, "final_Y": 9.74053482667763, "final_reward": 9.74053482667763, "final_target_Y": 9.576745373797142, "improvement": 4.418485990433525, "best_found_Y": 10.533657152502599, "gap_to_best_found": 0.7931223258249691, "global_certified": false, "final_mean_settings": [0.2746181146561383, 0.17938206342269353, 0.4821157969378556, 0.6371921642931234, 0.17002804543531982, 0.6945533544921433, 0.14039713541140517, 0.8422404631107271, 0.25653256703218363, 0.81436770133195, 0.8601947367342718, 0.7750433919563434], "final_targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.19039713541140602, 0.7922404631107287, 0.3065325670321841, 0.7958814625014619, 0.8232382908183786, 0.8361786454356084], "final_target_spending": 10.879916005251642, "nearest_stationary_index": 0, "distance_to_stationary": 0.3246181146561409, "within_one_percent_best": false, "settling_period": null, "cumulative_exploration_effect": -0.012330300902813285, "total_overload": 0.0, "skipped_turns": 0, "jump_events": 0, "bound_violations": 0, "target_path_length": 2.998416041363342, "tail_target_range": 0.5352248146529547, "idealized_slice_residual": {"distance": 0.3246181146561409, "targets": [0.0, 0.0, 0.4289104657067603, 0.7720080285868488, 0.0, 0.7666456618888103, 0.0, 0.8461925416070754, 0.23304486286092033, 0.8037848776951824, 0.84492244557337, 0.8555355553350862], "budget_violation": 0.0, "complementarity": 0.020754645385258126}, "actual_T": 566, "frequencies": [1, 4, 10, 13, 28, 31, 37, 40, 82, 85, 91, 94], "periods": 12, "warning": "Best-found gaps are not global gaps unless certified; period rewards may involve overload and targets need not be feasible"}, "job": {"family": "E10", "arm": "n12", "world_seed": 0, "seed": 0, "world": {"scenario": "frustrated", "n": 12, "s_off": 0.4, "budget_factor": 1.0, "alpha_max": 0.3}, "config": {"periods": 12, "T": 192, "k": 1, "schedule": "rotation", "frequencies": "nonresonant", "w_min": 0.1, "a_max": 0.08, "eps_dis": 0.02, "rho_dis": 0.05, "curvature_floor": 0.05, "beta": 0.7, "phi_mem": 1.0, "g0": 1.0, "commit": "fixed", "within_period": "fixed", "budget_rule": "price", "theta_adj": 0.3, "eta_p": 0.5, "p_min": 1e-08, "p_max": 1000.0, "lambda_overload": 1.0, "price_tol": 1e-10, "multistarts": 8, "log_executions": false, "outside_kind": "none", "outside_period": 150, "outside_scale": 0.4, "outside_role": 0, "outside_local_gain": 0.3, "outside_cost_fraction": 0.3, "outside_relocate": false, "initial_targets": null, "non_disruption": "draft"}}, "benchmarks": [{"period": 0, "world": {"b": [0.6403344716699173, 0.807304310855565, 0.7263008235905866, 1.0119015784928287, 0.9945282992952879, 1.0383728018471805, 0.7171775485854237, 0.9350767046422472, 1.3760969822008642, 1.0366496026520644, 0.7491813343714248, 1.079475490151101], "C": [[-0.10435848871542155, 0.06752658782822728, 0.4958793213710436, -0.7503143434187565, 0.4192995135375581, 0.2965348502287842, -0.26404864646587356, 0.636951421586502, -0.12407715254406322, -0.6428093969821387, -0.3993402121225238, 0.3649413565106343], [0.06752658782822728, -0.11397735465113787, -0.6890218001573531, -0.5233159686139426, -0.6317684074465779, 0.24795539318202403, 0.3141612134109921, -0.40574311403395225, -0.5928443073776396, 0.44549867279769234, 0.09221253706062221, -0.4232791039560244], [0.4958793213710436, -0.6890218001573531, -0.4774983443172779, -0.04763861059666674, -0.1549882974655111, -0.34782466731131984, -0.1846167883115179, 0.6581440910909557, 0.5310913111246081, 0.025777018999266696, -0.5006609831568174, 0.16107333746499314], [-0.7503143434187565, -0.5233159686139426, -0.04763861059666674, -0.5051763011090327, -0.38696377429231044, 1.011566749240555, 0.37544508614852623, 0.45827133800823355, -0.625893403137813, 0.9198622814964428, -0.14354581162988062, 0.01439117775036642], [0.4192995135375581, -0.6317684074465779, -0.1549882974655111, -0.38696377429231044, -0.47552239304609556, -0.10271952432628478, -0.32277878587085335, 0.4271683546813416, -0.09611602894778082, -0.3546727663306825, 0.6885961704257899, -0.8343126512346468], [0.2965348502287842, 0.24795539318202403, -0.34782466731131984, 1.011566749240555, -0.10271952432628478, -0.2808263603458514, -0.7348105252720052, 0.2438377337383031, -0.13195848972851526, -0.5153589843581189, 0.5354594551556237, 0.604913392312146], [-0.26404864646587356, 0.3141612134109921, -0.1846167883115179, 0.37544508614852623, -0.32277878587085335, -0.7348105252720052, -0.263134216363631, -0.02280051749250707, -0.03600381573431813, 0.2618183936013716, -0.16058335987062616, 0.20155363932507925], [0.636951421586502, -0.40574311403395225, 0.6581440910909557, 0.45827133800823355, 0.4271683546813416, 0.2438377337383031, -0.02280051749250707, -0.16002797784210468, 0.19693427246510858, 0.1428130175087898, 0.5599265157847074, 0.022209244487386356], [-0.12407715254406322, -0.5928443073776396, 0.5310913111246081, -0.625893403137813, -0.09611602894778082, -0.13195848972851526, -0.03600381573431813, 0.19693427246510858, -0.5608682480314453, 0.7712932567022233, -0.46075181469427035, -0.08473728235739016], [-0.6428093969821387, 0.44549867279769234, 0.025777018999266696, 0.9198622814964428, -0.3546727663306825, -0.5153589843581189, 0.2618183936013716, 0.1428130175087898, 0.7712932567022233, -0.319448302031656, 0.6399194470344636, 0.08602782515084748], [-0.3993402121225238, 0.09221253706062221, -0.5006609831568174, -0.14354581162988062, 0.6885961704257899, 0.5354594551556237, -0.16058335987062616, 0.5599265157847074, -0.46075181469427035, 0.6399194470344636, -0.3736449883564015, 0.380968597589126], [0.3649413565106343, -0.4232791039560244, 0.16107333746499314, 0.01439117775036642, -0.8343126512346468, 0.604913392312146, 0.20155363932507925, 0.022209244487386356, -0.08473728235739016, 0.08602782515084748, 0.380968597589126, -0.21873605724500203]], "gamma": [1.360279227467795, 0.6294317392538793, 0.5778219456242708, 1.0969713581787404, 0.7266412051126057, 1.371399528861551, 1.0625185292087496, 1.239516843971992, 1.4021457187889097, 1.0586354851679252, 0.7505915411296995, 0.643423406900978], "B": 10.921614243852288, "alpha": [0.051868370737476854, 0.16680670921896967, 0.018120808855272796, 0.16133338382290804, 0.18945389703809193, 0.021514842490473272, 0.2690534381868432, 0.09217470024916219, 0.20631559772329874, 0.15079201051465654, 0.14754391624700866, 0.24807920984507573], "w": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], "Y0": 0.0, "qbar": 0.999999}, "benchmarks": {"team": {"best": {"q": [0.0, 8.270308032783491e-14, 0.3308130309920412, 0.8262878483091051, 0.0, 0.782643389316986, 5.254148602152544e-13, 0.8045125606746973, 0.15939014782268812, 0.8011744304591858, 0.8514745895087192, 0.8607029415225168], "Y": 10.533657152502599, "spending": 10.92161424385229, "optimizer_success": true, "residual": 6.136868790918015e-12, "multiplier": 0.5575786790706334, "feasibility": 1.7763568394002505e-15, "complementarity": 9.90458700070877e-16, "tangent_eigenvalues": [-23.112926113203077, -20.438849179850653, -19.011418592795067, -18.397037003351436, -15.027729925234407, -2.909125339562044, -0.7231636034246409], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"}, "solutions": [{"q": [0.0, 8.270308032783491e-14, 0.3308130309920412, 0.8262878483091051, 0.0, 0.782643389316986, 5.254148602152544e-13, 0.8045125606746973, 0.15939014782268812, 0.8011744304591858, 0.8514745895087192, 0.8607029415225168], "Y": 10.533657152502599, "spending": 10.92161424385229, "optimizer_success": true, "residual": 6.136868790918015e-12, "multiplier": 0.5575786790706334, "feasibility": 1.7763568394002505e-15, "complementarity": 9.90458700070877e-16, "tangent_eigenvalues": [-23.112926113203077, -20.438849179850653, -19.011418592795067, -18.397037003351436, -15.027729925234407, -2.909125339562044, -0.7231636034246409], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"}], "validated_stationary_points": [{"q": [0.0, 8.270308032783491e-14, 0.3308130309920412, 0.8262878483091051, 0.0, 0.782643389316986, 5.254148602152544e-13, 0.8045125606746973, 0.15939014782268812, 0.8011744304591858, 0.8514745895087192, 0.8607029415225168], "Y": 10.533657152502599, "spending": 10.92161424385229, "optimizer_success": true, "residual": 6.136868790918015e-12, "multiplier": 0.5575786790706334, "feasibility": 1.7763568394002505e-15, "complementarity": 9.90458700070877e-16, "tangent_eigenvalues": [-23.112926113203077, -20.438849179850653, -19.011418592795067, -18.397037003351436, -15.027729925234407, -2.909125339562044, -0.7231636034246409], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"}], "starts": 8, "failed_kkt_starts": 1, "eigenvalues": [-3.0857097299265526, -2.220488243914057, -1.6490227472713186, -1.3178032659812924, -1.0478211996859048, -0.21769468143054793, -0.0659030858252593, 0.19152122438537506, 0.8281760473461328, 1.3092651120421441, 1.499634666623683, 1.9226268715825379], "global_certified": false, "status": "best_found_not_global_certificate"}, "ignoring_interactions": {"q": [0.466548356561317, 0.7865858177188819, 0.5018863520157771, 0.5199512388017693, 0.618869110242195, 0.587719306713335, 0.5010905937046921, 0.6387688762818781, 0.5851639573008859, 0.6406750582877566, 0.5388041118471666, 0.8109536783454918], "Y": 6.2437122196822, "spending": 10.92161424385229, "optimizer_success": true, "residual": 1.0115491777540342e-09, "multiplier": 0.21292818620797194, "feasibility": 1.7763568394002505e-15, "complementarity": 3.7823643987162103e-16, "tangent_eigenvalues": [-4.031698781340758, -3.083412555085784, -2.7150353878225046, -2.3693643673474782, -2.3059392131607312, -2.0849614246400896, -2.019191565200781, -1.5953652586077576, -1.4763180544466927, -1.4465325995937306, -1.2861501493169178], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified", "Y_under_diagonal": 5.419233776441503}, "informed_free": {"q": [3.809802220463859e-32, 2.563150381371985e-32, 0.34899448611551265, 0.8191070902112899, 2.563150381371985e-32, 0.7488946380004946, 0.14311577611511966, 0.7955936466596427, 0.23301135818909738, 0.8078269340079194, 0.8394760859948814, 0.8631526695003904], "Y": 10.503050784916041, "price": 0.6006569640248927, "iterations": 202, "converged": true, "residual": 2.1559709573182317e-10, "spending": 10.921614243581063}}}], "rows": [{"period": 0, "mean_Y": 5.322048836244105, "reward": 5.322048836244105, "price": 0.4363591106653075, "overload": 0.0, "mean_spending": 10.921614243276407, "mean_settings": [0.4356991326413036, 0.7646068780756496, 0.7523497524827139, 0.5878242605026354, 0.733426818117734, 0.41418112210501307, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "targets": [0.4356991326413036, 0.7646068780756496, 0.7523497524827139, 0.5878242605026354, 0.733426818117734, 0.41418112210501307, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.12067605194256448, 3.093327471546578, 0.948182880332413, 0.0028335692659818834, 2.1863722712232114, -1.460508559948022, 0.6131918285050066, -3.3980871233072865, 0.5389634525461703, -2.615434793073464, -1.3376773198421676, -0.1289558400569979], "exploration_effect": 1.509903313490213e-14, "predicted_exploration_effect": 0.0, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 1, "mean_Y": 5.318889144546977, "reward": 5.318889144546977, "price": 0.43664380785912726, "overload": 0.0, "mean_spending": 10.921614243532927, "mean_settings": [0.43569913264130355, 0.7644532986965945, 0.7521881760911803, 0.5875553414551642, 0.733252895687843, 0.4137989117041064, 0.6344187545187724, 0.5044498334067021, 0.4924725776729962, 0.5983230460804156, 0.7143977289012331, 0.7748966217538363], "targets": [0.3246181146561409, 0.7646068780756496, 0.7523497524827139, 0.5878242605026354, 0.733426818117734, 0.41418112210501307, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.1206513226713063, 3.0924317948142486, 0.9481889227599504, 0.003789567283834172, 2.1857258136440625, -1.4602094920601747, 0.6128545487591636, -3.397008284842782, 0.5387996692597511, -2.614321063327182, -1.336811795056299, -0.12861256297691126], "exploration_effect": -0.0003339471639041136, "predicted_exploration_effect": -0.000333947163889349, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 2, "mean_Y": 5.342142851369131, "reward": 5.342142851369131, "price": 0.4267906811605826, "overload": 0.0, "mean_spending": 10.921614242740702, "mean_settings": [0.32722127191428235, 0.7646068780756501, 0.7577801969888059, 0.596862399985789, 0.7392722024270038, 0.4270268872068939, 0.6426683123173701, 0.5156322170545304, 0.5039252352056759, 0.6073871249648941, 0.7208425136706015, 0.779976213096275], "targets": [0.3246181146561409, 0.22938206342269496, 0.7523497524827139, 0.5878242605026354, 0.733426818117734, 0.41418112210501307, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.0015529591162529721, 3.1380806810407313, 1.048450646707665, -0.19748406772374194, 2.292546624460589, -1.4036653151411351, 0.5704838421940389, -3.300344332924002, 0.5114286853337359, -2.787728439187059, -1.4524540707221534, -0.06568662979617601], "exploration_effect": -0.00036472753489569243, "predicted_exploration_effect": -0.0003647275348836412, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 3, "mean_Y": 7.097481037392593, "reward": 7.097481037392593, "price": 0.39547495873648586, "overload": 0.0, "mean_spending": 10.921614243776109, "mean_settings": [0.37005930309933904, 0.17938206342269353, 0.7523497524827143, 0.6264425800085303, 0.7584030778126593, 0.469068730547774, 0.6688874882243423, 0.5511726534123413, 0.5403246701550314, 0.6361950543725735, 0.7413256655771114, 0.7961204358769568], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.5878242605026354, 0.733426818117734, 0.41418112210501307, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.10860311703701864, 0.06076082430579843, 0.1755561234092442, -0.8707633169918525, 1.5597400577980767, -1.1795122393163084, 0.9999629359667486, -3.9316526395337714, -0.1492036145273572, -2.3174797584651894, -1.425633265168337, -0.6369657686493881], "exploration_effect": -0.0015279947018189688, "predicted_exploration_effect": -0.0015279947018152892, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 4, "mean_Y": 7.274463567085336, "reward": 7.274463567085336, "price": 0.3709024088038859, "overload": 0.0, "mean_spending": 10.921614242909973, "mean_settings": [0.37461811465613787, 0.17938206342269353, 0.4821157969378556, 0.5878242605026358, 0.773414527470497, 0.5020577601719896, 0.6894609241630247, 0.5790602152958445, 0.5688862636159402, 0.6587998109941247, 0.7573982078670235, 0.8087883448279014], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.733426818117734, 0.41418112210501307, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.3015830898448447, -0.31887235184976426, -0.029200486992873698, -0.9873851620215206, 1.4590243127783702, -1.2740563218708627, 0.9813083376579971, -3.610601220347478, 0.07480104246148922, -2.2675364522623216, -1.796558106015563, -0.5878163022827569], "exploration_effect": -0.0016165641635694783, "predicted_exploration_effect": -0.0016165641635489047, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 5, "mean_Y": 7.313693001749334, "reward": 7.313693001749334, "price": 0.3839506073859411, "overload": 0.0, "mean_spending": 10.921614242844552, "mean_settings": [0.37461811465613787, 0.17938206342269353, 0.4821157969378556, 0.7063456066804336, 0.7334268181177345, 0.4845403510814842, 0.6785362835221731, 0.5642517218174139, 0.5537198545814634, 0.6467965246397963, 0.7488635737288365, 0.8020615951798344], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.41418112210501307, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.5153556622863215, -0.2532240151191103, -0.016681432220553072, 0.027109308544477795, 1.5418509034556722, -1.5299857802529502, 0.8452420456812442, -3.6577651378529747, 0.22541177914048105, -2.4865776303317575, -1.669114690808751, -0.6256997577713257], "exploration_effect": -0.0015216716577484135, "predicted_exploration_effect": -0.0015216716577475058, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 6, "mean_Y": 8.296603566765047, "reward": 8.296603566765047, "price": 0.32643385566188954, "overload": 0.0, "mean_spending": 10.921614243655918, "mean_settings": [0.37461811465613787, 0.17938206342269353, 0.4928332806678034, 0.7063456066804336, 0.17002804543531982, 0.4141811221050132, 0.726692344258293, 0.6295278928880798, 0.6205737254430643, 0.6997072798504145, 0.786484432247717, 0.8317132583565137], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.6346571180380199, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [1.0542136240886806, -0.8424367042303729, -0.35402900981966123, -0.3652488204767401, 0.012237138730136876, -1.6033190317052588, 0.3623059513749992, -3.2389229860205173, 0.022986469821424826, -3.1595341965388073, -0.8934629923862514, -1.5328811498662085], "exploration_effect": -0.0008986443531000532, "predicted_exploration_effect": -0.0008986443531067245, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 7, "mean_Y": 8.496894021698028, "reward": 8.496894021698028, "price": 0.3777305099106343, "overload": 0.0, "mean_spending": 10.921614243457766, "mean_settings": [0.37461811465613787, 0.17938206342269353, 0.4821157969378556, 0.7063456066804336, 0.17002804543531982, 0.7290527069198272, 0.6346571180380199, 0.5713109547313762, 0.5609497064228264, 0.6525185107575296, 0.75293204769646, 0.8052682476721164], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.19039713541140602, 0.5047729382791077, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.8207025519349387, -1.0476183185476886, -0.05165422835183453, -0.8775242299372294, 0.021071201315042587, -0.11076988162073276, 0.8387365112099909, -3.306856984135064, 0.17116529241866085, -2.630149695420948, -1.180161106399089, -1.8471034976780474], "exploration_effect": -0.0008420294924054161, "predicted_exploration_effect": -0.0008420294923636192, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 8, "mean_Y": 8.7398655450625, "reward": 8.7398655450625, "price": 0.2877911358041274, "overload": 0.0, "mean_spending": 10.921614243419596, "mean_settings": [0.37461811465613787, 0.17938206342269353, 0.519716444948012, 0.7063456066804336, 0.17002804543531982, 0.7290527069198272, 0.14114567440963383, 0.5047729382791076, 0.6654896034381604, 0.7352554537263671, 0.8117600650499375, 0.8516347747688429], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.19039713541140602, 0.7922404631107287, 0.49280349186511824, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.753005548825161, -0.6610773905224208, -0.21762894102984798, -0.44818094939165043, -0.15388179120871903, -0.7836660587973188, -0.02474430048507742, -3.5115999721010205, 0.05633646519518731, -2.5991922669410257, -1.2713818483436854, -1.6986646077604761], "exploration_effect": -0.0005120895291543803, "predicted_exploration_effect": -0.000512089529094735, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 9, "mean_Y": 9.507738208175574, "reward": 9.507738208175574, "price": 0.3932739747369851, "overload": 0.0, "mean_spending": 10.921614243564198, "mean_settings": [0.373099391724366, 0.17938206342269353, 0.4821157969378556, 0.7005913089828756, 0.17002804543531982, 0.7290527069198272, 0.14039713541140517, 0.8422404631107271, 0.49280349186511785, 0.6382197814673581, 0.7427652967309127, 0.7972551111542309], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.19039713541140602, 0.7922404631107287, 0.3065325670321841, 0.5985849444505394, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.16834743110777373, -0.5959942889341523, -0.5242928701782461, -0.8186737231240997, -0.5552588850661987, -0.9688686374591149, 0.01841870287065822, 0.23207892410688924, 0.032614465149644056, -2.320575743007211, -1.683558587360721, -1.6599663158287443], "exploration_effect": -0.0017947783937266593, "predicted_exploration_effect": -0.001794778393700625, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 10, "mean_Y": 9.617771606492589, "reward": 9.617771606492589, "price": 0.2987850494378108, "overload": 0.0, "mean_spending": 10.921614243685042, "mean_settings": [0.37461811465613787, 0.17938206342269353, 0.5118967424075767, 0.7063456066804336, 0.17002804543531982, 0.7290527069198272, 0.14039713541140517, 0.8422404631107271, 0.3565325670321876, 0.5985849444505393, 0.8045691083810722, 0.8459670725031848], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.19039713541140602, 0.7922404631107287, 0.3065325670321841, 0.7958814625014619, 0.7145839451343897, 0.7750433919563431], "staleness_error": [0.07648295322928877, -0.6455583355891705, -0.33226976127888896, -0.8948808891496371, -0.6009918387456216, -1.1626304193121721, 0.03705090922070392, 0.17928852732862932, 0.10229526905352038, -2.2080152943971703, -1.7628366885834548, -1.7341999411557016], "exploration_effect": -0.0010222345665447108, "predicted_exploration_effect": -0.0010222345665012991, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 11, "mean_Y": 9.669806330864212, "reward": 9.669806330864212, "price": 0.43668370284422053, "overload": 0.0, "mean_spending": 10.92161424351087, "mean_settings": [0.3138460223680764, 0.17938206342269353, 0.4821157969378556, 0.6736962407259018, 0.17002804543531982, 0.7290527069198272, 0.14039713541140517, 0.8422404631107271, 0.283986396037269, 0.8363278147349884, 0.7145839451343905, 0.77487605465598], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.19039713541140602, 0.7922404631107287, 0.3065325670321841, 0.7958814625014619, 0.8232382908183786, 0.7750433919563431], "staleness_error": [0.32468666226828147, -1.0539947816047324, -0.277510962787914, -1.5408962373982882, -0.4245293114350627, -0.6729770891541036, -0.11148042887246395, 0.3904271271656663, -0.38373154924661046, 0.22277829260759452, -2.1675250846878664, -1.6639465753540303], "exploration_effect": -0.0011956639627772603, "predicted_exploration_effect": -0.0011956639627404848, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}, {"period": 12, "mean_Y": 9.74053482667763, "reward": 9.74053482667763, "price": 0.49773434278677087, "overload": 0.0, "mean_spending": 10.921614243609545, "mean_settings": [0.2746181146561383, 0.17938206342269353, 0.4821157969378556, 0.6371921642931234, 0.17002804543531982, 0.6945533544921433, 0.14039713541140517, 0.8422404631107271, 0.25653256703218363, 0.81436770133195, 0.8601947367342718, 0.7750433919563434], "targets": [0.3246181146561409, 0.22938206342269496, 0.5321157969378585, 0.6563456066804411, 0.22002804543532029, 0.6790527069198173, 0.19039713541140602, 0.7922404631107287, 0.3065325670321841, 0.7958814625014619, 0.8232382908183786, 0.8361786454356084], "staleness_error": [0.37149735043658505, -1.1094925693362039, -0.09004131519327485, -1.4821329241968364, -0.648081508791679, -0.7618796003383976, -0.09926687961735348, 0.3446971625841133, -0.2801818024427667, 0.059907261362524444, -0.002185463954449407, -1.7043465319902045], "exploration_effect": -0.0006999553831832372, "predicted_exploration_effect": -0.0006999553831840065, "best_found_Y": 10.533657152502599, "skipped": [], "fast_status": "cleared"}]}], "aggregate": [], "contrasts": [], "count": 1, "planned": 1, "preset": "individual appendix", "notes": [], "suite": {"source": "E10/n12/world_000/seed_000", "identity": "cd35dac2c32aaf92a356564fe37a25a29e9d84b0564742379072e7c27216e56d"}},$=id=>document.getElementById(id),fmt=x=>x==null?'—':Number(x).toFixed(5),esc=x=>String(x).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+$('coverage').textContent=`${D.count} completed runs / ${D.planned??'unspecified'} planned · ${D.aggregate.length} arms · preset ${D.preset}. Showing ${D.runs.length} representative trajectories.`;
+D.runs.forEach((r,i)=>$('run').add(new Option(r.name,i)));[...new Set(D.aggregate.map(a=>a.family))].forEach(f=>$('family').add(new Option(f,f)));if(D.aggregate.length)Object.keys(D.aggregate[0].metrics).forEach(k=>$('metric').add(new Option(k.replaceAll('_',' '),k)));
+const colors=['#137f77','#426cce','#b17c2d','#9453b1','#bc4963','#4b8da5','#857c41','#283955','#bf885c','#72897a','#bb636d','#5d8db4'];
+function plot(){const run=D.runs[+$('run').value];if(!run)return;const rows=run.rows,n=rows[0].mean_settings.length;let names,series,dashes=[];switch($('view').value){case 'q':names=[...Array(n)].map((_,i)=>'q'+(i+1)).concat([...Array(n)].map((_,i)=>'target'+(i+1)));series=rows.map(r=>r.mean_settings.concat(r.targets));dashes=names.map((_,i)=>i>=n);break;case 'price':names=['Price','Overload'];series=rows.map(r=>[r.price,r.overload]);break;case 'belief':names=[...Array(n)].map((_,i)=>'|e'+(i+1)+'|');series=rows.map(r=>r.staleness_error.map(Math.abs));break;case 'exploration':names=['Realized exploration effect','Quadratic prediction'];series=rows.map(r=>[r.exploration_effect,r.predicted_exploration_effect]);break;default:names=['Raw mean Y','Penalized reward','Team best found','Ignore interactions','Informed free'];series=rows.map(r=>{const b=[...run.benchmarks].reverse().find(b=>b.period<=r.period).benchmarks;return[r.mean_Y,r.reward,r.best_found_Y,b.ignoring_interactions.Y,b.informed_free.Y]});}
+const all=series.flat(),min=Math.min(...all),max=Math.max(...all),pad=Math.max((max-min)*.1,.01),low=min-pad,high=max+pad;const y=v=>320-(v-low)/(high-low)*285,x=i=>70+i/Math.max(1,rows.length-1)*1000;let svg='';for(let j=0;j<=5;j++){const v=low+(high-low)*j/5;svg+=`<line x1="70" x2="1070" y1="${y(v)}" y2="${y(v)}" stroke="#e2e8ef"/><text x="58" y="${y(v)+4}" text-anchor="end" font-size="12" fill="#63748a">${v.toFixed(3)}</text>`;}names.forEach((name,j)=>{svg+=`<polyline fill="none" stroke="${colors[j%colors.length]}" stroke-width="2" ${dashes[j]?'stroke-dasharray="5 4"':''} points="${series.map((s,i)=>`${x(i)},${y(s[j])}`).join(' ')}"/>`});svg+=`<text x="70" y="342" fill="#63748a" font-size="12">0</text><text x="1070" y="342" text-anchor="end" fill="#63748a" font-size="12">${rows.at(-1).period}</text><text x="550" y="370" text-anchor="middle" fill="#63748a" font-size="12">Review period</text>`;$('chart').innerHTML=svg;$('legend').innerHTML=names.map((n,j)=>`<span style="--c:${colors[j%colors.length]}">${n}${dashes[j]?' (dashed)':''}</span>`).join('');$('detail').textContent=`Final mean Y ${fmt(run.summary.final_Y)} · total overload ${fmt(run.summary.total_overload)} · skipped turns ${run.summary.skipped_turns} · actual T ${run.summary.actual_T}`;$('configuration').textContent=JSON.stringify({job:run.job,summary:run.summary},null,2);}
+function compare(){const family=$('family').value,metric=$('metric').value;$('comparison').innerHTML=D.aggregate.filter(a=>a.family===family).map(a=>{let v=a.metrics[metric];return `<tr><td>${esc(a.arm)}</td><td>${fmt(v.mean)}</td><td>${v.low==null?'not estimated':`[${fmt(v.low)}, ${fmt(v.high)}]`}</td><td>${v.worlds}</td><td>${a.runs}</td></tr>`}).join('');}
+$('run').onchange=plot;$('view').onchange=plot;$('family').onchange=compare;$('metric').onchange=compare;plot();compare();$('flags').innerHTML=D.notes.length?'<ul>'+D.notes.map(a=>`<li><strong>${esc(a.family+'/'+a.arm)}:</strong> ${a.notes.map(esc).join('; ')}</li>`).join('')+'</ul>':'No design flags.';$('audit').textContent=JSON.stringify(D.suite,null,2);</script></html>

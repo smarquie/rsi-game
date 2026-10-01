@@ -1,0 +1,74 @@
+test_correlated_critic (test_model.ModelTests.test_correlated_critic) ... ok
+test_crn_exact_pairing (test_model.ModelTests.test_crn_exact_pairing) ... ok
+test_deferred_evaluation_and_gated (test_model.ModelTests.test_deferred_evaluation_and_gated) ... ok
+test_determinism_snapshot_and_external (test_model.ModelTests.test_determinism_snapshot_and_external) ... ok
+test_equilibrium_certification (test_model.ModelTests.test_equilibrium_certification) ... ok
+test_evaluation_derivatives (test_model.ModelTests.test_evaluation_derivatives) ... ok
+test_grids (test_model.ModelTests.test_grids) ... ok
+test_infeasible_budget (test_model.ModelTests.test_infeasible_budget) ... ok
+test_interpreter_floor (test_model.ModelTests.test_interpreter_floor) ... ok
+test_invalid_meta_and_infinite_manifest (test_model.ModelTests.test_invalid_meta_and_infinite_manifest) ... ok
+test_logit_fallback_not_claimed_as_equilibrium (test_model.ModelTests.test_logit_fallback_not_claimed_as_equilibrium) ... ok
+test_mass_budget_and_vectorization (test_model.ModelTests.test_mass_budget_and_vectorization) ... ok
+test_measurement_inversion (test_model.ModelTests.test_measurement_inversion) ... ok
+test_no_loop_and_rejection_accounting (test_model.ModelTests.test_no_loop_and_rejection_accounting) ... ok
+test_oring (test_model.ModelTests.test_oring) ... ok
+test_sampler_exact (test_model.ModelTests.test_sampler_exact) ... ok
+test_sticky_exact_potential (test_model.ModelTests.test_sticky_exact_potential) ... ok
+test_two_stage_complementarity (test_model.ModelTests.test_two_stage_complementarity) ... ok
+test_T01_best_response_dense_grid (v04.test_functions.FunctionsTests.test_T01_best_response_dense_grid) ... ok
+test_T02_monotone_demand (v04.test_functions.FunctionsTests.test_T02_monotone_demand) ... ok
+test_T03_price_clearing_and_infeasible (v04.test_functions.FunctionsTests.test_T03_price_clearing_and_infeasible) ... ok
+test_T04_decentralization (v04.test_functions.FunctionsTests.test_T04_decentralization) ... ok
+test_T05_private_motives (v04.test_functions.FunctionsTests.test_T05_private_motives) ... ok
+test_T06_worked_examples (v04.test_functions.FunctionsTests.test_T06_worked_examples) ... ok
+test_T07_single_identification (v04.test_functions.FunctionsTests.test_T07_single_identification) ... ok
+test_T08_simultaneous_and_resonance (v04.test_functions.FunctionsTests.test_T08_simultaneous_and_resonance) ... ok
+test_T09_demodulation (v04.test_functions.FunctionsTests.test_T09_demodulation) ... ok
+test_T10_exploration_cost (v04.test_functions.FunctionsTests.test_T10_exploration_cost) ... ok
+test_T11_fixed_background_nonidentification (v04.test_functions.FunctionsTests.test_T11_fixed_background_nonidentification) ... ok
+test_T12_staleness (v04.test_functions.FunctionsTests.test_T12_staleness) ... ok
+test_T13_total_derivative_exact_clearing (v04.test_functions.FunctionsTests.test_T13_total_derivative_exact_clearing) ... ok
+test_T14_fixed_points (v04.test_functions.FunctionsTests.test_T14_fixed_points) ... ok
+test_T15_absorption_fixed_multiplier (v04.test_functions.FunctionsTests.test_T15_absorption_fixed_multiplier) ... ok
+test_T16_invisible_intervention (v04.test_functions.FunctionsTests.test_T16_invisible_intervention) ... ok
+test_T17_determinism_and_local_review (v04.test_functions.FunctionsTests.test_T17_determinism_and_local_review) ... /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/scipy/optimize/_optimize.py:353: RuntimeWarning: Values in x were outside bounds during a minimize step, clipping to bounds
+  warnings.warn("Values in x were outside bounds during a "
+ok
+test_certificate_and_resource_limit (v04.test_functions.FunctionsTests.test_certificate_and_resource_limit) ... ok
+test_jump_mixture_finite_horizon (v04.test_functions.FunctionsTests.test_jump_mixture_finite_horizon) ... ok
+test_skip_bounds_ration_and_outside (v04.test_functions.FunctionsTests.test_skip_bounds_ration_and_outside) ... ok
+test_vector_response_matches_scalar (v04.test_functions.FunctionsTests.test_vector_response_matches_scalar) ... ok
+test_interval_and_world_validation (v04.test_operations.Operations.test_interval_and_world_validation) ... ok
+test_replication_and_flags (v04.test_operations.Operations.test_replication_and_flags) ... ok
+test_resume_and_identity_guard (v04.test_operations.Operations.test_resume_and_identity_guard) ... /Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.sse4_2'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx1_0'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx2_0'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.bmi1'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.bmi2'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512f'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512cd'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512dq'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512bw'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512vl'. Detail: [errno 1] Operation not permitted
+ok
+test_all_runs_world_weighting_coverage_and_contrasts (v04.test_reporting.ResearchReporting.test_all_runs_world_weighting_coverage_and_contrasts) ... /Users/sergemarquie/Documents/Codex/2026-10-01/wha/outputs/rsi-game/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/sergemarquie/Documents/Codex/2026-10-01/wha/outputs/rsi-game/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/sergemarquie/Documents/Codex/2026-10-01/wha/outputs/rsi-game/.venv/lib/python3.11/site-packages/matplotlib/_mathtext.py:30: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /Users/sergemarquie/Documents/Codex/2026-10-01/wha/outputs/rsi-game/.venv/lib/python3.11/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /Users/sergemarquie/Documents/Codex/2026-10-01/wha/outputs/rsi-game/.venv/lib/python3.11/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+test_intervals_preserve_missingness (v04.test_reporting.ResearchReporting.test_intervals_preserve_missingness) ... ok
+test_mixed_model_versions_rejected (v04.test_reporting.ResearchReporting.test_mixed_model_versions_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 14.160s
+
+OK
+Complete research bundle: /var/folders/w_/y0mwz28d1pl3w1rj4bcfxcqw0000gn/T/tmp8v2fan54/report/research_report.html (3 individual appendices)

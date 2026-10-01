@@ -1,0 +1,350 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RSI Functions v0.4 · Research</title>
+<style>:root{font-family:system-ui,sans-serif;background:#f3f6fa;color:#1a2b42}body{max-width:1180px;margin:auto;padding:40px 25px;line-height:1.65}h1{font-size:38px;line-height:1.2}h2{margin-top:35px;font-size:24px}.tag{font-size:12px;color:#087c75;letter-spacing:2px;text-transform:uppercase}.note{padding:18px;border-left:4px solid #ca9952;background:#fff9ec}section{border:1px solid #dce4ed;background:#fff;padding:24px;border-radius:12px;margin:20px 0}select{max-width:100%;padding:8px;border:1px solid #b5c4d4;border-radius:5px;font:inherit;margin:8px 14px 10px 0}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:9px;text-align:left;border-bottom:1px solid #dde5ee}th{background:#edf2f7}.scroll{overflow:auto}svg{width:100%;height:auto}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px}.legend span:before{content:'●';color:var(--c);margin-right:5px}pre{white-space:pre-wrap;background:#17273c;color:#fff;padding:18px;border-radius:8px;font-size:12px}.muted{color:#5d6e83;font-size:13px}summary{cursor:pointer;font-weight:600}a{color:#087c75}</style>
+<div class="tag">Serge Marquie · Functions game · v0.4</div><h1>Decentralized learning under a shared budget</h1><p id="coverage"></p>
+<p class="note"><strong>Read the scope before interpreting a gap.</strong> Indefinite-world optima are best found by multi-start SLSQP, not certified global optima. The optional branch-and-bound command reports an explicit remaining gap. Finite-width targets need not be budget-feasible; overload may make raw outcomes incomparable with the feasible team benchmark. This report does not classify a short transient as a proven fixed point or cycle.</p>
+<h2>Trajectories</h2><section><label for="run">Run</label><br><select id="run"></select><label for="view">View</label><select id="view"><option value="Y">Outcomes and benchmarks</option><option value="q">Settings and targets</option><option value="price">Price and overload</option><option value="belief">Absolute belief staleness</option><option value="exploration">Exploration effect: actual vs predicted</option></select><div class="legend" id="legend"></div><svg viewBox="0 0 1100 380" id="chart" role="img" aria-label="Model trajectories"></svg><p id="detail" class="muted"></p><details><summary>Run configuration and benchmark qualifications</summary><pre id="configuration"></pre></details></section>
+<p><a href="../research_report.html">Return to complete study report</a></p><h2>Complete scalar period record</h2><div class="scroll"><table><thead><tr><th>Period</th><th>Y</th><th>Reward</th><th>Price</th><th>Mean spending</th><th>Overload</th><th>Target spending</th><th>Fast status</th></tr></thead><tbody><tr><td>0</td><td>2.35485</td><td>2.35485</td><td>0.191766</td><td>4.67617</td><td>0</td><td>4.67617</td><td>cleared</td></tr><tr><td>1</td><td>2.35007</td><td>2.35007</td><td>0.192269</td><td>4.67617</td><td>0</td><td>4.87902</td><td>cleared</td></tr><tr><td>2</td><td>2.30743</td><td>2.30743</td><td>0.20735</td><td>4.67617</td><td>0</td><td>4.55289</td><td>cleared</td></tr><tr><td>3</td><td>2.41012</td><td>2.41012</td><td>0.187533</td><td>4.67617</td><td>0</td><td>4.63666</td><td>cleared</td></tr><tr><td>4</td><td>2.39546</td><td>2.39546</td><td>0.193474</td><td>4.67617</td><td>0</td><td>5.26755</td><td>cleared</td></tr><tr><td>5</td><td>2.48142</td><td>2.43003</td><td>1000</td><td>4.72756</td><td>0.0513888</td><td>4.51805</td><td>price_cap_or_infeasible</td></tr><tr><td>6</td><td>2.05327</td><td>2.05327</td><td>0.224698</td><td>4.67617</td><td>0</td><td>4.46214</td><td>cleared</td></tr><tr><td>7</td><td>2.03893</td><td>2.03893</td><td>0.223256</td><td>4.67617</td><td>0</td><td>4.0624</td><td>cleared</td></tr><tr><td>8</td><td>2.08241</td><td>2.08241</td><td>0</td><td>4.57653</td><td>0</td><td>5.1882</td><td>slack</td></tr><tr><td>9</td><td>2.03941</td><td>2.03941</td><td>1.29238</td><td>4.67617</td><td>0</td><td>3.98475</td><td>cleared</td></tr><tr><td>10</td><td>1.6329</td><td>1.6329</td><td>0.0357799</td><td>4.67617</td><td>0</td><td>5.07587</td><td>cleared</td></tr><tr><td>11</td><td>2.09218</td><td>2.09218</td><td>0.260433</td><td>4.67617</td><td>0</td><td>5.18959</td><td>cleared</td></tr><tr><td>12</td><td>2.10698</td><td>2.10698</td><td>0.296243</td><td>4.67617</td><td>0</td><td>5.2773</td><td>cleared</td></tr></tbody></table></div><h2>Every recorded metric</h2><div class="scroll"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>initial_Y</td><td>2.35485</td></tr><tr><td>final_Y</td><td>2.10698</td></tr><tr><td>final_reward</td><td>2.10698</td></tr><tr><td>improvement</td><td>-0.247871</td></tr><tr><td>gap_to_best_found</td><td>0.414939</td></tr><tr><td>settling_period</td><td>not estimable</td></tr><tr><td>total_overload</td><td>0.0513888</td></tr><tr><td>skipped_turns</td><td>0</td></tr><tr><td>jump_events</td><td>0</td></tr><tr><td>bound_violations</td><td>0</td></tr><tr><td>tail_target_range</td><td>0.533308</td></tr><tr><td>target_path_length</td><td>2.5693</td></tr><tr><td>within_one_percent_best</td><td>0</td></tr><tr><td>mean_absolute_staleness</td><td>0.360094</td></tr><tr><td>max_curvature_fit_error</td><td>1.78413e-13</td></tr><tr><td>max_slope_fit_error</td><td>2.39808e-13</td></tr><tr><td>max_valid_identification_error</td><td>2.39808e-13</td></tr><tr><td>max_exploration_formula_error</td><td>4.28325e-15</td></tr><tr><td>mean_overload</td><td>0.00395298</td></tr><tr><td>overload_period_fraction</td><td>0.0769231</td></tr><tr><td>tail_mean_Y</td><td>2.18042</td></tr><tr><td>tail_mean_reward</td><td>2.17646</td></tr><tr><td>tail_price_range</td><td>1000</td></tr><tr><td>settling_observed</td><td>0</td></tr><tr><td>skip_fraction</td><td>0</td></tr><tr><td>eligible_fit_count</td><td>12</td></tr><tr><td>fit_count</td><td>12</td></tr><tr><td>max_complementarity_residual</td><td>51.3888</td></tr><tr><td>final_target_budget_excess</td><td>0.60113</td></tr><tr><td>final_budget_feasible</td><td>1</td></tr><tr><td>global_certified</td><td>0</td></tr></tbody></table></div><h2>Benchmark audit: every world version</h2><pre>[
+  {
+    &quot;period&quot;: 0,
+    &quot;world&quot;: {
+      &quot;b&quot;: [
+        0.6403344716699173,
+        0.807304310855565,
+        0.7263008235905866,
+        1.0119015784928287,
+        0.9945282992952879
+      ],
+      &quot;C&quot;: [
+        [
+          -0.39848567908937027,
+          -0.05221573413222128,
+          0.4107116031991293,
+          0.0024358218742084603,
+          0.11518430385526812
+        ],
+        [
+          -0.05221573413222128,
+          -0.21332060255630284,
+          -0.2722656050523859,
+          -0.18972246680316646,
+          0.23679107360965745
+        ],
+        [
+          0.4107116031991293,
+          -0.2722656050523859,
+          -0.5356997644307755,
+          0.25306746503203864,
+          0.020909442715822082
+        ],
+        [
+          0.0024358218742084603,
+          -0.18972246680316646,
+          0.25306746503203864,
+          -0.38125926460437487,
+          0.3940740972523247
+        ],
+        [
+          0.11518430385526812,
+          0.23679107360965745,
+          0.020909442715822082,
+          0.3940740972523247,
+          -0.46975842198599604
+        ]
+      ],
+      &quot;gamma&quot;: [
+        1.0383728018471805,
+        0.7171775485854237,
+        0.9350767046422472,
+        1.3760969822008642,
+        1.0366496026520644
+      ],
+      &quot;B&quot;: 4.676173967556696,
+      &quot;alpha&quot;: [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      &quot;w&quot;: [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      &quot;Y0&quot;: 0.0,
+      &quot;qbar&quot;: 0.999999
+    },
+    &quot;benchmarks&quot;: {
+      &quot;team&quot;: {
+        &quot;best&quot;: {
+          &quot;q&quot;: [
+            0.5693204422439551,
+            0.3654713672929601,
+            0.5786063171214448,
+            0.6367219178956662,
+            0.7073279932364891
+          ],
+          &quot;Y&quot;: 2.5219210850455274,
+          &quot;spending&quot;: 4.676173967556696,
+          &quot;optimizer_success&quot;: true,
+          &quot;residual&quot;: 3.3476525995723705e-09,
+          &quot;multiplier&quot;: 0.3275657574106185,
+          &quot;feasibility&quot;: 0.0,
+          &quot;complementarity&quot;: 0.0,
+          &quot;tangent_eigenvalues&quot;: [
+            -5.4985064776856705,
+            -3.6153636588204647,
+            -2.8348570630548853,
+            -0.7059040597496834
+          ],
+          &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;
+        },
+        &quot;solutions&quot;: [
+          {
+            &quot;q&quot;: [
+              0.5693204422439551,
+              0.3654713672929601,
+              0.5786063171214448,
+              0.6367219178956662,
+              0.7073279932364891
+            ],
+            &quot;Y&quot;: 2.5219210850455274,
+            &quot;spending&quot;: 4.676173967556696,
+            &quot;optimizer_success&quot;: true,
+            &quot;residual&quot;: 3.3476525995723705e-09,
+            &quot;multiplier&quot;: 0.3275657574106185,
+            &quot;feasibility&quot;: 0.0,
+            &quot;complementarity&quot;: 0.0,
+            &quot;tangent_eigenvalues&quot;: [
+              -5.4985064776856705,
+              -3.6153636588204647,
+              -2.8348570630548853,
+              -0.7059040597496834
+            ],
+            &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;
+          }
+        ],
+        &quot;validated_stationary_points&quot;: [
+          {
+            &quot;q&quot;: [
+              0.5693204422439551,
+              0.3654713672929601,
+              0.5786063171214448,
+              0.6367219178956662,
+              0.7073279932364891
+            ],
+            &quot;Y&quot;: 2.5219210850455274,
+            &quot;spending&quot;: 4.676173967556696,
+            &quot;optimizer_success&quot;: true,
+            &quot;residual&quot;: 3.3476525995723705e-09,
+            &quot;multiplier&quot;: 0.3275657574106185,
+            &quot;feasibility&quot;: 0.0,
+            &quot;complementarity&quot;: 0.0,
+            &quot;tangent_eigenvalues&quot;: [
+              -5.4985064776856705,
+              -3.6153636588204647,
+              -2.8348570630548853,
+              -0.7059040597496834
+            ],
+            &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;
+          }
+        ],
+        &quot;starts&quot;: 8,
+        &quot;failed_kkt_starts&quot;: 0,
+        &quot;eigenvalues&quot;: [
+          -1.0394178512900507,
+          -0.8760841227573644,
+          -0.2968788643971138,
+          -0.03394121231719012,
+          0.24779831809489983
+        ],
+        &quot;global_certified&quot;: false,
+        &quot;status&quot;: &quot;best_found_not_global_certificate&quot;
+      },
+      &quot;ignoring_interactions&quot;: {
+        &quot;q&quot;: [
+          0.45752773440088634,
+          0.7819364996280415,
+          0.4495364774150024,
+          0.6281094531884308,
+          0.6295521031768743
+        ],
+        &quot;Y&quot;: 2.374827909465047,
+        &quot;spending&quot;: 4.676173967556696,
+        &quot;optimizer_success&quot;: true,
+        &quot;residual&quot;: 1.9094149372733682e-08,
+        &quot;multiplier&quot;: 0.14403161703058057,
+        &quot;feasibility&quot;: 0.0,
+        &quot;complementarity&quot;: 0.0,
+        &quot;tangent_eigenvalues&quot;: [
+          -2.457833478638046,
+          -2.0853434188663034,
+          -1.5908683232382461,
+          -1.3694935527015915
+        ],
+        &quot;tangent_warning&quot;: &quot;Equality-tangent diagnostic; weakly active critical cone is not certified&quot;,
+        &quot;Y_under_diagonal&quot;: 1.8537244770351027
+      },
+      &quot;informed_free&quot;: {
+        &quot;q&quot;: [
+          0.5693204416202692,
+          0.36547136823862153,
+          0.5786063156732263,
+          0.6367219178836913,
+          0.707327994187193
+        ],
+        &quot;Y&quot;: 2.5219210849385973,
+        &quot;price&quot;: 0.3275657571748525,
+        &quot;iterations&quot;: 116,
+        &quot;converged&quot;: true,
+        &quot;residual&quot;: 2.2093921137056327e-10,
+        &quot;spending&quot;: 4.676173967230256
+      }
+    }
+  }
+]</pre><h2>Reproduction manifest</h2><pre>{
+  &quot;identity&quot;: &quot;eb988598d707fba7fde02fe2b63c8d8dc8e7daf394f1508979eadb4cb750e741&quot;,
+  &quot;version&quot;: &quot;0.4.0&quot;,
+  &quot;code_hash&quot;: &quot;d5f31a480d4078bf4ad2&quot;,
+  &quot;job&quot;: {
+    &quot;family&quot;: &quot;E2&quot;,
+    &quot;arm&quot;: &quot;frustrated_prior0.5_alpha0.0&quot;,
+    &quot;world_seed&quot;: 0,
+    &quot;seed&quot;: 0,
+    &quot;world&quot;: {
+      &quot;scenario&quot;: &quot;frustrated&quot;,
+      &quot;n&quot;: 5,
+      &quot;s_off&quot;: 0.4,
+      &quot;budget_factor&quot;: 1.0,
+      &quot;alpha_max&quot;: 0.0
+    },
+    &quot;config&quot;: {
+      &quot;periods&quot;: 12,
+      &quot;T&quot;: 192,
+      &quot;k&quot;: 1,
+      &quot;schedule&quot;: &quot;rotation&quot;,
+      &quot;frequencies&quot;: &quot;nonresonant&quot;,
+      &quot;w_min&quot;: 0.1,
+      &quot;a_max&quot;: 0.08,
+      &quot;eps_dis&quot;: 0.02,
+      &quot;rho_dis&quot;: 0.05,
+      &quot;curvature_floor&quot;: 0.05,
+      &quot;beta&quot;: 0.7,
+      &quot;phi_mem&quot;: 1.0,
+      &quot;g0&quot;: 0.5,
+      &quot;commit&quot;: &quot;fixed&quot;,
+      &quot;within_period&quot;: &quot;fixed&quot;,
+      &quot;budget_rule&quot;: &quot;price&quot;,
+      &quot;theta_adj&quot;: 0.3,
+      &quot;eta_p&quot;: 0.5,
+      &quot;p_min&quot;: 1e-08,
+      &quot;p_max&quot;: 1000.0,
+      &quot;lambda_overload&quot;: 1.0,
+      &quot;price_tol&quot;: 1e-10,
+      &quot;multistarts&quot;: 8,
+      &quot;log_executions&quot;: false,
+      &quot;outside_kind&quot;: &quot;none&quot;,
+      &quot;outside_period&quot;: 150,
+      &quot;outside_scale&quot;: 0.4,
+      &quot;outside_role&quot;: 0,
+      &quot;outside_local_gain&quot;: 0.3,
+      &quot;outside_cost_fraction&quot;: 0.3,
+      &quot;outside_relocate&quot;: false,
+      &quot;initial_targets&quot;: null,
+      &quot;non_disruption&quot;: &quot;draft&quot;
+    }
+  },
+  &quot;world&quot;: {
+    &quot;b&quot;: [
+      0.6403344716699173,
+      0.807304310855565,
+      0.7263008235905866,
+      1.0119015784928287,
+      0.9945282992952879
+    ],
+    &quot;C&quot;: [
+      [
+        -0.39848567908937027,
+        -0.05221573413222128,
+        0.4107116031991293,
+        0.0024358218742084603,
+        0.11518430385526812
+      ],
+      [
+        -0.05221573413222128,
+        -0.21332060255630284,
+        -0.2722656050523859,
+        -0.18972246680316646,
+        0.23679107360965745
+      ],
+      [
+        0.4107116031991293,
+        -0.2722656050523859,
+        -0.5356997644307755,
+        0.25306746503203864,
+        0.020909442715822082
+      ],
+      [
+        0.0024358218742084603,
+        -0.18972246680316646,
+        0.25306746503203864,
+        -0.38125926460437487,
+        0.3940740972523247
+      ],
+      [
+        0.11518430385526812,
+        0.23679107360965745,
+        0.020909442715822082,
+        0.3940740972523247,
+        -0.46975842198599604
+      ]
+    ],
+    &quot;gamma&quot;: [
+      1.0383728018471805,
+      0.7171775485854237,
+      0.9350767046422472,
+      1.3760969822008642,
+      1.0366496026520644
+    ],
+    &quot;B&quot;: 4.676173967556696,
+    &quot;alpha&quot;: [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    &quot;w&quot;: [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    &quot;Y0&quot;: 0.0,
+    &quot;qbar&quot;: 0.999999
+  },
+  &quot;python&quot;: &quot;3.11.2 (v3.11.2:878ead1ac1, Feb  7 2023, 10:02:41) [Clang 13.0.0 (clang-1300.0.29.30)]&quot;,
+  &quot;numpy&quot;: &quot;1.23.5&quot;,
+  &quot;scipy&quot;: &quot;1.10.1&quot;,
+  &quot;status&quot;: &quot;running&quot;
+}</pre><h2>Final function states</h2><div class="scroll"><table><thead><tr><th>Function</th><th>Target</th><th>Mean setting</th><th>Belief A</th><th>Belief G</th><th>Belief C</th><th>Commitment bounds</th></tr></thead><tbody><tr><td>0</td><td>0.690163</td><td>0.673971</td><td>1.29526</td><td>1.48064</td><td>-0.398486</td><td>[0.6401628692314418, 0.7401628692314419]</td></tr><tr><td>1</td><td>0.330306</td><td>0.243178</td><td>2.00043</td><td>0.492835</td><td>-0.213321</td><td>[0.28030620499042824, 0.3803062049904282]</td></tr><tr><td>2</td><td>0.901629</td><td>0.851629</td><td>1.30627</td><td>1.51739</td><td>-0.5357</td><td>[0.8516294009787667, 0.9516294009787668]</td></tr><tr><td>3</td><td>0.199893</td><td>0.249893</td><td>1.18486</td><td>1.53839</td><td>-0.381259</td><td>[0.1498928640324098, 0.2498928640324098]</td></tr><tr><td>4</td><td>0.714031</td><td>0.664031</td><td>1.37294</td><td>1.53168</td><td>-0.469758</td><td>[0.6640314144086845, 0.7640314144086846]</td></tr></tbody></table></div><h2>Across-world comparisons</h2><p class="muted">Nested schedule/intervention replicas are averaged within each world first. Intervals are percentile-bootstrap 90% confidence intervals over independent world means. A single-world smoke run has no uncertainty interval. No multiple-comparison adjustment is claimed; preselect confirmatory contrasts before a large study.</p><label for="family">Family</label><select id="family"></select><label for="metric">Metric</label><select id="metric"></select><div class="scroll"><table><thead><tr><th>Arm</th><th>Mean</th><th>90% CI</th><th>Worlds</th><th>Runs</th></tr></thead><tbody id="comparison"></tbody></table></div>
+<h2>Design flags</h2><div id="flags"></div><h2>Interpretation guide</h2><ul>
+<li><strong>Identification:</strong> exact curvature/slope recovery requires nonzero dither, the frequency conditions, a fixed free-function background, and a raw quadratic aggregate. Adaptive clearing and finite-horizon mixtures can break the fixed-background assumption.</li>
+<li><strong>Learning versus feasibility:</strong> raw Y, penalized reward, spending and overload are distinct series. A lower reward can reflect price instability or a infeasible exploration floor even if the fitted quadratic is exact.</li>
+<li><strong>Traps:</strong> nearest stationary candidate is a distance diagnostic, not proof of basin membership. Use longer runs, residual checks, multiple starts and the two-dimensional basin command.</li>
+<li><strong>Convergence:</strong> tail target range and settling time are finite-horizon diagnostics. Fixed-multiplier idealized tests differ from the finite-width, changing-price process.</li>
+<li><strong>Outside changes:</strong> the invisible construction preserves slices through the chosen target. It need not preserve observations under finite-width commitments, shifted boundary centers, or changing backgrounds.</li>
+<li><strong>Statistical unit:</strong> the baseline is deterministic conditional on the world. Changing only a seed does not create independent evidence. Random schedules and outside interventions supply nested randomness when enabled.</li>
+</ul><h2>Saved artifacts</h2><p>Use <code>aggregate.csv</code>, <code>run_summary.csv</code> and <code>paired_contrasts.json</code> alongside the complete per-run JSONL/CSV/Parquet records. The contrasts file compares each arm with the lexicographically first completed arm in its family on shared world seeds; this is descriptive, not a claim that this is the scientifically preferred control. Standalone SVG/PNG plots for up to twelve representative runs are under <code>figures/</code>.</p>
+<details><summary>Completion and failure audit</summary><pre id="audit"></pre></details>
+<script>const D={"runs": [{"name": "E2/frustrated_prior0.5_alpha0.0/0/0", "summary": {"initial_Y": 2.3548535031271625, "final_Y": 2.1069821990809516, "final_reward": 2.1069821990809516, "final_target_Y": 2.129180908811509, "improvement": -0.24787130404621083, "best_found_Y": 2.5219210850455274, "gap_to_best_found": 0.41493888596457573, "global_certified": false, "final_mean_settings": [0.6739711945040905, 0.24317808925344145, 0.8516294009787658, 0.24989286403241048, 0.6640314144086832], "final_targets": [0.6901628692314419, 0.33030620499042823, 0.9016294009787668, 0.1998928640324098, 0.7140314144086846], "final_target_spending": 5.27730379435094, "nearest_stationary_index": 0, "distance_to_stationary": 0.43682905386325643, "within_one_percent_best": false, "settling_period": null, "cumulative_exploration_effect": -0.014748331990335206, "total_overload": 0.051388802859605676, "skipped_turns": 0, "jump_events": 0, "bound_violations": 0, "target_path_length": 2.569301807703773, "tail_target_range": 0.5333079293351033, "idealized_slice_residual": {"distance": 0.5031813055957544, "targets": [0.6822759389446532, 0.38180359720910395, 0.5658833396542767, 0.7030741696281642, 0.6549058282228273], "budget_violation": 0.6011298267942449, "complementarity": 0.17808050251509924}, "actual_T": 192, "frequencies": [1, 4, 10, 13, 28], "periods": 12, "warning": "Best-found gaps are not global gaps unless certified; period rewards may involve overload and targets need not be feasible"}, "job": {"family": "E2", "arm": "frustrated_prior0.5_alpha0.0", "world_seed": 0, "seed": 0, "world": {"scenario": "frustrated", "n": 5, "s_off": 0.4, "budget_factor": 1.0, "alpha_max": 0.0}, "config": {"periods": 12, "T": 192, "k": 1, "schedule": "rotation", "frequencies": "nonresonant", "w_min": 0.1, "a_max": 0.08, "eps_dis": 0.02, "rho_dis": 0.05, "curvature_floor": 0.05, "beta": 0.7, "phi_mem": 1.0, "g0": 0.5, "commit": "fixed", "within_period": "fixed", "budget_rule": "price", "theta_adj": 0.3, "eta_p": 0.5, "p_min": 1e-08, "p_max": 1000.0, "lambda_overload": 1.0, "price_tol": 1e-10, "multistarts": 8, "log_executions": false, "outside_kind": "none", "outside_period": 150, "outside_scale": 0.4, "outside_role": 0, "outside_local_gain": 0.3, "outside_cost_fraction": 0.3, "outside_relocate": false, "initial_targets": null, "non_disruption": "draft"}}, "benchmarks": [{"period": 0, "world": {"b": [0.6403344716699173, 0.807304310855565, 0.7263008235905866, 1.0119015784928287, 0.9945282992952879], "C": [[-0.39848567908937027, -0.05221573413222128, 0.4107116031991293, 0.0024358218742084603, 0.11518430385526812], [-0.05221573413222128, -0.21332060255630284, -0.2722656050523859, -0.18972246680316646, 0.23679107360965745], [0.4107116031991293, -0.2722656050523859, -0.5356997644307755, 0.25306746503203864, 0.020909442715822082], [0.0024358218742084603, -0.18972246680316646, 0.25306746503203864, -0.38125926460437487, 0.3940740972523247], [0.11518430385526812, 0.23679107360965745, 0.020909442715822082, 0.3940740972523247, -0.46975842198599604]], "gamma": [1.0383728018471805, 0.7171775485854237, 0.9350767046422472, 1.3760969822008642, 1.0366496026520644], "B": 4.676173967556696, "alpha": [0.0, 0.0, 0.0, 0.0, 0.0], "w": [1.0, 1.0, 1.0, 1.0, 1.0], "Y0": 0.0, "qbar": 0.999999}, "benchmarks": {"team": {"best": {"q": [0.5693204422439551, 0.3654713672929601, 0.5786063171214448, 0.6367219178956662, 0.7073279932364891], "Y": 2.5219210850455274, "spending": 4.676173967556696, "optimizer_success": true, "residual": 3.3476525995723705e-09, "multiplier": 0.3275657574106185, "feasibility": 0.0, "complementarity": 0.0, "tangent_eigenvalues": [-5.4985064776856705, -3.6153636588204647, -2.8348570630548853, -0.7059040597496834], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"}, "solutions": [{"q": [0.5693204422439551, 0.3654713672929601, 0.5786063171214448, 0.6367219178956662, 0.7073279932364891], "Y": 2.5219210850455274, "spending": 4.676173967556696, "optimizer_success": true, "residual": 3.3476525995723705e-09, "multiplier": 0.3275657574106185, "feasibility": 0.0, "complementarity": 0.0, "tangent_eigenvalues": [-5.4985064776856705, -3.6153636588204647, -2.8348570630548853, -0.7059040597496834], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"}], "validated_stationary_points": [{"q": [0.5693204422439551, 0.3654713672929601, 0.5786063171214448, 0.6367219178956662, 0.7073279932364891], "Y": 2.5219210850455274, "spending": 4.676173967556696, "optimizer_success": true, "residual": 3.3476525995723705e-09, "multiplier": 0.3275657574106185, "feasibility": 0.0, "complementarity": 0.0, "tangent_eigenvalues": [-5.4985064776856705, -3.6153636588204647, -2.8348570630548853, -0.7059040597496834], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified"}], "starts": 8, "failed_kkt_starts": 0, "eigenvalues": [-1.0394178512900507, -0.8760841227573644, -0.2968788643971138, -0.03394121231719012, 0.24779831809489983], "global_certified": false, "status": "best_found_not_global_certificate"}, "ignoring_interactions": {"q": [0.45752773440088634, 0.7819364996280415, 0.4495364774150024, 0.6281094531884308, 0.6295521031768743], "Y": 2.374827909465047, "spending": 4.676173967556696, "optimizer_success": true, "residual": 1.9094149372733682e-08, "multiplier": 0.14403161703058057, "feasibility": 0.0, "complementarity": 0.0, "tangent_eigenvalues": [-2.457833478638046, -2.0853434188663034, -1.5908683232382461, -1.3694935527015915], "tangent_warning": "Equality-tangent diagnostic; weakly active critical cone is not certified", "Y_under_diagonal": 1.8537244770351027}, "informed_free": {"q": [0.5693204416202692, 0.36547136823862153, 0.5786063156732263, 0.6367219178836913, 0.707327994187193], "Y": 2.5219210849385973, "price": 0.3275657571748525, "iterations": 116, "converged": true, "residual": 2.2093921137056327e-10, "spending": 4.676173967230256}}}], "rows": [{"period": 0, "mean_Y": 2.3548535031271625, "reward": 2.3548535031271625, "price": 0.19176604229187433, "overload": 0.0, "mean_spending": 4.676173967402404, "mean_settings": [0.6017507147324854, 0.7249393997743706, 0.641368082222855, 0.47222265582709616, 0.6024116169119375], "targets": [0.6017507147324854, 0.7249393997743706, 0.641368082222855, 0.47222265582709616, 0.6024116169119375], "staleness_error": [-0.7325398383355126, -0.001326555010781716, -0.5900412597988756, -1.0391669288433258, -1.3754738631303653], "exploration_effect": 1.7763568394002505e-15, "predicted_exploration_effect": 0.0, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 1, "mean_Y": 2.350066192773463, "reward": 2.350066192773463, "price": 0.19226851719622573, "overload": 0.0, "mean_spending": 4.6761739669440034, "mean_settings": [0.6017507147324858, 0.7242186723341139, 0.6404283770674056, 0.470839747428077, 0.6013698360920615], "targets": [0.6724227561030478, 0.7249393997743706, 0.641368082222855, 0.47222265582709616, 0.6024116169119375], "staleness_error": [-0.7315964787043878, -0.0018696225842609326, -0.5896902140255007, -1.0381437099436532, -1.3740033053015615], "exploration_effect": -0.0012751541730859905, "predicted_exploration_effect": -0.001275154173085985, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 2, "mean_Y": 2.307432618698232, "reward": 2.307432618698232, "price": 0.20734999839078228, "overload": 0.0, "mean_spending": 4.676173966653848, "mean_settings": [0.6857261717217787, 0.7249393997743704, 0.6122236935943447, 0.4293325859101797, 0.570101413116578], "targets": [0.6724227561030478, 0.5665660197683468, 0.641368082222855, 0.47222265582709616, 0.6024116169119375], "staleness_error": [0.03064871932899038, -0.009399787988354058, -0.635961309689147, -0.999359805467747, -1.3597966552226182], "exploration_effect": -0.0006826259281789149, "predicted_exploration_effect": -0.0006826259281801691, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 3, "mean_Y": 2.410119590798031, "reward": 2.410119590798031, "price": 0.1875334693863806, "overload": 0.0, "mean_spending": 4.6761739665681965, "mean_settings": [0.7081487291914256, 0.5272098128217477, 0.641368082222855, 0.483871517431486, 0.6111870069532899], "targets": [0.6724227561030478, 0.5665660197683468, 0.6721003365958892, 0.47222265582709616, 0.6024116169119375], "staleness_error": [-0.02367087420545677, 0.019448767307560344, -0.7913718620311962, -1.1216290598757204, -1.3155244524681602], "exploration_effect": -0.0017142392461741984, "predicted_exploration_effect": -0.0017142392461784817, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 4, "mean_Y": 2.395464240091552, "reward": 2.395464240091552, "price": 0.1934744076379502, "overload": 0.0, "mean_spending": 4.676173967297287, "mean_settings": [0.701334140684008, 0.5185125873125392, 0.6791055266162257, 0.47222265582709627, 0.5988696643975514], "targets": [0.6724227561030478, 0.5665660197683468, 0.6721003365958892, 0.6663095467746992, 0.6024116169119375], "staleness_error": [-0.05268327265101869, 0.04069949810341189, 0.0072727437016657515, -1.134288327266556, -1.3022328430921197], "exploration_effect": -0.0012200296467357319, "predicted_exploration_effect": -0.0012200296467339995, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 5, "mean_Y": 2.4814200568265234, "reward": 2.4300312539669178, "price": 1000.0, "overload": 0.051388802859605676, "mean_spending": 4.727562770416301, "mean_settings": [0.6224227561030486, 0.5165660197683477, 0.6221003365958913, 0.6163095467747005, 0.6024116169119378], "targets": [0.6724227561030478, 0.5665660197683468, 0.6721003365958892, 0.6663095467746992, 0.18072348507358127], "staleness_error": [-0.007579064260718971, 0.05441319653686172, -0.002043109514225261, 0.025706547345818453, -1.3943102070980808], "exploration_effect": -0.0015032269503589824, "predicted_exploration_effect": -0.0015032269503551874, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "price_cap_or_infeasible"}, {"period": 6, "mean_Y": 2.053266550416983, "reward": 2.053266550416983, "price": 0.22469768350674713, "overload": 0.0, "mean_spending": 4.676173967490065, "mean_settings": [0.6724227561030481, 0.5165660197683477, 0.6480732724928949, 0.7159069030086588, 0.2307234850735819], "targets": [0.6543031194392293, 0.5665660197683468, 0.6721003365958892, 0.6663095467746992, 0.18072348507358127], "staleness_error": [0.056226238051464206, 0.2875944199595577, -0.07798038736452928, 0.3052624850918153, -0.09110206610939287], "exploration_effect": -0.0012751541730859905, "predicted_exploration_effect": -0.001275154173085985, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 7, "mean_Y": 2.038930110142367, "reward": 2.038930110142367, "price": 0.22325621000618412, "overload": 0.0, "mean_spending": 4.676173967378825, "mean_settings": [0.6481289909892526, 0.566566019768347, 0.6494591393903592, 0.7163095467746992, 0.2307234850735819], "targets": [0.6543031194392293, 0.24317808925344153, 0.6721003365958892, 0.6663095467746992, 0.18072348507358127], "staleness_error": [0.004081228645697044, 0.2859648153148452, -0.031002156498396216, 0.3236516466958477, -0.10955995099128812], "exploration_effect": -0.000682625928179359, "predicted_exploration_effect": -0.0006826259281801691, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 8, "mean_Y": 2.0824063947874376, "reward": 2.0824063947874376, "price": 0.0, "overload": 0.0, "mean_spending": 4.576533466559424, "mean_settings": [0.7043031194392305, 0.2931780892534428, 0.672100336595889, 0.7163095467746992, 0.2307234850735819], "targets": [0.6543031194392293, 0.24317808925344153, 0.9016294009787668, 0.6663095467746992, 0.18072348507358127], "staleness_error": [-0.04306707914901331, 0.01819518522498423, -0.22601314983772514, 0.20818282044697312, 0.006024106773457438], "exploration_effect": -0.0017142392461804157, "predicted_exploration_effect": -0.0017142392461784817, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "slack"}, {"period": 9, "mean_Y": 2.0394093061339884, "reward": 2.0394093061339884, "price": 1.292376303695164, "overload": 0.0, "mean_spending": 4.676173967532895, "mean_settings": [0.6043031194392267, 0.19317808925344107, 0.8516294009787658, 0.6663095467746994, 0.2103681345444145], "targets": [0.6543031194392293, 0.24317808925344153, 0.9016294009787668, 0.1998928640324098, 0.18072348507358127], "staleness_error": [-0.19604674973423486, 0.09617890100661333, 0.05384718420449475, 0.09590259378335686, 0.10831888661659872], "exploration_effect": -0.001220029646731735, "predicted_exploration_effect": -0.0012200296467339995, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 10, "mean_Y": 1.6329026690151025, "reward": 1.6329026690151025, "price": 0.03577990264602704, "overload": 0.0, "mean_spending": 4.676173967192946, "mean_settings": [0.7043031194392305, 0.2931780892534428, 0.935100427171904, 0.24989286403241048, 0.1807234850735813], "targets": [0.6543031194392293, 0.24317808925344153, 0.9016294009787668, 0.1998928640324098, 0.7140314144086846], "staleness_error": [-0.24531081053083037, 0.008106602948938418, 0.23816071937230943, 0.018574103938364672, 0.3626312025073297], "exploration_effect": -0.001503226950356762, "predicted_exploration_effect": -0.0015032269503551874, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 11, "mean_Y": 2.0921757293749454, "reward": 2.0921757293749454, "price": 0.2604332553346467, "overload": 0.0, "mean_spending": 4.676173967552704, "mean_settings": [0.6543031194392289, 0.19317808925344107, 0.8516294009787658, 0.24989286403241048, 0.6933116843455561], "targets": [0.6901628692314419, 0.24317808925344153, 0.9016294009787668, 0.1998928640324098, 0.7140314144086846], "staleness_error": [-0.30527314917548987, -0.28532016941642446, 0.20334289150277796, -0.380874669010804, 0.06236731038869392], "exploration_effect": -0.001275154173088211, "predicted_exploration_effect": -0.001275154173085985, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}, {"period": 12, "mean_Y": 2.1069821990809516, "reward": 2.1069821990809516, "price": 0.29624299872921256, "overload": 0.0, "mean_spending": 4.676173967466221, "mean_settings": [0.6739711945040905, 0.24317808925344145, 0.8516294009787658, 0.24989286403241048, 0.6640314144086832], "targets": [0.6901628692314419, 0.33030620499042823, 0.9016294009787668, 0.1998928640324098, 0.7140314144086846], "staleness_error": [0.011966828431980048, -0.2693995903516001, 0.2156381069784543, -0.33892104630006514, 0.03415729595868955], "exploration_effect": -0.0006826259281806912, "predicted_exploration_effect": -0.0006826259281801691, "best_found_Y": 2.5219210850455274, "skipped": [], "fast_status": "cleared"}]}], "aggregate": [], "contrasts": [], "count": 1, "planned": 1, "preset": "individual appendix", "notes": [], "suite": {"source": "E2/frustrated_prior0.5_alpha0.0/world_000/seed_000", "identity": "eb988598d707fba7fde02fe2b63c8d8dc8e7daf394f1508979eadb4cb750e741"}},$=id=>document.getElementById(id),fmt=x=>x==null?'—':Number(x).toFixed(5),esc=x=>String(x).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+$('coverage').textContent=`${D.count} completed runs / ${D.planned??'unspecified'} planned · ${D.aggregate.length} arms · preset ${D.preset}. Showing ${D.runs.length} representative trajectories.`;
+D.runs.forEach((r,i)=>$('run').add(new Option(r.name,i)));[...new Set(D.aggregate.map(a=>a.family))].forEach(f=>$('family').add(new Option(f,f)));if(D.aggregate.length)Object.keys(D.aggregate[0].metrics).forEach(k=>$('metric').add(new Option(k.replaceAll('_',' '),k)));
+const colors=['#137f77','#426cce','#b17c2d','#9453b1','#bc4963','#4b8da5','#857c41','#283955','#bf885c','#72897a','#bb636d','#5d8db4'];
+function plot(){const run=D.runs[+$('run').value];if(!run)return;const rows=run.rows,n=rows[0].mean_settings.length;let names,series,dashes=[];switch($('view').value){case 'q':names=[...Array(n)].map((_,i)=>'q'+(i+1)).concat([...Array(n)].map((_,i)=>'target'+(i+1)));series=rows.map(r=>r.mean_settings.concat(r.targets));dashes=names.map((_,i)=>i>=n);break;case 'price':names=['Price','Overload'];series=rows.map(r=>[r.price,r.overload]);break;case 'belief':names=[...Array(n)].map((_,i)=>'|e'+(i+1)+'|');series=rows.map(r=>r.staleness_error.map(Math.abs));break;case 'exploration':names=['Realized exploration effect','Quadratic prediction'];series=rows.map(r=>[r.exploration_effect,r.predicted_exploration_effect]);break;default:names=['Raw mean Y','Penalized reward','Team best found','Ignore interactions','Informed free'];series=rows.map(r=>{const b=[...run.benchmarks].reverse().find(b=>b.period<=r.period).benchmarks;return[r.mean_Y,r.reward,r.best_found_Y,b.ignoring_interactions.Y,b.informed_free.Y]});}
+const all=series.flat(),min=Math.min(...all),max=Math.max(...all),pad=Math.max((max-min)*.1,.01),low=min-pad,high=max+pad;const y=v=>320-(v-low)/(high-low)*285,x=i=>70+i/Math.max(1,rows.length-1)*1000;let svg='';for(let j=0;j<=5;j++){const v=low+(high-low)*j/5;svg+=`<line x1="70" x2="1070" y1="${y(v)}" y2="${y(v)}" stroke="#e2e8ef"/><text x="58" y="${y(v)+4}" text-anchor="end" font-size="12" fill="#63748a">${v.toFixed(3)}</text>`;}names.forEach((name,j)=>{svg+=`<polyline fill="none" stroke="${colors[j%colors.length]}" stroke-width="2" ${dashes[j]?'stroke-dasharray="5 4"':''} points="${series.map((s,i)=>`${x(i)},${y(s[j])}`).join(' ')}"/>`});svg+=`<text x="70" y="342" fill="#63748a" font-size="12">0</text><text x="1070" y="342" text-anchor="end" fill="#63748a" font-size="12">${rows.at(-1).period}</text><text x="550" y="370" text-anchor="middle" fill="#63748a" font-size="12">Review period</text>`;$('chart').innerHTML=svg;$('legend').innerHTML=names.map((n,j)=>`<span style="--c:${colors[j%colors.length]}">${n}${dashes[j]?' (dashed)':''}</span>`).join('');$('detail').textContent=`Final mean Y ${fmt(run.summary.final_Y)} · total overload ${fmt(run.summary.total_overload)} · skipped turns ${run.summary.skipped_turns} · actual T ${run.summary.actual_T}`;$('configuration').textContent=JSON.stringify({job:run.job,summary:run.summary},null,2);}
+function compare(){const family=$('family').value,metric=$('metric').value;$('comparison').innerHTML=D.aggregate.filter(a=>a.family===family).map(a=>{let v=a.metrics[metric];return `<tr><td>${esc(a.arm)}</td><td>${fmt(v.mean)}</td><td>${v.low==null?'not estimated':`[${fmt(v.low)}, ${fmt(v.high)}]`}</td><td>${v.worlds}</td><td>${a.runs}</td></tr>`}).join('');}
+$('run').onchange=plot;$('view').onchange=plot;$('family').onchange=compare;$('metric').onchange=compare;plot();compare();$('flags').innerHTML=D.notes.length?'<ul>'+D.notes.map(a=>`<li><strong>${esc(a.family+'/'+a.arm)}:</strong> ${a.notes.map(esc).join('; ')}</li>`).join('')+'</ul>':'No design flags.';$('audit').textContent=JSON.stringify(D.suite,null,2);</script></html>

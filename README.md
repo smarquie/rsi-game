@@ -33,6 +33,10 @@ Delivered results are under `results/v04`: 36 smoke runs; four 300-period worked
 
 Continuous dynamics cannot be exhaustively enumerated. Nonconcave multi-start solutions are labeled **best found**. Optional branch-and-bound gives an explicit numerical optimality gap. Correct local learning does not guarantee convergence, feasibility, or a team optimum.
 
+## Complete research reports
+
+Every suite now generates a complete research bundle automatically. Open `results/v04/<study>/research/research_report.html`: every arm, every run appendix, detailed numerical analysis, 95% world-level intervals, reusable tables/figures and provenance. The ordinary dashboard links to it. See [research reporting](docs/RESEARCH_REPORTING.md) for explicit comparison definitions and manuscript integration.
+
 ## Validation and legacy
 
 ```bash

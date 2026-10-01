@@ -1,0 +1,2 @@
+family,svg,png,caption
+E12,figures/E12.svg,figures/E12.png,All completed arms: world means and exploratory 95% bootstrap intervals. Single-world arms have no interval. Tail windows contain up to 20 observations. Compare configurations and feasibility before interpreting differences.

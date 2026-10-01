@@ -81,6 +81,8 @@ Repeating an identical suite command resumes completed runs. Changed model code 
 
 ## 7. Read the outputs correctly
 
+The suite now automatically builds the dashboard and an extensive research bundle under `research/`. Open `research/research_report.html` for complete coverage of all runs, detailed analysis, and reusable manuscript text/tables/figures. See [Research reporting](RESEARCH_REPORTING.md). Use `--contrasts configs/v04/research-contrasts.json` to request the suggested explicit comparisons; use `--no-report` to defer reporting.
+
 - `plan.json`: exact jobs, counts and design warnings.
 - `suite_summary.json`: completed/failing jobs, runtime and partial-run flag.
 - Per run: `manifest.json` (world, seeds, model hash and versions), `periods.jsonl`, scalar `periods.csv`, `summary.json`, `benchmarks.json`, `complete.json`; optional detailed `executions.jsonl`.
