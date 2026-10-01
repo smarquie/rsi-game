@@ -52,7 +52,22 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument('--port',type=int,default=8765); p.add_argument('--no-browser',action='store_true'); args=p.parse_args()
-    server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler)
+    url=f'http://127.0.0.1:{args.port}'
+    try:
+        server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler)
+    except OSError as error:
+        import errno
+        from urllib.request import urlopen
+        if error.errno != errno.EADDRINUSE: raise
+        try:
+            with urlopen(url,timeout=2) as response: page=response.read(1024).decode('utf-8')
+        except Exception:
+            raise RuntimeError(f'Port {args.port} is busy; choose --port with a different number') from error
+        if '<title>RSI Game · Laboratory</title>' not in page:
+            raise RuntimeError(f'Port {args.port} belongs to another app; choose a different --port') from error
+        print(f'RSI Game is already running: {url}',flush=True)
+        if not args.no_browser: webbrowser.open(url)
+        return
     url=f'http://127.0.0.1:{server.server_port}'; print(f'RSI Game: {url} (Ctrl-C to stop)',flush=True)
     if not args.no_browser: webbrowser.open(url)
     try: server.serve_forever()
