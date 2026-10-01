@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsi-game"
+version = "0.1.0"
+description = "Exact policy-game analysis and sticky-snapshot self-improvement simulation"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.23,<3"]
+
+[project.scripts]
+rsi-game = "rsi_game.run:main"
+
+[tool.setuptools.packages.find]
+include = ["rsi_game*"]
+
+[tool.setuptools.package-data]
+rsi_game = ["lab.html"]
