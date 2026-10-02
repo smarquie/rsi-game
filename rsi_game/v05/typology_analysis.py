@@ -31,9 +31,10 @@ def analyze(root):
                     clusters[selected[i]['world_seed']].append(float(predicted==y[i]));predictions.append(dict(id=selected[i]['id'],process=process,held_archetype=held,model=name,true=y[i],predicted=predicted))
                 mean,lo,hi=interval([np.mean(v) for v in clusters.values()]);scores.append(dict(process=process,held_archetype=held,model=name,accuracy=mean,ci_low=lo,ci_high=hi,majority_baseline=baseacc,test_world_clusters=len(clusters),training_runs=int(sum(train))))
     csvfile(out/'descriptor_generalization.csv',scores);csvfile(out/'descriptor_predictions.csv',predictions)
-    worlds=defaultdict(dict);labels={}
+    worlds=defaultdict(lambda:defaultdict(list));labels={}
     for r in rows:
-        if r['fraction']!='':worlds[r['world_identity']][r['process']]=[float(r['fraction']),float(r['tail_std'])];labels[r['world_identity']]=r['archetype']
+        if r['fraction']!='':worlds[r['world_identity']][r['process']].append([float(r['fraction']),float(r['tail_std'])]);labels[r['world_identity']]=r['archetype']
+    worlds={key:{process:np.mean(values,axis=0).tolist() for process,values in methods.items()} for key,methods in worlds.items()}
     processes=sorted(set.intersection(*(set(v) for v in worlds.values()))) if worlds else []
     complete=[k for k,v in worlds.items() if all(p in v for p in processes)]
     cluster_result=dict(status='insufficient common-process coverage',common_processes=processes)

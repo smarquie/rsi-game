@@ -32,6 +32,7 @@ class Config:
     k: int = 1
     schedule: str = 'rotation'
     frequencies: str = 'nonresonant'
+    commitment_half_width: float | None = None
     w_min: float = .10
     a_max: float = .08
     eps_dis: float = .02
@@ -59,14 +60,15 @@ class Config:
     outside_cost_fraction: float = .3
     outside_relocate: bool = False  # explicit informed intervention, not baseline
     initial_targets: tuple | None = None  # explicit controlled-start variant
-    non_disruption: str = 'draft'  # absolute_drop is a sign-robust sensitivity arm
+    non_disruption: str = 'absolute_drop'  # absolute_drop is a sign-robust sensitivity arm
 
     def __post_init__(self):
+        if self.commitment_half_width is not None and (not math.isfinite(self.commitment_half_width) or self.commitment_half_width<self.w_min/2):raise ValueError('Commitment half-width must respect minimum freedom w_min/2')
         if self.outside_kind!='none' or self.outside_relocate:raise ValueError('Use the v05 paired intervention runner instead of legacy outside_* controls')
         if self.pin_targets is not None:object.__setattr__(self,'pin_targets',tuple(self.pin_targets))
         if self.within_period!='fixed' and (self.price_rule=='integral' or self.remedy in ('R3','R1+R3')):raise ValueError('Integral-period price requires fixed within-period execution')
         if self.price_rule not in ('clearing','ema','integral'): raise ValueError('Invalid price rule')
-        if self.remedy not in ('baseline','R1','R2','R3','R4','R5','R6','R7','R1+R3','oracle','unreviewed'): raise ValueError('Invalid remedy')
+        if self.remedy not in ('baseline','R1','R2','R3','R4','R5','R6','R7','R1+R3','oracle','unreviewed','random_schedule','adaptive_commit','damping03'): raise ValueError('Invalid remedy')
         if min(self.channel_every,self.full_every,self.access_every,self.access_starts,self.persistence,self.oscillation_window)<1: raise ValueError('Counts must be positive')
         if not 0<=self.lambda_p<1 or not math.isfinite(self.eta_B) or self.eta_B<=0: raise ValueError('Invalid price gain')
         if min(self.Y_scale,self.step_cap,self.channel_amplitude,self.channel_eta,self.channel_break,self.absolute_target)<0: raise ValueError('Negative scale')
@@ -101,9 +103,19 @@ class Config:
             raise ValueError('initial_targets must match world dimension and bounds')
 
     @property
+    def commitment_h(self):
+        return self.w_min/2 if self.commitment_half_width is None else self.commitment_half_width
+
+    @property
     def hash(self): return hashlib.sha256(json.dumps(asdict(self),sort_keys=True).encode()).hexdigest()[:20]
 
 
 def load_config(path):
     with open(path) as f: d=json.load(f)
     return d.get('world',{}),Config(**d.get('config',{}))
+
+
+def with_process(config,remedy):
+    from dataclasses import replace
+    options={'random_schedule':dict(schedule='random'),'adaptive_commit':dict(commit='adaptive'),'damping03':dict(beta=.3)}
+    return replace(config,remedy=remedy,**options.get(remedy,{}))

@@ -1,5 +1,7 @@
 # Running the v0.5 research package
 
+> **Updated October 2: v0.5.1.** The completed v0.4 audit led to corrected width handling, new process controls and a sign-robust disruption default. Use the fresh v051 directories below. See [the completed-study review](audits/v04-completed/REVIEW.md).
+
 The v0.5 engine is separate from v0.4. Your existing v0.4 study and browser on port 8766 continue to use the old engine. v0.5 reports are standalone HTML files; a browser server is optional.
 
 ## 1. Open the project and check the installation
@@ -29,10 +31,10 @@ New PyCharm run configurations prepare the publication core plan, execute the va
 ```bash
 .venv/bin/python -m rsi_game.v05 suite \
   --plan configs/v05/validation-plan.json \
-  --output results/v05/my-validation \
+  --output results/v05/v051/my-validation \
   --workers 2
 
-open results/v05/my-validation/research/research_report.html
+open results/v05/v051/my-validation/research/research_report.html
 ```
 
 This is a 46-job integration check covering the remedies, independent-learning controls, numerical saddle, all intervention types, pinned/unpinned invisible controls and structural selection. Short runs test the software; they do not establish scientific conclusions. The validation plan does not replace the paper's complete T1–T34 checklist; see `V05_FIDELITY.md`.
@@ -44,14 +46,14 @@ The pilot below runs five held-out world seeds across the core experiments, 100 
 ```bash
 .venv/bin/python -m rsi_game.v05 plan \
   --study core --preset pilot \
-  --output results/v05/pilot/plans/core.json
+  --output results/v05/v051/pilot/plans/core.json
 
 .venv/bin/python -m rsi_game.v05 suite \
-  --plan results/v05/pilot/plans/core.json \
-  --output results/v05/pilot/core \
+  --plan results/v05/v051/pilot/plans/core.json \
+  --output results/v05/v051/pilot/core \
   --workers 2
 
-open results/v05/pilot/core/research/research_report.html
+open results/v05/v051/pilot/core/research/research_report.html
 ```
 
 Prepare the larger plan without executing it, then extrapolate runtime and raw disk use from your own Mac:
@@ -59,11 +61,11 @@ Prepare the larger plan without executing it, then extrapolate runtime and raw d
 ```bash
 .venv/bin/python -m rsi_game.v05 plan \
   --study core --preset paper \
-  --output results/v05/paper/plans/core.json
+  --output results/v05/v051/paper/plans/core.json
 
 .venv/bin/python -m rsi_game.v05 estimate \
-  --plan results/v05/paper/plans/core.json \
-  --pilot results/v05/pilot/core --workers 2
+  --plan results/v05/v051/paper/plans/core.json \
+  --pilot results/v05/v051/pilot/core --workers 2
 ```
 
 These estimates are approximate: dimension, optimizer difficulty, benchmark reuse, longer horizons, accessibility frequency and HTML reporting affect the cost. In particular, 12-function support enumeration can be much slower than five-function cases. A partial run can be produced with `--max-jobs 10`; its report is explicitly labelled PARTIAL.
@@ -76,10 +78,10 @@ caffeinate -i bash scripts/run_v05.sh paper 2
 
 The script performs the stages in this order:
 
-1. Numerical examples.
-2. Remedy tuning on seeds 0–99, then freezes three selected processes.
+1. A 60-run readiness check, then numerical examples.
+2. Remedy tuning on seeds 0–99, including random scheduling, adaptive commitment and low damping, then freezes three selected processes.
 3. Core X1–X5 experiments on held-out seeds 100–149.
-4. X6 factorial typology: 9 archetypes × 4 value profiles × 3 strengths × 3 budget factors × 20 worlds, each with baseline and three selected processes.
+4. X6 factorial typology: 9 archetypes × 4 value profiles × 3 strengths × 3 budget factors × 20 worlds, each with baseline and three selected processes; random scheduling has four nested replicas.
 5. Broad-ensemble descriptor coverage and prediction checks.
 6. Long-horizon replication to 3,000 periods, with outputs at 300, 1,000 and 3,000.
 7. Bounded structural-edit selection on seeds 0–99.
@@ -106,11 +108,11 @@ This is an exceptionally large computational study, not an overnight Mac command
 ```bash
 .venv/bin/python -m rsi_game.v05 plan \
   --study core --preset full \
-  --output results/v05/full/plans/core.json
+  --output results/v05/v051/full/plans/core.json
 
 .venv/bin/python -m rsi_game.v05 estimate \
-  --plan results/v05/full/plans/core.json \
-  --pilot results/v05/pilot/core --workers 2
+  --plan results/v05/v051/full/plans/core.json \
+  --pilot results/v05/v051/pilot/core --workers 2
 ```
 
 ## 5. Individual stages, if you prefer control over timing
@@ -119,40 +121,40 @@ These are the full publication-oriented commands that the script runs. Each can 
 
 ```bash
 # Tune on selection worlds only.
-.venv/bin/python -m rsi_game.v05 plan --study tuning --preset paper --output results/v05/paper/plans/tuning.json
-.venv/bin/python -m rsi_game.v05 suite --plan results/v05/paper/plans/tuning.json --output results/v05/paper/tuning --workers 2
-.venv/bin/python -m rsi_game.v05 select --input results/v05/paper/tuning --output results/v05/paper/selection.json
+.venv/bin/python -m rsi_game.v05 plan --study tuning --preset paper --output results/v05/v051/paper/plans/tuning.json
+.venv/bin/python -m rsi_game.v05 suite --plan results/v05/v051/paper/plans/tuning.json --output results/v05/v051/paper/tuning --workers 2
+.venv/bin/python -m rsi_game.v05 select --input results/v05/v051/paper/tuning --output results/v05/v051/paper/selection.json
 
 # Core research questions.
-.venv/bin/python -m rsi_game.v05 plan --study core --preset paper --output results/v05/paper/plans/core.json
-.venv/bin/python -m rsi_game.v05 suite --plan results/v05/paper/plans/core.json --output results/v05/paper/core --workers 2
+.venv/bin/python -m rsi_game.v05 plan --study core --preset paper --output results/v05/v051/paper/plans/core.json
+.venv/bin/python -m rsi_game.v05 suite --plan results/v05/v051/paper/plans/core.json --output results/v05/v051/paper/core --workers 2
 
 # Structural typology, conditional on the frozen tuning selection.
-.venv/bin/python -m rsi_game.v05 plan --study typology --preset paper --selection results/v05/paper/selection.json --output results/v05/paper/plans/typology.json
-.venv/bin/python -m rsi_game.v05 suite --plan results/v05/paper/plans/typology.json --output results/v05/paper/typology --workers 2
-.venv/bin/python -m rsi_game.v05 typology-analysis --input results/v05/paper/typology
+.venv/bin/python -m rsi_game.v05 plan --study typology --preset paper --selection results/v05/v051/paper/selection.json --output results/v05/v051/paper/plans/typology.json
+.venv/bin/python -m rsi_game.v05 suite --plan results/v05/v051/paper/plans/typology.json --output results/v05/v051/paper/typology --workers 2
+.venv/bin/python -m rsi_game.v05 typology-analysis --input results/v05/v051/paper/typology
 
 # Long-horizon replication, without selecting again on test results.
-.venv/bin/python -m rsi_game.v05 plan --study long --preset paper --selection results/v05/paper/selection.json --output results/v05/paper/plans/long.json
-.venv/bin/python -m rsi_game.v05 suite --plan results/v05/paper/plans/long.json --output results/v05/paper/long --workers 2
+.venv/bin/python -m rsi_game.v05 plan --study long --preset paper --selection results/v05/v051/paper/selection.json --output results/v05/v051/paper/plans/long.json
+.venv/bin/python -m rsi_game.v05 suite --plan results/v05/v051/paper/plans/long.json --output results/v05/v051/paper/long --workers 2
 
 # Select bounded edits, then evaluate transferable process edits on fresh worlds.
-.venv/bin/python -m rsi_game.v05 plan --study structural --preset paper --output results/v05/paper/plans/structural.json
-.venv/bin/python -m rsi_game.v05 suite --plan results/v05/paper/plans/structural.json --output results/v05/paper/structural --workers 2
-.venv/bin/python -m rsi_game.v05 select-structural --input results/v05/paper/structural --output results/v05/paper/structural-selection.json
-.venv/bin/python -m rsi_game.v05 plan --study structural-test --preset paper --selection results/v05/paper/structural-selection.json --output results/v05/paper/plans/structural-test.json
-.venv/bin/python -m rsi_game.v05 suite --plan results/v05/paper/plans/structural-test.json --output results/v05/paper/structural-test --workers 2
+.venv/bin/python -m rsi_game.v05 plan --study structural --preset paper --output results/v05/v051/paper/plans/structural.json
+.venv/bin/python -m rsi_game.v05 suite --plan results/v05/v051/paper/plans/structural.json --output results/v05/v051/paper/structural --workers 2
+.venv/bin/python -m rsi_game.v05 select-structural --input results/v05/v051/paper/structural --output results/v05/v051/paper/structural-selection.json
+.venv/bin/python -m rsi_game.v05 plan --study structural-test --preset paper --selection results/v05/v051/paper/structural-selection.json --output results/v05/v051/paper/plans/structural-test.json
+.venv/bin/python -m rsi_game.v05 suite --plan results/v05/v051/paper/plans/structural-test.json --output results/v05/v051/paper/structural-test --workers 2
 ```
 
-Selection is deterministic and recorded with source checksums. Remedy selection ranks average final captured headroom across balanced tuning cells. Structural transfer selects process edits accepted in at least half of selection runs, in acceptance-frequency order; every prefix is evaluated. An empty accepted sequence is a valid negative result. Structural selection effort is retained separately; held-out performance alone must not be described as cost-free recursive improvement.
+Selection is deterministic and recorded with source checksums. Remedy selection ranks absolute deployment improvement after averaging replicas within each world; oracle and R7 are excluded. Headroom fractions remain secondary outcomes. Structural transfer selects process edits accepted in at least half of selection runs, in acceptance-frequency order; every prefix is evaluated. An empty accepted sequence is a valid negative result. Structural selection effort is retained separately; held-out performance alone must not be described as cost-free recursive improvement.
 
 ## 6. Resume, report, and inspect failures
 
 Run the identical command again to resume. Completed jobs are reused only if their configuration, source-code identity and file checksums match. Do not edit the v0.5 source while a study is running. After a code change, use a new output directory. Ctrl-C stops orchestration; incomplete jobs can be rerun. Do not delete a completion marker to disguise a mismatched run.
 
 ```bash
-.venv/bin/python -m rsi_game.v05 report --input results/v05/paper/core
-open results/v05/paper/core/research/research_report.html
+.venv/bin/python -m rsi_game.v05 report --input results/v05/v051/paper/core
+open results/v05/v051/paper/core/research/research_report.html
 ```
 
 `failures.json` lists failed jobs. Coverage tables distinguish missing jobs and integrity failures. Mixed-code reports are refused. SciPy's bounds-clipping warning alone does not establish failure; feasibility and KKT diagnostics remain in the outputs. If a run fails, inspect its logged error rather than suppressing all warnings.

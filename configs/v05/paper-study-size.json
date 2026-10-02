@@ -1,1 +1,51 @@
-{"note": "Selected-remedy counts assume three selected methods; identities are frozen by tuning. Structural validation periods differ from the generic count.", "studies": [{"study": "examples", "jobs": 40, "learning_periods": 12000}, {"study": "tuning", "jobs": 4000, "learning_periods": 1200000}, {"study": "core", "jobs": 8500, "learning_periods": 3720000}, {"study": "typology", "jobs": 25920, "learning_periods": 7776000}, {"study": "broad", "jobs": 200, "learning_periods": 60000}, {"study": "long", "jobs": 800, "learning_periods": 2400000}, {"study": "structural", "jobs": 800, "learning_periods": 240000}, {"study": "continuation", "jobs": 6300, "learning_periods": 1890000}, {"study": "stability", "jobs": 1200, "learning_periods": 360000}]}
+{
+  "note": "Historical v0.5.0 counts; do not use to estimate v0.5.1. Current core has 9700 jobs, tuning 6400, readiness 60 and stability 1200. Downstream counts depend on whether random_schedule is selected (four nested replicas). Generate current plans to obtain exact counts.",
+  "studies": [
+    {
+      "study": "examples",
+      "jobs": 40,
+      "learning_periods": 12000
+    },
+    {
+      "study": "tuning",
+      "jobs": 4000,
+      "learning_periods": 1200000
+    },
+    {
+      "study": "core",
+      "jobs": 8500,
+      "learning_periods": 3720000
+    },
+    {
+      "study": "typology",
+      "jobs": 25920,
+      "learning_periods": 7776000
+    },
+    {
+      "study": "broad",
+      "jobs": 200,
+      "learning_periods": 60000
+    },
+    {
+      "study": "long",
+      "jobs": 800,
+      "learning_periods": 2400000
+    },
+    {
+      "study": "structural",
+      "jobs": 800,
+      "learning_periods": 240000
+    },
+    {
+      "study": "continuation",
+      "jobs": 6300,
+      "learning_periods": 1890000
+    },
+    {
+      "study": "stability",
+      "jobs": 1200,
+      "learning_periods": 360000
+    }
+  ],
+  "status": "historical-v0.5.0"
+}

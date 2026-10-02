@@ -1,4 +1,6 @@
-# v0.5 research package
+# v0.5.1 research package
+
+Updated after the completed 10,704-run v0.4 audit: see [findings and corrections](docs/audits/v04-completed/REVIEW.md).
 
 The October v0.5 engine adds deployment-based self-improvement measurement, coordination/accessibility diagnostics, process remedies, structural interventions, typology studies and auditable reports. The v0.4 engine and its running studies are preserved.
 

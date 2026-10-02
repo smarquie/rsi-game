@@ -1,3 +1,11 @@
+# v0.5.1 follow-up validation (October 2)
+
+After the completed v0.4 study: 27 v0.5 tests and 45 preserved legacy/v0.4 tests passed (72 total). The corrected 60-job readiness study completed with a single code identity; all recorded deployments were feasible and every wide-commitment process performed reviews in all 60 learning periods on the readiness worlds. The core paper grid (9,700 jobs) and stability grid (1,200 jobs) passed structural exploration preflight. State-dependent skips remain legitimate outcomes.
+
+See [the completed-study review](audits/v04-completed/REVIEW.md) and [readiness provenance](audits/v04-completed/v051-readiness.json). The earlier validation record below refers to v0.5.0 and is retained as history, not evidence that the old launch grid was scientifically appropriate.
+
+---
+
 # v0.5 validation record
 
 Validated locally with the versions pinned in `requirements-v05-tested.txt`.

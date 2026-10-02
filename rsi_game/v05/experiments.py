@@ -1,10 +1,10 @@
 """Explicit, frozen plans. Selection worlds and held-out worlds never overlap."""
 from dataclasses import asdict,replace
 from itertools import product
-from .config import Config
+from .config import Config,with_process
 from .typology import ARCHETYPES,PROFILES
 
-REMEDIES=('baseline','R1','R2','R3','R4','R5','R6','R7','R1+R3','oracle')
+REMEDIES=('baseline','R1','R2','R3','R4','R5','R6','R7','R1+R3','oracle','random_schedule','adaptive_commit','damping03')
 def plan(study='core',preset='pilot',selection=None):
     if preset not in ('smoke','pilot','paper','full'):raise ValueError(preset)
     periods={'smoke':10,'pilot':100,'paper':300,'full':3000}[preset];starts={'smoke':4,'pilot':32,'paper':300,'full':300}[preset]
@@ -12,15 +12,28 @@ def plan(study='core',preset='pilot',selection=None):
     if preset in ('paper','full') and selection is not None and selection.get('preset') not in ('paper','full'):raise ValueError('Publication studies require publication-scale tuning, not smoke/pilot selection')
     jobs=[]
     def add(family,arm,seed,world,config=cfg,**extra):
-        jobs.append(dict(id=f'{len(jobs):07d}',family=family,arm=arm,world_seed=seed,seed=seed,world=dict(seed=seed,**world),config=asdict(config),**extra))
+        config=with_process(config,config.remedy)
+        repetitions=4 if config.schedule=='random' and preset in ('paper','full') and study!='readiness' else 1
+        for replicate in range(repetitions):
+            jobs.append(dict(id=f'{len(jobs):07d}',family=family,arm=arm,world_seed=seed,seed=seed*100+replicate if repetitions>1 else seed,world=dict(seed=seed,**world),config=asdict(config),**extra))
     worlds=('concave','frustrated','two_camps','modular')
     if study=='tuning':
         for seed,archetype,remedy in product(range({'smoke':1,'pilot':5,'paper':100,'full':100}[preset]),worlds,REMEDIES):
             add('X5',f'{archetype}_{remedy}',seed,dict(archetype=archetype),replace(cfg,remedy=remedy,periods=min(periods,1000)))
+    elif study=='readiness':
+        for seed in range(900000,900003):
+            for h in (.05,.2):
+                for process in ('baseline','R1','R3','adaptive_commit','random_schedule','damping03'):
+                    add('Q_width',f'h{h}_{process}',seed,dict(archetype='frustrated'),replace(cfg,periods=60,multistarts=16,access_starts=2,commitment_half_width=h,remedy=process))
+            for offset in (-5.,0.,5.):
+                for rule in ('draft','absolute_drop'):
+                    add('Q_offset',f'Y0{offset}_{rule}',seed,dict(archetype='frustrated',Y0=offset),replace(cfg,periods=60,multistarts=16,access_starts=2,non_disruption=rule))
+            for mode in ('adaptive','adaptive_exact'):
+                add('Q_adaptive',mode,seed,dict(archetype='frustrated'),replace(cfg,periods=60,multistarts=16,access_starts=2,within_period=mode))
     elif study=='core':
         for seed,a,motive,h,beta,budget in product(seeds,worlds,(0.,.3),(.05,.2),(.3,.7),( .5,1.,2.,3.) if preset=='full' else (1.,)):
             for remedy in ('baseline','R3'):
-                add('X1',f'{a}_alpha{motive}_h{h}_beta{beta}_B{budget}_{remedy}',seed,dict(archetype=a,alpha_max=motive,budget_factor=budget),replace(cfg,w_min=2*h,beta=beta,remedy=remedy))
+                add('X1',f'{a}_alpha{motive}_h{h}_beta{beta}_B{budget}_{remedy}',seed,dict(archetype=a,alpha_max=motive,budget_factor=budget),replace(cfg,commitment_half_width=h,beta=beta,remedy=remedy))
         for seed,a,n,remedy in product(seeds,('modular','two_camps'),(3,5,8,12),('baseline','unreviewed','oracle','independent')):
             add('X2',f'{a}_n{n}_{remedy}',seed,dict(archetype=a,n=n),replace(cfg,remedy='baseline' if remedy=='independent' else remedy),kind='independent' if remedy=='independent' else 'simulation')
         for seed,a,prior in product(seeds,('frustrated','two_camps'),(.5,1.,2.)):
@@ -64,7 +77,17 @@ def plan(study='core',preset='pilot',selection=None):
             add('X6_continuation',f'{route}_t{t}_{remedy}',seed,dict(archetype=route,t=t),replace(cfg,remedy=remedy,periods=min(periods,1000)))
     elif study=='stability':
         for n,alpha,h,beta in product((2,3,5,8),(0.,.1,.2,.3,.5),[j/100 for j in range(1,31)],(.3,.7)):
-            add('D1',f'n{n}_alpha{alpha}_h{h}_beta{beta}',100,dict(archetype='symmetric',n=n,alpha_max=alpha),replace(cfg,w_min=2*h,beta=beta))
+            add('D1',f'n{n}_alpha{alpha}_h{h}_beta{beta}',100,dict(archetype='symmetric',n=n,alpha_max=alpha),replace(cfg,w_min=.02,commitment_half_width=h,beta=beta))
     else:raise ValueError(study)
-    return dict(schema='rsi-v05-plan-1',study=study,preset=preset,jobs=jobs,horizons=[h for h in (300,1000,3000) if h<=periods],selection=selection,
+    return dict(schema='rsi-v05-plan-2',preflight=preflight(jobs),study=study,preset=preset,jobs=jobs,horizons=[h for h in (300,1000,3000) if h<=periods],selection=selection,
         limitations=['No finite grid covers all possible dynamics.','Full R7 assumes an oracle budget-feasibility service.','Negative accessibility searches do not certify impossibility.'])
+
+
+def preflight(jobs):
+    seen=set()
+    for job in jobs:
+        if job['id'] in seen:raise ValueError('Duplicate job id')
+        seen.add(job['id']);config=Config(**job['config'])
+        if config.learning and config.remedy!='unreviewed' and config.eps_dis>0 and config.a_max<config.w_min/2:
+            raise ValueError(f"Unintentionally frozen exploration: {job['family']}/{job['arm']}")
+    return dict(jobs_checked=len(jobs),structurally_blocked_exploration=0,warning='State-dependent skips remain possible; this check only excludes incompatible fixed amplitude/freedom bounds.')

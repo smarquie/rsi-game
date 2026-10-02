@@ -1,6 +1,12 @@
-# v0.5 implementation, assumptions and publication boundaries
+# v0.5.1 implementation, assumptions and publication boundaries
 
 Source: Serge Marquie's `rsi_functions_game_v05.pdf`, working draft 0.5, October 2026. The original PDF is not copied into the public repository. The v0.4 source remains unchanged.
+
+## October 2 operational clarification
+
+Actual commitment half-width is now a separate `commitment_half_width` parameter from minimum freedom `w_min`. Omitting it preserves the old width convention. X1 holds minimum width at 0.10 while varying actual half-width 0.05/0.20; the stability grid holds minimum width at 0.02. This avoids disabling exploration when only the commitment band should widen. Adaptive commitment uses the target step to widen its band and that width is no longer overwritten by the simulator.
+
+The default disruption check is now `absolute_drop`, with signed-offset sensitivity in the readiness study. It is sign-robust, not generally translation-invariant. Random scheduling, adaptive commitment and beta=0.3 are explicit candidates. Randomized publication arms have four nested replicas; method selection averages them within world before ranking mean absolute deployment improvement. Oracle and R7 remain benchmarks rather than candidates for the selected three processes. These changes respond to the completed old study and must be distinguished from unchanged v0.4 runs.
 
 ## Implemented research mechanisms
 

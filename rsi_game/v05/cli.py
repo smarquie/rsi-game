@@ -2,13 +2,13 @@
 import argparse,json
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor,wait,FIRST_COMPLETED
-from .experiments import plan
+from .experiments import plan,preflight
 from .storage import atomic,run_job,digest
 from .research_report import report
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest='command',required=True)
-    p=sub.add_parser('plan');p.add_argument('--study',choices=('core','tuning','typology','examples','structural','broad','stability','continuation','structural-test','long'),default='core');p.add_argument('--preset',choices=('smoke','pilot','paper','full'),default='pilot');p.add_argument('--selection');p.add_argument('--output',required=True)
+    p=sub.add_parser('plan');p.add_argument('--study',choices=('core','tuning','typology','examples','structural','broad','stability','continuation','structural-test','long','readiness'),default='core');p.add_argument('--preset',choices=('smoke','pilot','paper','full'),default='pilot');p.add_argument('--selection');p.add_argument('--output',required=True)
     p=sub.add_parser('suite');p.add_argument('--plan',required=True);p.add_argument('--output',required=True);p.add_argument('--workers',type=int,default=2);p.add_argument('--max-jobs',type=int);p.add_argument('--no-report',action='store_true')
     p=sub.add_parser('report');p.add_argument('--input',required=True)
     p=sub.add_parser('select');p.add_argument('--input',required=True);p.add_argument('--output',required=True)
@@ -54,7 +54,7 @@ def main():
         if p['study']!='tuning':raise ValueError('Selection must use the tuning study only')
         from collections import defaultdict
         import numpy as np
-        values=defaultdict(list);sources=[]
+        values=defaultdict(lambda:defaultdict(list));sources=[]
         for j in p['jobs']:
             if j['world_seed']>=100:raise ValueError('Held-out world in tuning data')
             path=root/'runs'/j['id'];marker=path/'complete.json'
@@ -62,13 +62,16 @@ def main():
             completion=json.loads(marker.read_text())
             if any(digest(path/k)!=v for k,v in completion['checksums'].items()):raise ValueError('Tuning integrity failure')
             data=json.loads((path/'result.json').read_text());remedy=j['config']['remedy']
-            if remedy not in ('baseline','oracle') and data['summary']['fraction'] is not None:values[remedy].append(data['summary']['fraction'])
+            if remedy not in ('baseline','oracle','R7'):
+                key=json.dumps(j['world'],sort_keys=True)
+                values[remedy][key].append(data['summary']['improvement'])
             sources.append(dict(id=j['id'],sha256=digest(path/'result.json')))
-        ranking=sorted(values,key=lambda k:(-np.mean(values[k]),k));atomic(args.output,dict(selected=ranking[:3],criterion='Mean final fraction across equally represented tuning cells; ties alphabetic',scores={k:float(np.mean(values[k])) for k in ranking},source_plan_sha256=digest(root/'plan.json'),source_results=sources,seed_range=[0,99],preset=p['preset']))
+        scores={k:float(np.mean([np.mean(v) for v in worlds.values()])) for k,worlds in values.items()};ranking=sorted(scores,key=lambda k:(-scores[k],k));atomic(args.output,dict(selected=ranking[:3],criterion='Mean absolute deployment improvement, replicas averaged within world first; oracle and R7 excluded; ties alphabetic. Headroom fractions remain secondary reported outcomes.',scores=scores,source_plan_sha256=digest(root/'plan.json'),source_results=sources,seed_range=[0,99],preset=p['preset']))
         print('Selected:',', '.join(ranking[:3]));return
     if args.workers<1:raise ValueError('workers must be positive')
     p=json.loads(Path(args.plan).read_text());root=Path(args.output);saved=root/'plan.json'
     if saved.exists() and json.loads(saved.read_text())!=p:raise ValueError('Output contains a different plan; choose a new output directory')
+    preflight(p['jobs'])
     atomic(saved,p);jobs=p['jobs'][:args.max_jobs] if args.max_jobs else p['jobs'];failures=[]
     print(f'Running {len(jobs)} / {len(p["jobs"])} prepared jobs with {args.workers} workers',flush=True)
     with ProcessPoolExecutor(max_workers=args.workers) as pool:

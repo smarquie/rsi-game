@@ -51,10 +51,14 @@ def report(root):
                 if h<=result['summary']['periods']:
                     pr=result['periods'][h];horizons.append(dict(**common,subarm=sub,horizon=h,**{k:pr[k] for k in ('deployment_Y','improvement','opportunity','fraction','evaluations','resources')}))
             if sub=='run':
-                w=job['world'].copy();w.pop('seed',None);config=job['config'].copy();config.pop('remedy',None)
-                key=(job['family'],json.dumps(w,sort_keys=True),json.dumps(config,sort_keys=True),job['world_seed']);matched[key]['independent' if job.get('kind')=='independent' else job['config']['remedy']]=row
+                w=job['world'].copy();w.pop('seed',None);config=job['config'].copy();process=config.pop('remedy',None)
+                if process=='random_schedule':config['schedule']='rotation'
+                if process=='adaptive_commit':config['commit']='fixed'
+                if process=='damping03':config['beta']=.7
+                key=(job['family'],json.dumps(w,sort_keys=True),json.dumps(config,sort_keys=True),job['world_seed']);matched[key].setdefault('independent' if job.get('kind')=='independent' else job['config']['remedy'],[]).append(row)
         body+='<h2>Inputs and provenance</h2><pre>'+html.escape(json.dumps(manifest,indent=2))+'</pre><p><a href="../../runs/'+job['id']+'/result.json">Complete machine-readable result, including fitted coefficients and benchmark candidates</a></p>'
         (out/'runs'/f'{job["id"]}.html').write_text(document(job['family']+' / '+job['arm'],body))
+    matched={key:{process:average_replicas(items) for process,items in methods.items()} for key,methods in matched.items()}
     if len(hashes)>1:raise ValueError('Mixed code hashes: report refused. Use separate output roots.')
     stats=[]
     metrics=('final_Y','improvement','opportunity','fraction','tail_std','total_overload','evaluations','resources','misallocation','tau_absolute_evaluations','tau_fraction_evaluations','tau_absolute_resources')
@@ -69,8 +73,10 @@ def report(root):
             times=[r[metric] for r in items if r[metric] is not None];n=len(items)
             # RMST at common observed horizon includes right-censored runs.
             horizon=min(r['periods'] for r in items);restricted=[min(r[metric],horizon) if r[metric] is not None else horizon for r in items]
-            mean,lo,hi=interval(restricted)
-            stats.append(dict(family=family,arm=arm,subarm=sub,metric=metric+'_restricted_mean',worlds=n,mean=mean,ci_low=lo,ci_high=hi,events=len(times),censored=n-len(times),horizon=horizon))
+            restricted_worlds=defaultdict(list)
+            for item,value in zip(items,restricted):restricted_worlds[item['world_seed']].append(value)
+            mean,lo,hi=interval([np.mean(v) for v in restricted_worlds.values()])
+            stats.append(dict(family=family,arm=arm,subarm=sub,metric=metric+'_restricted_mean',worlds=len(restricted_worlds),runs=n,mean=mean,ci_low=lo,ci_high=hi,events=len(times),censored=n-len(times),horizon=horizon))
     from .inference import paired_sign_test,holm
     contrasts=[]
     for family in sorted({key[0] for key in matched}):
@@ -85,15 +91,16 @@ def report(root):
     effort_pairs=[];effort_groups=defaultdict(lambda:defaultdict(list))
     for (family,_,_,seed),runs in matched.items():
         if 'baseline' not in runs:continue
-        baseline=json.loads((root/'runs'/runs['baseline']['id']/'result.json').read_text())['periods']
+        baselines=[json.loads((root/'runs'/identity/'result.json').read_text())['periods'] for identity in runs['baseline']['_replica_ids']]
         for remedy,row in runs.items():
             if remedy=='baseline':continue
-            periods=json.loads((root/'runs'/row['id']/'result.json').read_text())['periods']
+            trajectories=[json.loads((root/'runs'/identity/'result.json').read_text())['periods'] for identity in row['_replica_ids']]
             for budget_type in ('evaluations','resources'):
-                budget=min(baseline[-1][budget_type],periods[-1][budget_type])
-                left=next(r for r in reversed(baseline) if r[budget_type]<=budget);right=next(r for r in reversed(periods) if r[budget_type]<=budget)
-                difference=right['improvement']-left['improvement']
-                effort_pairs.append(dict(family=family,remedy=remedy,world_seed=seed,budget_type=budget_type,budget=budget,baseline_consumed=left[budget_type],treatment_consumed=right[budget_type],improvement_difference=difference))
+                budget=min(trace[-1][budget_type] for trace in baselines+trajectories)
+                left=[next(r for r in reversed(trace) if r[budget_type]<=budget) for trace in baselines]
+                right=[next(r for r in reversed(trace) if r[budget_type]<=budget) for trace in trajectories]
+                difference=float(np.mean([r['improvement'] for r in right])-np.mean([r['improvement'] for r in left]))
+                effort_pairs.append(dict(family=family,remedy=remedy,world_seed=seed,budget_type=budget_type,budget=budget,baseline_consumed=float(np.mean([r[budget_type] for r in left])),treatment_consumed=float(np.mean([r[budget_type] for r in right])),baseline_replicas=len(left),treatment_replicas=len(right),improvement_difference=difference))
                 effort_groups[(family,remedy,budget_type)][seed].append(difference)
     effort_statistics=[]
     for (family,remedy,budget_type),byseed in effort_groups.items():
@@ -122,3 +129,13 @@ def report(root):
     (out/'research_report.html').write_text(document('RSI v0.5 research report',body))
     atomic(out/'report_manifest.json',dict(status=status,planned=len(plan['jobs']),verified=valid,code_hashes=sorted(hashes),plan_sha256=digest(root/'plan.json'),files={p.name:digest(p) for p in out.glob('*.csv')}))
     return out/'research_report.html'
+
+
+def average_replicas(items):
+    """A world remains one observation even when its schedule is replicated."""
+    result=items[0].copy()
+    for key in result:
+        values=[r[key] for r in items if isinstance(r.get(key),(int,float))]
+        if values:result[key]=float(np.mean(values))
+    result['_replica_ids']=[r['id'] for r in items]
+    return result

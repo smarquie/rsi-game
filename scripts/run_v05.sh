@@ -6,7 +6,7 @@ workers="${2:-2}"
 case "$preset" in smoke|pilot|paper|full) ;; *) echo 'Preset must be smoke, pilot, paper or full'; exit 2;; esac
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 python_bin="$PWD/.venv/bin/python"
-base="results/v05/$preset"
+base="results/v05/v051/$preset"
 mkdir -p "$base/plans" "$base/_matplotlib"
 export MPLCONFIGDIR="$PWD/$base/_matplotlib"
 run_study() {
@@ -15,6 +15,7 @@ run_study() {
   "$python_bin" -m rsi_game.v05 plan --study "$study" --preset "$preset" --output "$base/plans/$study.json" "$@"
   "$python_bin" -m rsi_game.v05 suite --plan "$base/plans/$study.json" --output "$base/$study" --workers "$workers"
 }
+run_study readiness
 run_study examples
 run_study tuning
 "$python_bin" -m rsi_game.v05 select --input "$base/tuning" --output "$base/selection.json"

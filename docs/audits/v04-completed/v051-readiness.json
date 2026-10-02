@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE",
+  "planned": 60,
+  "verified": 60,
+  "code_hashes": [
+    "62873b6d57f7599627905c20a4c569221bb9a34c99bd4fc5a8674f9921262be5"
+  ],
+  "plan_sha256": "f6230a60a230c1b5e719a645cd78b935116526e08c315159f537542586d2f331",
+  "files": {
+    "all_runs.csv": "074507bb4cfb62c1d6ab58f129e43988e0e4309d4630be6a897fca30c5397c4f",
+    "matched_effort_statistics.csv": "88ac0172d6b3fe23d9c61a002b7a86bd331d975616bd0744029d9b6a3a5f7bd3",
+    "all_arm_statistics.csv": "933be72e0b94fb91fd0f2abae19b17a6ffff0fcb2b9a92df200275ef7c447e76",
+    "matched_effort_pairs.csv": "313419f6d9eb267427415d89daf697182d11a03b59af0749ecfb9e7eb432bb90",
+    "paired_contrasts.csv": "28dc293a489bfcbb6ad90d054083e288544552f4924df6e25fdd3e0e79a10b0f",
+    "all_periods.csv": "9bce27a5fc545756e5cae0a67111dc38a150771c035eb6acd757088cc0de70ff"
+  }
+}

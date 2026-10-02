@@ -5,7 +5,7 @@ from .world import World, make_world, kappa
 ARCHETYPES=('independent','concave','pipeline','hub','modular','two_camps','redundancy','frustrated','activation')
 PROFILES=('uniform','dominant','aligned','anti_aligned')
 
-def generate(archetype='frustrated',profile='uniform',n=5,seed=0,strength=.4,budget_factor=1.,alpha_max=.3,t=None):
+def _generate(archetype='frustrated',profile='uniform',n=5,seed=0,strength=.4,budget_factor=1.,alpha_max=.3,t=None):
     if '_to_' in archetype:
         if t is None or not 0<=t<=1:raise ValueError('Continuation requires t in [0,1]')
         left,right=archetype.split('_to_');a=generate(left,profile,n,seed,strength,budget_factor,alpha_max);b=generate(right,profile,n,seed,strength,budget_factor,alpha_max)
@@ -63,3 +63,8 @@ def descriptors(world):
         complement_share=sum(v>0 for _,_,v in edges)/max(1,len(edges)),frustration=float(frustration),density=len(edges)/max(1,n*(n-1)/2),
         centralization=float(strength.max()/strength.mean()) if strength.mean() else 0.,value_cv=float(b.std()/abs(b.mean())) if b.mean() else None,
         alignment=float(np.linalg.norm(top.T@b)/max(np.linalg.norm(b),1e-300)),budget_factor=float(world.B/(sum(world.gamma)*kappa(.6))),cost_cv=float(np.std(world.gamma)/np.mean(world.gamma)))
+
+
+def generate(*args,Y0=0.,**kwargs):
+    from dataclasses import replace
+    return replace(_generate(*args,**kwargs),Y0=float(Y0))

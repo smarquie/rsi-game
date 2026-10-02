@@ -17,8 +17,9 @@ from .channels import transfer_path,estimate_transfer,transfer_update,full_fit
 from .diagnostics import classify,decomposition
 from .typology import descriptors
 
-def commitment(s,world,i,config,p):
-    half=config.w_min/2
+def commitment(s,world,i,config,p,previous_target=None):
+    half=config.commitment_h
+    if config.commit=='adaptive' and previous_target is not None:half=max(half,abs(s.target-previous_target))
     if config.commit=='motive' or config.remedy=='R4':
         G,C=s.belief[1:]; own=best_response(G,C,world.alpha[i],world.w[i],world.gamma[i],p,0,world.qbar)
         team=best_response(G,C,0,1,world.gamma[i],p/world.w[i],0,world.qbar)
@@ -90,8 +91,8 @@ def simulate(world,config=Config(),seed=0,checkpoint=None,benchmark=None,return_
                 if update['updated']:
                     update['decomposition']=decomposition(*s.belief[1:],world.local_coeffs(i,center)[1],truth[i,1],world.C[i][i],used/world.w[i],mu0,mu0d,muc,world.gamma[i],world.qbar)
                     if config.remedy=='R5' and any(flags.values()):s.target=old;update['target_skipped_degenerate']=True
-                    if config.remedy in ('R1','R1+R3'):s.target=float(old+np.clip(s.target-old,-config.step_cap*(n-1)*config.w_min/2,config.step_cap*(n-1)*config.w_min/2))
-                    commitment(s,world,i,config,result['price'])
+                    if config.remedy in ('R1','R1+R3'):s.target=float(old+np.clip(s.target-old,-config.step_cap*(n-1)*config.commitment_h,config.step_cap*(n-1)*config.commitment_h))
+                    commitment(s,world,i,config,result['price'],old)
                 updates[str(i)]=update
             if kind=='full' and len(paths)==n:
                 fitted=full_fit(result['Y'],freq);amps=np.array([s.amplitude for s in states]);z=np.array([s.center for s in states]);C=np.array(fitted['C_dither'])/np.outer(amps,amps);g=np.array(fitted['gradient_dither'])/amps

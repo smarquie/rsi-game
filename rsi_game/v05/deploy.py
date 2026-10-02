@@ -4,7 +4,7 @@ from .fast import clear,best_responses
 from .world import kappa
 
 def bounds_for(states,config,qbar):
-    return np.array([(max(0,s.target-config.w_min/2),min(qbar,s.target+config.w_min/2)) if s.mode=='exploring' else s.bounds for s in states])
+    return np.array([(max(0,s.target-config.commitment_h),min(qbar,s.target+config.commitment_h)) if s.mode=='exploring' else s.bounds for s in states])
 
 def price_flags(world,beliefs,bounds,price,paths=None,T=1,p_max=1000.):
     paths=paths or {}; free=np.array([i for i in range(world.n) if i not in paths],dtype=int)

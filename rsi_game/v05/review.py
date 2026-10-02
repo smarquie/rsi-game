@@ -30,7 +30,7 @@ def review(state,own_q,Y,price,gamma,w,config,qbar,previous_Y,period,prices=None
     mu=price/w if config.within_period=='fixed' and config.budget_rule=='price' else 0.
     optimum=best_response(G,C,0.,1.,gamma,mu,0.,qbar)
     old=state.target; state.target+=config.beta*(optimum-state.target)
-    half=config.w_min/2 if config.commit=='fixed' else max(config.w_min/2,abs(state.target-old))
+    half=config.commitment_h if config.commit=='fixed' else max(config.commitment_h,abs(state.target-old))
     state.bounds=(max(0.,state.target-half),min(qbar,state.target+half))
     state.last_turn=period; state.rank=diagnostic['rank']; state.condition=diagnostic['condition']
     return dict(updated=True,fitted=fitted.tolist(),target_optimum=float(optimum),demodulated_slope=demodulate(own_q,Y),**diagnostic)
