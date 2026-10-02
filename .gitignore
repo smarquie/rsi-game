@@ -9,3 +9,6 @@ __pycache__/
 # Recomputable shared benchmark caches
 results/v04/**/_benchmarks/
 results/v04/_lab_benchmarks/
+
+# v0.5 research output can be very large; publish selected artifacts deliberately.
+results/v05/

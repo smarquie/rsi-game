@@ -1,0 +1,7 @@
+# Tested with Python 3.11; install into a separate venv if preserving another environment.
+numpy==1.23.5
+scipy==1.10.1
+matplotlib==3.7.5
+pyarrow==11.0.0
+networkx==3.1
+scikit-learn==1.2.2

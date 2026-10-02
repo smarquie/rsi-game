@@ -1,3 +1,18 @@
+# v0.5 research package
+
+The October v0.5 engine adds deployment-based self-improvement measurement, coordination/accessibility diagnostics, process remedies, structural interventions, typology studies and auditable reports. The v0.4 engine and its running studies are preserved.
+
+Start with [the complete v0.5 run guide](docs/RUN_V05.md), [implementation assumptions and limits](docs/V05_FIDELITY.md), and [the test/validation record](docs/V05_VALIDATION.md).
+
+```bash
+.venv/bin/python -m unittest discover -s tests/v05 -v
+caffeinate -i bash scripts/run_v05.sh paper 2
+```
+
+Prepare and estimate the study before the second command: the publication package is substantial, and the `full` preset is much larger. New PyCharm configurations are named **RSI v0.5**. `main_v05.py` prepares a pilot; `main.py` remains the v0.4 interactive lab.
+
+---
+
 # RSI Functions Game — v0.4
 
 A research implementation of Serge Marquie's revised continuous functions game. Functions learn local quadratic response models from their own settings and the shared aggregate, explore on separate frequencies, and interact through a common resource price. This is a mathematical simulation, not a system that trains or modifies an LLM.
